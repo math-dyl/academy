@@ -8,7 +8,6 @@ from .content_service import ContentService
 
 @dataclass(slots=True)
 class Topic:
-
     course: str
     topic: str
     path: Path
@@ -19,7 +18,6 @@ class Topic:
 
 
 class CourseService:
-
     """
     Course structure:
 
@@ -29,15 +27,16 @@ class CourseService:
                 <topic>/
                     course.json
                     lessons.json
-                    examples.json
                     practice.json
                     quizzes.json
+
+    Lesson examples are optional and are stored
+    directly inside lessons.json.
     """
 
     REQUIRED_FILES = {
         "course.json",
         "lessons.json",
-        "examples.json",
         "practice.json",
         "quizzes.json",
     }
@@ -47,7 +46,6 @@ class CourseService:
         content_service: ContentService,
         courses_dir: Path,
     ):
-
         self.content = content_service
 
         self.courses_dir = Path(
@@ -59,7 +57,6 @@ class CourseService:
     # ==================================================
 
     def discover(self) -> list[Topic]:
-
         topics: list[Topic] = []
 
         if not self.courses_dir.exists():
@@ -68,14 +65,12 @@ class CourseService:
         for course_dir in sorted(
             self.courses_dir.iterdir()
         ):
-
             if not course_dir.is_dir():
                 continue
 
             for topic_dir in sorted(
                 course_dir.iterdir()
             ):
-
                 if not topic_dir.is_dir():
                     continue
 
@@ -110,7 +105,6 @@ class CourseService:
     # ==================================================
 
     def courses(self) -> list[str]:
-
         return sorted(
             {
                 item.course
@@ -149,7 +143,6 @@ class CourseService:
         topic = topic.strip().lower()
 
         for item in self.discover():
-
             if (
                 item.course.lower() == course
                 and item.topic.lower() == topic
@@ -169,14 +162,12 @@ class CourseService:
         filename: str,
         default=None,
     ):
-
         topic_data = self.get_topic(
             course,
             topic,
         )
 
         if topic_data is None:
-
             return (
                 {}
                 if default is None
@@ -271,25 +262,6 @@ class CourseService:
         return self._as_list(data)
 
     # ==================================================
-    # EXAMPLES
-    # ==================================================
-
-    def examples(
-        self,
-        course: str,
-        topic: str,
-    ) -> list:
-
-        data = self.load_topic_file(
-            course,
-            topic,
-            "examples.json",
-            [],
-        )
-
-        return self._as_list(data)
-
-    # ==================================================
     # PRACTICE
     # ==================================================
 
@@ -343,7 +315,6 @@ class CourseService:
                 "items",
                 "data",
                 "lessons",
-                "examples",
                 "practice",
                 "questions",
                 "quizzes",
