@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+discord.py
+python-dotenv
+httpx
+pydantic
+reportlab
+fastapi
+uvicorn
