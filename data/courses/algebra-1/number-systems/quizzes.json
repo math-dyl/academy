@@ -1,0 +1,122 @@
+[
+  {
+    "id": "quiz-1",
+    "question": "Which set contains 1, 2, 3, 4, and so on?",
+    "options": [
+      "Natural numbers",
+      "Integers",
+      "Irrational numbers",
+      "Real numbers"
+    ],
+    "answer": "Natural numbers",
+    "explanation": "Natural numbers are the positive counting numbers."
+  },
+  {
+    "id": "quiz-2",
+    "question": "Which of the following is a whole number but not a natural number?",
+    "options": [
+      "-1",
+      "0",
+      "1/2",
+      "√2"
+    ],
+    "answer": "0",
+    "explanation": "Under the definition used in this course, whole numbers include zero while natural numbers begin at 1."
+  },
+  {
+    "id": "quiz-3",
+    "question": "Which number is an integer?",
+    "options": [
+      "2.5",
+      "3/4",
+      "-6",
+      "√5"
+    ],
+    "answer": "-6",
+    "explanation": "-6 is a negative whole number, so it belongs to the integers."
+  },
+  {
+    "id": "quiz-4",
+    "question": "Which number is irrational?",
+    "options": [
+      "5",
+      "3/8",
+      "0.25",
+      "√7"
+    ],
+    "answer": "√7",
+    "explanation": "√7 is irrational because it cannot be expressed as a ratio of two integers."
+  },
+  {
+    "id": "quiz-5",
+    "question": "Which statement correctly describes rational numbers?",
+    "options": [
+      "They cannot be written as fractions.",
+      "They can be written as a/b where a and b are integers and b is not zero.",
+      "They are always irrational.",
+      "They are always negative."
+    ],
+    "answer": "They can be written as a/b where a and b are integers and b is not zero.",
+    "explanation": "A rational number is any number that can be represented as a ratio of two integers with a non-zero denominator."
+  },
+  {
+    "id": "quiz-6",
+    "question": "Which number belongs to the rational numbers?",
+    "options": [
+      "√2",
+      "π",
+      "7/9",
+      "√11"
+    ],
+    "answer": "7/9",
+    "explanation": "7/9 is a ratio of two integers, so it is rational."
+  },
+  {
+    "id": "quiz-7",
+    "question": "What is the relationship between rational and irrational numbers?",
+    "options": [
+      "Both are subsets of the real numbers.",
+      "Both are subsets of the natural numbers.",
+      "Irrational numbers are integers.",
+      "Rational numbers are never real."
+    ],
+    "answer": "Both are subsets of the real numbers.",
+    "explanation": "The real numbers consist of rational and irrational numbers."
+  },
+  {
+    "id": "quiz-8",
+    "question": "Which number belongs to the integers but not the whole numbers?",
+    "options": [
+      "0",
+      "5",
+      "-3",
+      "1/2"
+    ],
+    "answer": "-3",
+    "explanation": "Integers include negative numbers, while whole numbers do not."
+  },
+  {
+    "id": "quiz-9",
+    "question": "Which of the following is a real number?",
+    "options": [
+      "√2",
+      "3/5",
+      "-8",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "Rational numbers, irrational numbers, and integers are all part of the real number system."
+  },
+  {
+    "id": "quiz-10",
+    "question": "Which number is NOT rational?",
+    "options": [
+      "0.5",
+      "4/7",
+      "-12",
+      "π"
+    ],
+    "answer": "π",
+    "explanation": "π is irrational because its decimal representation is non-terminating and non-repeating."
+  }
+]

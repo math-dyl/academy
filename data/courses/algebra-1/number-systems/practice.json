@@ -1,0 +1,60 @@
+[
+  {
+    "id": "practice-1",
+    "question": "Which number system contains 0?",
+    "options": [
+      "Natural numbers only",
+      "Whole numbers",
+      "Irrational numbers only",
+      "None of the above"
+    ],
+    "answer": "Whole numbers",
+    "explanation": "Zero is included in the whole numbers."
+  },
+  {
+    "id": "practice-2",
+    "question": "Which of the following is an integer?",
+    "options": [
+      "3/4",
+      "2.5",
+      "-9",
+      "√2"
+    ],
+    "answer": "-9",
+    "explanation": "Integers include negative and positive whole numbers as well as zero."
+  },
+  {
+    "id": "practice-3",
+    "question": "Which number is irrational?",
+    "options": [
+      "4",
+      "1/2",
+      "0.75",
+      "√3"
+    ],
+    "answer": "√3",
+    "explanation": "√3 cannot be expressed as a ratio of two integers and has a non-terminating, non-repeating decimal representation."
+  },
+  {
+    "id": "practice-4",
+    "question": "Which statement is true?",
+    "options": [
+      "Every integer is irrational.",
+      "Every natural number is an integer.",
+      "Every real number is a whole number.",
+      "Every irrational number is an integer."
+    ],
+    "answer": "Every natural number is an integer.",
+    "explanation": "Natural numbers are contained within the set of integers."
+  },
+  {
+    "id": "practice-5",
+    "question": "Is 0.125 a rational number?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "explanation": "0.125 is a terminating decimal and can be written as 125/1000, which can be simplified to 1/8."
+  }
+]

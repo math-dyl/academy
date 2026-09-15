@@ -1,0 +1,37 @@
+[
+  {
+    "id": "lesson-1",
+    "title": "Introduction to Number Systems",
+    "content": "A number system is a way of representing and classifying numbers. In Algebra, the most common number systems are natural numbers, whole numbers, integers, rational numbers, and irrational numbers.",
+    "formula": "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real",
+    "example": "The number 5 is a natural number, whole number, integer, rational number, and real number."
+  },
+  {
+    "id": "lesson-2",
+    "title": "Natural and Whole Numbers",
+    "content": "Natural numbers are commonly used for counting. They are 1, 2, 3, 4, and so on. Whole numbers include all natural numbers together with zero.",
+    "formula": "Natural Numbers = {1, 2, 3, ...}\nWhole Numbers = {0, 1, 2, 3, ...}",
+    "example": "7 is both a natural number and a whole number. 0 is a whole number but is not included in the natural numbers under this definition."
+  },
+  {
+    "id": "lesson-3",
+    "title": "Integers",
+    "content": "Integers include positive whole numbers, negative whole numbers, and zero. They do not contain fractional or decimal parts.",
+    "formula": "Integers = {..., -3, -2, -1, 0, 1, 2, 3, ...}",
+    "example": "-8, 0, and 15 are integers, while 2.5 is not an integer."
+  },
+  {
+    "id": "lesson-4",
+    "title": "Rational and Irrational Numbers",
+    "content": "A rational number can be written as a ratio of two integers where the denominator is not zero. Irrational numbers cannot be written as a ratio of two integers and have non-terminating, non-repeating decimal representations.",
+    "formula": "Rational: a/b, where a,b ∈ Z and b ≠ 0",
+    "example": "3/4 is rational because it is a ratio of two integers. √2 is irrational because its decimal representation is non-terminating and non-repeating."
+  },
+  {
+    "id": "lesson-5",
+    "title": "Real Numbers",
+    "content": "Real numbers consist of both rational and irrational numbers. Every point on the number line represents a real number.",
+    "formula": "Real Numbers = Rational Numbers ∪ Irrational Numbers",
+    "example": "−5, 0, 2/3, 1.25, and √2 are all real numbers."
+  }
+]
