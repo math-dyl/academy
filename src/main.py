@@ -15,6 +15,7 @@ from .services.formula_service import FormulaService
 from .services.pdf_service import PDFService
 from .services.problem_service import ProblemService
 from .services.quiz_service import QuizService
+from .services.practice_service import PracticeService
 
 from .utils.config import (
     COURSES_DIR,
@@ -79,6 +80,12 @@ class MathdylBot(
         self.daily_service = (
             DailyService(
                 self.content_service
+            )
+        )
+
+        self.practice_service = (
+            PracticeService(
+                self.course_service
             )
         )
 

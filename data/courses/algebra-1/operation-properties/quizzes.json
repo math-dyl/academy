@@ -1,0 +1,122 @@
+[
+  {
+    "id": "quiz-1",
+    "question": "Which property allows the order of addends or factors to be changed?",
+    "options": [
+      "Associative Property",
+      "Commutative Property",
+      "Identity Property",
+      "Inverse Property"
+    ],
+    "answer": "Commutative Property",
+    "explanation": "The Commutative Property allows numbers to change order without changing the result."
+  },
+  {
+    "id": "quiz-2",
+    "question": "Which property changes the grouping of numbers?",
+    "options": [
+      "Commutative Property",
+      "Associative Property",
+      "Identity Property",
+      "Distributive Property"
+    ],
+    "answer": "Associative Property",
+    "explanation": "The Associative Property changes grouping using parentheses without changing the order."
+  },
+  {
+    "id": "quiz-3",
+    "question": "Which equation demonstrates the Commutative Property of Addition?",
+    "options": [
+      "3 + 0 = 3",
+      "(3 + 4) + 5 = 3 + (4 + 5)",
+      "3 + 4 = 4 + 3",
+      "3 + (−3) = 0"
+    ],
+    "answer": "3 + 4 = 4 + 3",
+    "explanation": "The order of the addends changes while the sum remains the same."
+  },
+  {
+    "id": "quiz-4",
+    "question": "Which equation demonstrates the Associative Property of Multiplication?",
+    "options": [
+      "2 × 3 = 3 × 2",
+      "(2 × 3) × 4 = 2 × (3 × 4)",
+      "2 × 1 = 2",
+      "2 × 1/2 = 1"
+    ],
+    "answer": "(2 × 3) × 4 = 2 × (3 × 4)",
+    "explanation": "The grouping of the factors changes, but their order remains the same."
+  },
+  {
+    "id": "quiz-5",
+    "question": "What is the additive identity?",
+    "options": [
+      "-1",
+      "0",
+      "1",
+      "10"
+    ],
+    "answer": "0",
+    "explanation": "Adding zero to any number leaves the number unchanged."
+  },
+  {
+    "id": "quiz-6",
+    "question": "What is the multiplicative identity?",
+    "options": [
+      "-1",
+      "0",
+      "1",
+      "10"
+    ],
+    "answer": "1",
+    "explanation": "Multiplying any number by one leaves the number unchanged."
+  },
+  {
+    "id": "quiz-7",
+    "question": "Which property is demonstrated by 12 + (−12) = 0?",
+    "options": [
+      "Identity Property",
+      "Inverse Property",
+      "Associative Property",
+      "Commutative Property"
+    ],
+    "answer": "Inverse Property",
+    "explanation": "A number and its additive inverse have a sum of zero."
+  },
+  {
+    "id": "quiz-8",
+    "question": "Which property is demonstrated by 7 × 1/7 = 1?",
+    "options": [
+      "Commutative Property",
+      "Identity Property",
+      "Inverse Property",
+      "Distributive Property"
+    ],
+    "answer": "Inverse Property",
+    "explanation": "A nonzero number multiplied by its reciprocal equals one."
+  },
+  {
+    "id": "quiz-9",
+    "question": "Which property is demonstrated by 4(x + 3) = 4x + 12?",
+    "options": [
+      "Commutative Property",
+      "Associative Property",
+      "Distributive Property",
+      "Inverse Property"
+    ],
+    "answer": "Distributive Property",
+    "explanation": "The 4 is multiplied by both x and 3."
+  },
+  {
+    "id": "quiz-10",
+    "question": "Which statement about the Commutative Property is correct?",
+    "options": [
+      "It applies to subtraction and division.",
+      "It changes the grouping of numbers.",
+      "It allows the order of numbers to be changed in addition and multiplication.",
+      "It always produces zero."
+    ],
+    "answer": "It allows the order of numbers to be changed in addition and multiplication.",
+    "explanation": "The Commutative Property applies to addition and multiplication, but not generally to subtraction or division."
+  }
+]

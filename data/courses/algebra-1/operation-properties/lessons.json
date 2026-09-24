@@ -1,0 +1,51 @@
+[
+  {
+    "id": "lesson-1",
+    "title": "Introduction to Operation Properties",
+    "content": "Operation properties are rules that describe how numbers behave when mathematical operations are performed. These properties help us simplify expressions, rearrange terms, and solve algebraic problems.",
+    "formula": "Commutative, Associative, Identity, Inverse, and Distributive Properties",
+    "example": "The expression 3 + 5 can be rewritten as 5 + 3 using the Commutative Property of Addition."
+  },
+  {
+    "id": "lesson-2",
+    "title": "Commutative Property",
+    "content": "The Commutative Property states that changing the order of numbers does not change the result. It applies to addition and multiplication but does not apply to subtraction or division.",
+    "formula": "a + b = b + a\na × b = b × a",
+    "example": "4 + 7 = 7 + 4. Also, 3 × 5 = 5 × 3."
+  },
+  {
+    "id": "lesson-3",
+    "title": "Associative Property",
+    "content": "The Associative Property states that changing the grouping of numbers does not change the result. It applies to addition and multiplication but does not apply to subtraction or division.",
+    "formula": "(a + b) + c = a + (b + c)\n(a × b) × c = a × (b × c)",
+    "example": "(2 + 3) + 4 = 2 + (3 + 4). Both sides equal 9."
+  },
+  {
+    "id": "lesson-4",
+    "title": "Identity Property",
+    "content": "The Identity Property states that certain numbers can be combined with another number without changing its value. The additive identity is zero, while the multiplicative identity is one.",
+    "formula": "a + 0 = a\na × 1 = a",
+    "example": "8 + 0 = 8 and 8 × 1 = 8."
+  },
+  {
+    "id": "lesson-5",
+    "title": "Inverse Property",
+    "content": "The Inverse Property states that a number combined with its additive or multiplicative inverse produces the identity value. The additive inverse of a number is its opposite, while the multiplicative inverse is its reciprocal.",
+    "formula": "a + (−a) = 0\na × 1/a = 1, where a ≠ 0",
+    "example": "5 + (−5) = 0. Also, 4 × 1/4 = 1."
+  },
+  {
+    "id": "lesson-6",
+    "title": "Distributive Property",
+    "content": "The Distributive Property allows multiplication to be distributed across addition or subtraction inside parentheses. It is commonly used to expand and simplify algebraic expressions.",
+    "formula": "a(b + c) = ab + ac\na(b − c) = ab − ac",
+    "example": "3(x + 4) = 3x + 12."
+  },
+  {
+    "id": "lesson-7",
+    "title": "Applying Operation Properties",
+    "content": "Operation properties can be combined to simplify expressions and make calculations easier. Identifying the correct property helps determine which transformation can be performed.",
+    "formula": "a + b = b + a → Commutative\na(b + c) = ab + ac → Distributive",
+    "example": "2(x + 5) can be simplified to 2x + 10 using the Distributive Property."
+  }
+]

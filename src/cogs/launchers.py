@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import traceback
+
 import discord
 from discord.ext import commands
 
@@ -15,7 +17,6 @@ class TopicLauncherView(discord.ui.View):
         course: str,
         topic: str,
     ):
-
         super().__init__(
             timeout=None
         )
@@ -31,7 +32,7 @@ class TopicLauncherView(discord.ui.View):
     @discord.ui.button(
         label="Start Learning",
         style=discord.ButtonStyle.primary,
-        emoji="📖",
+        emoji="📖", 
         custom_id="mathdyl:start_learning",
     )
     async def start_learning(
@@ -39,7 +40,6 @@ class TopicLauncherView(discord.ui.View):
         interaction: discord.Interaction,
         button: discord.ui.Button,
     ):
-
         lessons = (
             self.bot.course_service.lessons(
                 self.course,
@@ -48,12 +48,10 @@ class TopicLauncherView(discord.ui.View):
         )
 
         if not lessons:
-
             await interaction.response.send_message(
                 "No lessons are available for this topic.",
                 ephemeral=True,
             )
-
             return
 
         from .courses import LessonView
@@ -71,90 +69,11 @@ class TopicLauncherView(discord.ui.View):
             ephemeral=True,
         )
 
-    # ==================================================
-    # PRACTICE
-    # ==================================================
+    
 
-    @discord.ui.button(
-        label="Practice",
-        style=discord.ButtonStyle.secondary,
-        emoji="📝",
-        custom_id="mathdyl:practice",
-    )
-    async def practice(
-        self,
-        interaction: discord.Interaction,
-        button: discord.ui.Button,
-    ):
-
-        practice = (
-            self.bot.course_service.practice(
-                self.course,
-                self.topic,
-            )
-        )
-
-        if not practice:
-
-            await interaction.response.send_message(
-                "No practice problems are available.",
-                ephemeral=True,
-            )
-
-            return
-
-        await interaction.response.send_message(
-            "Practice mode is available for this topic.",
-            ephemeral=True,
-        )
-
-    # ==================================================
-    # QUIZ
-    # ==================================================
-
-    @discord.ui.button(
-        label="Take Quiz",
-        style=discord.ButtonStyle.success,
-        emoji="🎯",
-        custom_id="mathdyl:take_quiz",
-    )
-    async def take_quiz(
-        self,
-        interaction: discord.Interaction,
-        button: discord.ui.Button,
-    ):
-
-        questions = (
-            self.bot.quiz_service.questions(
-                self.course,
-                self.topic,
-            )
-        )
-
-        if not questions:
-
-            await interaction.response.send_message(
-                "No quiz questions are available.",
-                ephemeral=True,
-            )
-
-            return
-
-        from .quizzes import QuizView
-
-        view = QuizView(
-            bot=self.bot,
-            course=self.course,
-            topic=self.topic,
-            questions=questions,
-        )
-
-        await interaction.response.send_message(
-            embed=view.make_embed(),
-            view=view,
-            ephemeral=True,
-        )
-
+# ======================================================
+# TOPIC LAUNCHER COG
+# ======================================================
 
 class TopicLauncherCog(
     commands.Cog
@@ -164,7 +83,6 @@ class TopicLauncherCog(
         self,
         bot,
     ):
-
         self.bot = bot
 
         self.launchers_started = False
@@ -207,9 +125,6 @@ class TopicLauncherCog(
                 )
 
             except Exception:
-
-                import traceback
-
                 traceback.print_exc()
 
     # ==================================================
@@ -305,7 +220,8 @@ class TopicLauncherCog(
 
         description = config.get(
             "description",
-            "Continue your learning journey with Mathdyl Academy.",
+            "Continue your learning journey "
+            "with Mathdyl Academy.",
         )
 
         embed = discord.Embed(
@@ -376,7 +292,6 @@ class TopicLauncherCog(
         )
 
         # Hide marker from normal users
-        # by immediately editing it out.
         await message.edit(
             content=None
         )
@@ -435,6 +350,10 @@ class TopicLauncherCog(
 
         return None
 
+
+# ======================================================
+# SETUP
+# ======================================================
 
 async def setup(bot):
 

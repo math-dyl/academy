@@ -1,0 +1,98 @@
+[
+  {
+    "id": "practice-1",
+    "question": "Which property allows 4 + 7 to be rewritten as 7 + 4?",
+    "options": [
+      "Associative Property",
+      "Commutative Property",
+      "Identity Property",
+      "Distributive Property"
+    ],
+    "answer": "Commutative Property",
+    "explanation": "The Commutative Property allows the order of numbers to be changed without changing the result."
+  },
+  {
+    "id": "practice-2",
+    "question": "Which property is shown by (2 + 3) + 4 = 2 + (3 + 4)?",
+    "options": [
+      "Commutative Property",
+      "Associative Property",
+      "Identity Property",
+      "Inverse Property"
+    ],
+    "answer": "Associative Property",
+    "explanation": "The Associative Property changes the grouping of numbers without changing their order."
+  },
+  {
+    "id": "practice-3",
+    "question": "Which property is shown by 9 + 0 = 9?",
+    "options": [
+      "Identity Property",
+      "Inverse Property",
+      "Commutative Property",
+      "Distributive Property"
+    ],
+    "answer": "Identity Property",
+    "explanation": "Zero is the additive identity because adding zero to a number does not change its value."
+  },
+  {
+    "id": "practice-4",
+    "question": "Which property is shown by 6 + (−6) = 0?",
+    "options": [
+      "Identity Property",
+      "Inverse Property",
+      "Associative Property",
+      "Distributive Property"
+    ],
+    "answer": "Inverse Property",
+    "explanation": "A number and its additive inverse combine to produce zero."
+  },
+  {
+    "id": "practice-5",
+    "question": "Which property is shown by 5(x + 2) = 5x + 10?",
+    "options": [
+      "Commutative Property",
+      "Associative Property",
+      "Identity Property",
+      "Distributive Property"
+    ],
+    "answer": "Distributive Property",
+    "explanation": "The 5 is distributed to both x and 2, producing 5x + 10."
+  },
+  {
+    "id": "practice-6",
+    "question": "Which property is shown by 7 × 1 = 7?",
+    "options": [
+      "Inverse Property",
+      "Identity Property",
+      "Associative Property",
+      "Distributive Property"
+    ],
+    "answer": "Identity Property",
+    "explanation": "One is the multiplicative identity because multiplying a number by one does not change its value."
+  },
+  {
+    "id": "practice-7",
+    "question": "Which property allows 3 × 8 to be rewritten as 8 × 3?",
+    "options": [
+      "Commutative Property",
+      "Associative Property",
+      "Inverse Property",
+      "Distributive Property"
+    ],
+    "answer": "Commutative Property",
+    "explanation": "The Commutative Property allows the factors to change order without changing the product."
+  },
+  {
+    "id": "practice-8",
+    "question": "What is the multiplicative inverse of 5?",
+    "options": [
+      "-5",
+      "0",
+      "1",
+      "1/5"
+    ],
+    "answer": "1/5",
+    "explanation": "The multiplicative inverse of a nonzero number is its reciprocal. 5 × 1/5 = 1."
+  }
+]
