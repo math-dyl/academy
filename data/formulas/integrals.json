@@ -1,0 +1,25 @@
+{
+  "title": "Integrals",
+  "formulas": [
+    {
+      "name": "Power Rule",
+      "formula": "∫xⁿ dx = xⁿ⁺¹/(n+1) + C, n ≠ -1"
+    },
+    {
+      "name": "Constant Rule",
+      "formula": "∫c dx = cx + C"
+    },
+    {
+      "name": "Sum Rule",
+      "formula": "∫[f(x)+g(x)]dx = ∫f(x)dx + ∫g(x)dx"
+    },
+    {
+      "name": "Difference Rule",
+      "formula": "∫[f(x)-g(x)]dx = ∫f(x)dx - ∫g(x)dx"
+    },
+    {
+      "name": "Constant Multiple Rule",
+      "formula": "∫cf(x)dx = c∫f(x)dx"
+    }
+  ]
+}

@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import discord
 
-from discord import app_commands
 from discord.ext import commands
 
 from ..utils.embeds import make_embed
@@ -18,56 +17,6 @@ class QuizzesCog(
     ):
 
         self.bot = bot
-
-    # ==================================================
-    # /quiz
-    # ==================================================
-
-    @app_commands.command(
-        name="quiz",
-        description="Start a quiz for a topic.",
-    )
-    @app_commands.describe(
-        course="Course slug",
-        topic="Topic slug",
-    )
-    async def quiz(
-        self,
-        interaction: discord.Interaction,
-        course: str,
-        topic: str,
-    ):
-
-        questions = (
-            self.bot
-            .quiz_service
-            .questions(
-                course,
-                topic,
-            )
-        )
-
-        if not questions:
-
-            await interaction.response.send_message(
-                "No quiz questions were found.",
-                ephemeral=True,
-            )
-
-            return
-
-        view = QuizView(
-            bot=self.bot,
-            course=course,
-            topic=topic,
-            questions=questions,
-        )
-
-        await interaction.response.send_message(
-            embed=view.make_embed(),
-            view=view,
-            ephemeral=True,
-        )
 
 
 async def setup(bot):

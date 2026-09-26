@@ -71,10 +71,10 @@ class ContentService:
         )
 
     # --------------------------------------------------
-    # GENERAL
+    # DAILY
     # --------------------------------------------------
 
-    def load_general(
+    def load_daily(
         self,
         filename: str,
         default=None,
@@ -82,7 +82,28 @@ class ContentService:
 
         path = (
             self.data_dir
-            / "general"
+            / "daily"
+            / filename
+        )
+
+        return self.load_json(
+            path,
+            default,
+        )
+
+    # --------------------------------------------------
+    # FORMULAS
+    # --------------------------------------------------
+
+    def load_formula(
+        self,
+        filename: str,
+        default=None,
+    ):
+
+        path = (
+            self.data_dir
+            / "formulas"
             / filename
         )
 

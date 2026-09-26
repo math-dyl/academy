@@ -8,15 +8,9 @@ from discord.ext import commands
 from ..utils.embeds import make_embed
 
 
-class CourseCog(
-    commands.Cog
-):
+class CourseCog(commands.Cog):
 
-    def __init__(
-        self,
-        bot,
-    ):
-
+    def __init__(self, bot):
         self.bot = bot
 
     # ==================================================
@@ -25,7 +19,7 @@ class CourseCog(
 
     @app_commands.command(
         name="courses",
-        description="List all available courses.",
+        description="View all available courses.",
     )
     async def courses(
         self,
@@ -41,294 +35,34 @@ class CourseCog(
         if not courses:
 
             await interaction.response.send_message(
-                "No courses were found in `data/courses/`.",
+                "No courses are currently available.",
                 ephemeral=True,
             )
 
             return
 
         description = "\n".join(
-            f"• `{course}`"
+            f"📚 `{course}`"
             for course in courses
         )
 
         embed = make_embed(
             "Available Courses",
-            description,
-        )
-
-        await interaction.response.send_message(
-            embed=embed
-        )
-
-    # ==================================================
-    # /course
-    # ==================================================
-
-    @app_commands.command(
-        name="course",
-        description="Show the topics inside a course.",
-    )
-    @app_commands.describe(
-        course="Example: algebra-1"
-    )
-    async def course(
-        self,
-        interaction: discord.Interaction,
-        course: str,
-    ):
-
-        topics = (
-            self.bot
-            .course_service
-            .topics(course)
-        )
-
-        if not topics:
-
-            await interaction.response.send_message(
-                f"No topics found for `{course}`.",
-                ephemeral=True,
-            )
-
-            return
-
-        description = "\n".join(
-            f"• `{item.topic}`"
-            for item in topics
-        )
-
-        embed = make_embed(
-            f"Course: {course}",
-            description,
-        )
-
-        await interaction.response.send_message(
-            embed=embed
-        )
-
-    # ==================================================
-    # /topics
-    # ==================================================
-
-    @app_commands.command(
-        name="topics",
-        description="List topics inside a course.",
-    )
-    @app_commands.describe(
-        course="Example: algebra-1"
-    )
-    async def topics(
-        self,
-        interaction: discord.Interaction,
-        course: str,
-    ):
-
-        topics = (
-            self.bot
-            .course_service
-            .topics(course)
-        )
-
-        if not topics:
-
-            await interaction.response.send_message(
-                f"Course `{course}` was not found.",
-                ephemeral=True,
-            )
-
-            return
-
-        embed = make_embed(
-            f"Topics in {course}",
-            "\n".join(
-                f"• `{item.topic}`"
-                for item in topics
+            (
+                "Here are the courses currently "
+                "available in Mathdyl Academy.\n\n"
+                f"{description}\n\n"
+                "Go to the corresponding course channel "
+                "to start learning."
             ),
         )
 
-        await interaction.response.send_message(
-            embed=embed
+        embed.set_footer(
+            text="Mathdyl Academy • Available Courses"
         )
-
-    # ==================================================
-    # /topic
-    # ==================================================
-
-    @app_commands.command(
-        name="topic",
-        description="Show information about a topic.",
-    )
-    @app_commands.describe(
-        course="Course slug",
-        topic="Topic slug",
-    )
-    async def topic(
-        self,
-        interaction: discord.Interaction,
-        course: str,
-        topic: str,
-    ):
-
-        item = (
-            self.bot
-            .course_service
-            .get_topic(
-                course,
-                topic,
-            )
-        )
-
-        if item is None:
-
-            await interaction.response.send_message(
-                "Topic not found.",
-                ephemeral=True,
-            )
-
-            return
-
-        config = (
-            self.bot
-            .course_service
-            .course_config(
-                course,
-                topic,
-            )
-        )
-
-        title = config.get(
-            "title",
-            topic.replace(
-                "-",
-                " ",
-            ).title(),
-        )
-
-        description = config.get(
-            "description",
-            f"{course} / {topic}",
-        )
-
-        channel_id = (
-            self.bot
-            .course_service
-            .channel_id(
-                course,
-                topic,
-            )
-        )
-
-        embed = make_embed(
-            title,
-            description,
-        )
-
-        embed.add_field(
-            name="Course Path",
-            value=(
-                f"`data/courses/"
-                f"{course}/"
-                f"{topic}/`"
-            ),
-            inline=False,
-        )
-
-        embed.add_field(
-            name="Content Files",
-            value="\n".join(
-                f"• `{filename}`"
-                for filename in item.files
-            ),
-            inline=False,
-        )
-
-        if channel_id:
-
-            embed.add_field(
-                name="Discord Channel",
-                value=f"<#{channel_id}>",
-                inline=False,
-            )
-
-        else:
-
-            embed.add_field(
-                name="Discord Channel",
-                value="Not configured",
-                inline=False,
-            )
 
         await interaction.response.send_message(
             embed=embed
-        )
-
-    # ==================================================
-    # /learn
-    # ==================================================
-
-    @app_commands.command(
-        name="learn",
-        description="Start learning a topic.",
-    )
-    @app_commands.describe(
-        course="Course slug",
-        topic="Topic slug",
-    )
-    async def learn(
-        self,
-        interaction: discord.Interaction,
-        course: str,
-        topic: str,
-    ):
-
-        item = (
-            self.bot
-            .course_service
-            .get_topic(
-                course,
-                topic,
-            )
-        )
-
-        if item is None:
-
-            await interaction.response.send_message(
-                "Topic not found.",
-                ephemeral=True,
-            )
-
-            return
-
-        lessons = (
-            self.bot
-            .course_service
-            .lessons(
-                course,
-                topic,
-            )
-        )
-
-        if not lessons:
-
-            await interaction.response.send_message(
-                "No lessons were found for this topic.",
-                ephemeral=True,
-            )
-
-            return
-
-        view = LessonView(
-            bot=self.bot,
-            course=course,
-            topic=topic,
-            lessons=lessons,
-        )
-
-        await interaction.response.send_message(
-            embed=view.make_embed(),
-            view=view,
-            ephemeral=True,
         )
 
 
@@ -432,7 +166,7 @@ class LessonView(
             )
 
         # ==============================================
-        # FINAL LESSON MESSAGE
+        # FINAL LESSON
         # ==============================================
 
         if self.index == len(
@@ -496,8 +230,7 @@ class LessonView(
             label="Next",
             style=discord.ButtonStyle.primary,
             disabled=(
-                self.index
-                >= len(self.lessons) - 1
+                self.index >= len(self.lessons) - 1
             ),
         )
 
@@ -511,8 +244,6 @@ class LessonView(
 
         # ==============================================
         # PRACTICE / QUIZ
-        #
-        # Only show these after the final lesson.
         # ==============================================
 
         if self.index == len(
@@ -572,7 +303,6 @@ class LessonView(
     ):
 
         if self.index > 0:
-
             self.index -= 1
 
         self.update_buttons()

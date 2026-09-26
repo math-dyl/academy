@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the only number that has the same number of letters as its value?",
+    "answer": "Four",
+    "explanation": "The word 'four' contains four letters."
+  },
+  {
+    "question": "What is the value of π to two decimal places?",
+    "answer": "3.14",
+    "explanation": "Pi is an irrational number approximately equal to 3.14159265..."
+  },
+  {
+    "question": "What is the only even prime number?",
+    "answer": "2",
+    "explanation": "A prime number has exactly two positive factors. The number 2 is divisible only by 1 and 2."
+  },
+  {
+    "question": "What is the name of a polygon with eight sides?",
+    "answer": "Octagon",
+    "explanation": "The prefix 'octa-' means eight, so an eight-sided polygon is called an octagon."
+  },
+  {
+    "question": "What is the square root of 144?",
+    "answer": "12",
+    "explanation": "Since 12 × 12 = 144, √144 = 12."
+  },
+  {
+    "question": "What is the sum of the angles inside a triangle?",
+    "answer": "180°",
+    "explanation": "In Euclidean geometry, the interior angles of every triangle add up to 180 degrees."
+  },
+  {
+    "question": "What is a number greater than 1 that has exactly two positive factors called?",
+    "answer": "Prime number",
+    "explanation": "A prime number has exactly two positive factors: 1 and itself."
+  },
+  {
+    "question": "What mathematical constant is approximately equal to 2.71828?",
+    "answer": "Euler's number (e)",
+    "explanation": "Euler's number e is an important mathematical constant used extensively in exponential growth, logarithms, calculus, and differential equations."
+  },
+  {
+    "question": "What is the Fibonacci sequence beginning with 0 and 1?",
+    "answer": "0, 1, 1, 2, 3, 5, 8, 13, ...",
+    "explanation": "Each number after the first two is obtained by adding the previous two numbers."
+  },
+  {
+    "question": "What is the derivative of x²?",
+    "answer": "2x",
+    "explanation": "Using the Power Rule, d/dx[xⁿ] = nxⁿ⁻¹. Therefore, d/dx[x²] = 2x."
+  }
+]

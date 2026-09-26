@@ -1,0 +1,29 @@
+{
+  "timezone": "Asia/Manila",
+
+  "daily": {
+    "formula": {
+      "enabled": true,
+      "time": "20:33",
+      "channel_id": "1526511372098080802"
+    },
+
+    "problem": {
+      "enabled": true,
+      "time": "20:33",
+      "channel_id": "1526511372098080802"
+    },
+
+    "solution": {
+      "enabled": true,
+      "time": "20:33",
+      "channel_id": "1526511372098080802"
+    },
+
+    "trivia": {
+      "enabled": true,
+      "time": "20:33",
+      "channel_id": "1526511372098080802"
+    }
+  }
+}

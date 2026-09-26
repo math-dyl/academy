@@ -1,0 +1,37 @@
+{
+  "title": "Derivatives",
+  "formulas": [
+    {
+      "name": "Constant Rule",
+      "formula": "d/dx[c] = 0"
+    },
+    {
+      "name": "Power Rule",
+      "formula": "d/dx[xⁿ] = nxⁿ⁻¹"
+    },
+    {
+      "name": "Constant Multiple Rule",
+      "formula": "d/dx[cf(x)] = cf′(x)"
+    },
+    {
+      "name": "Sum Rule",
+      "formula": "d/dx[f(x)+g(x)] = f′(x)+g′(x)"
+    },
+    {
+      "name": "Difference Rule",
+      "formula": "d/dx[f(x)-g(x)] = f′(x)-g′(x)"
+    },
+    {
+      "name": "Product Rule",
+      "formula": "(fg)′ = f′g + fg′"
+    },
+    {
+      "name": "Quotient Rule",
+      "formula": "(f/g)′ = (gf′-fg′)/g²"
+    },
+    {
+      "name": "Chain Rule",
+      "formula": "d/dx[f(g(x))] = f′(g(x))g′(x)"
+    }
+  ]
+}

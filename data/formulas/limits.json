@@ -1,0 +1,33 @@
+{
+  "title": "Limits",
+  "formulas": [
+    {
+      "name": "Constant Law",
+      "formula": "lim(x→a) c = c"
+    },
+    {
+      "name": "Identity Law",
+      "formula": "lim(x→a) x = a"
+    },
+    {
+      "name": "Sum Law",
+      "formula": "lim(x→a)[f(x)+g(x)] = L+M"
+    },
+    {
+      "name": "Difference Law",
+      "formula": "lim(x→a)[f(x)-g(x)] = L-M"
+    },
+    {
+      "name": "Product Law",
+      "formula": "lim(x→a)[f(x)g(x)] = LM"
+    },
+    {
+      "name": "Quotient Law",
+      "formula": "lim(x→a)[f(x)/g(x)] = L/M"
+    },
+    {
+      "name": "Power Law",
+      "formula": "lim(x→a)[f(x)]ⁿ = Lⁿ"
+    }
+  ]
+}

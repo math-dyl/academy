@@ -8,14 +8,9 @@ from discord.ext import commands
 from ..utils.embeds import make_embed
 
 
-class GeneralCog(
-    commands.Cog
-):
+class GeneralCog(commands.Cog):
 
-    def __init__(
-        self,
-        bot,
-    ):
+    def __init__(self, bot):
 
         self.bot = bot
 
@@ -40,40 +35,73 @@ class GeneralCog(
             ),
         )
 
+        # ==============================================
+        # QUICK ACCESS
+        # ==============================================
+
         embed.add_field(
-            name="Courses",
+            name="Quick Access",
             value=(
-                "`/courses`\n"
-                "`/course <course>`\n"
-                "`/topics <course>`\n"
-                "`/topic <course> <topic>`"
+                "`/limit_formula` — Limit formulas\n"
+                "`/derivative_formula` — Derivative formulas\n"
+                "`/integral_formula` — Integral formulas\n"
+                "`/quadratic_formula` — Quadratic formula\n"
+                "`/trigonometry` — Trigonometric formulas\n"
+                "`/ask` — Ask the AI Math Assistant "
+                "(3/day)"
             ),
             inline=False,
         )
+
+        # ==============================================
+        # COURSES
+        # ==============================================
+
+        embed.add_field(
+            name="Courses",
+            value=(
+                "`/courses` — View available courses"
+            ),
+            inline=False,
+        )
+
+        # ==============================================
+        # LEARNING
+        # ==============================================
 
         embed.add_field(
             name="Learning",
             value=(
-                "`/learn <course> <topic>`\n"
-                "`/quiz <course> <topic>`"
+                "Open an available course channel "
+                "and select **Start Learning** to "
+                "begin a topic."
             ),
             inline=False,
         )
 
+        # ==============================================
+        # DAILY CONTENT
+        # ==============================================
+
         embed.add_field(
-            name="General",
+            name="Daily Content",
             value=(
-                "`/formula`\n"
-                "`/formula_of_the_day`\n"
-                "`/problem`\n"
-                "`/problem_of_the_day`\n"
-                "`/ask <question>`"
+                "**Formula of the Day**\n"
+                "**Problem of the Day**\n"
+                "**Math Trivia**\n\n"
+                "Daily content is automatically posted "
+                "according to the Mathdyl schedule."
             ),
             inline=False,
+        )
+
+        embed.set_footer(
+            text="Mathdyl Academy"
         )
 
         await interaction.response.send_message(
-            embed=embed
+            embed=embed,
+            ephemeral=True,
         )
 
 

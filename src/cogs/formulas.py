@@ -3,7 +3,6 @@ from __future__ import annotations
 import discord
 
 from discord import app_commands
-
 from discord.ext import commands
 
 from ..utils.embeds import make_embed
@@ -20,67 +19,185 @@ class FormulaCog(
 
         self.bot = bot
 
-    @app_commands.command(
-        name="formula",
-        description="Show a random mathematics formula.",
-    )
-    async def formula(
+    # ==================================================
+    # FORMULA HELPER
+    # ==================================================
+
+    async def send_formula(
         self,
         interaction: discord.Interaction,
+        category: str,
+        category_name: str,
     ):
 
-        item = (
+        cheatsheet = (
             self.bot
             .formula_service
-            .random()
+            .get_cheatsheet(
+                category
+            )
         )
 
-        if not item:
+        if not cheatsheet:
 
             await interaction.response.send_message(
-                "No formulas were found.",
+                f"No {category_name.lower()} "
+                "cheatsheet was found.",
                 ephemeral=True,
             )
 
             return
 
-        title = item.get(
-            "name",
-            item.get(
-                "title",
-                "Formula",
-            ),
+        title = cheatsheet.get(
+            "title",
+            category_name,
         )
 
-        formula = item.get(
-            "formula",
-            item.get(
-                "expression",
-                "",
-            ),
+        formulas = cheatsheet.get(
+            "formulas",
+            [],
         )
 
-        explanation = item.get(
-            "explanation",
-            item.get(
-                "description",
-                "",
-            ),
-        )
+        if not formulas:
+
+            await interaction.response.send_message(
+                f"No formulas were found in "
+                f"the {category_name.lower()} cheatsheet.",
+                ephemeral=True,
+            )
+
+            return
 
         embed = make_embed(
             title,
-            explanation,
+            "",
         )
 
-        embed.add_field(
-            name="Formula",
-            value=f"`{formula}`",
-            inline=False,
+        for item in formulas:
+
+            name = item.get(
+                "name",
+                "Formula",
+            )
+
+            formula = item.get(
+                "formula",
+                "",
+            )
+
+            if not formula:
+                continue
+
+            embed.add_field(
+                name=name,
+                value=f"`{formula}`",
+                inline=False,
+            )
+
+        embed.set_footer(
+            text=(
+                f"Mathdyl Academy • "
+                f"{category_name} Cheatsheet"
+            )
         )
 
         await interaction.response.send_message(
             embed=embed
+        )
+
+    # ==================================================
+    # /limit_formula
+    # ==================================================
+
+    @app_commands.command(
+        name="limit_formula",
+        description="Get the limit formula cheatsheet.",
+    )
+    async def limit_formula(
+        self,
+        interaction: discord.Interaction,
+    ):
+
+        await self.send_formula(
+            interaction,
+            "limits",
+            "Limit Formula",
+        )
+
+    # ==================================================
+    # /derivative_formula
+    # ==================================================
+
+    @app_commands.command(
+        name="derivative_formula",
+        description="Get the derivative formula cheatsheet.",
+    )
+    async def derivative_formula(
+        self,
+        interaction: discord.Interaction,
+    ):
+
+        await self.send_formula(
+            interaction,
+            "derivatives",
+            "Derivative Formula",
+        )
+
+    # ==================================================
+    # /integral_formula
+    # ==================================================
+
+    @app_commands.command(
+        name="integral_formula",
+        description="Get the integral formula cheatsheet.",
+    )
+    async def integral_formula(
+        self,
+        interaction: discord.Interaction,
+    ):
+
+        await self.send_formula(
+            interaction,
+            "integrals",
+            "Integral Formula",
+        )
+
+    # ==================================================
+    # /quadratic_formula
+    # ==================================================
+
+    @app_commands.command(
+        name="quadratic_formula",
+        description="Get the quadratic formula cheatsheet.",
+    )
+    async def quadratic_formula(
+        self,
+        interaction: discord.Interaction,
+    ):
+
+        await self.send_formula(
+            interaction,
+            "quadratic",
+            "Quadratic Formula",
+        )
+
+    # ==================================================
+    # /trigonometry
+    # ==================================================
+
+    @app_commands.command(
+        name="trigonometry",
+        description="Get the trigonometry formula cheatsheet.",
+    )
+    async def trigonometry(
+        self,
+        interaction: discord.Interaction,
+    ):
+
+        await self.send_formula(
+            interaction,
+            "trigonometry",
+            "Trigonometry",
         )
 
 

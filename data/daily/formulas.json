@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Power Rule",
+    "formula": "d/dx [x^n] = n x^(n-1)",
+    "explanation": "The Power Rule is used to differentiate a function containing a power of x. Multiply the exponent by the coefficient, then decrease the exponent by 1."
+  },
+  {
+    "title": "Product Rule",
+    "formula": "d/dx [u·v] = u'v + uv'",
+    "explanation": "The Product Rule is used when differentiating the product of two functions."
+  },
+  {
+    "title": "Quotient Rule",
+    "formula": "d/dx [u/v] = (v u' - u v') / v²",
+    "explanation": "The Quotient Rule is used when differentiating one function divided by another."
+  },
+  {
+    "title": "Chain Rule",
+    "formula": "d/dx [f(g(x))] = f'(g(x)) · g'(x)",
+    "explanation": "The Chain Rule is used to differentiate composite functions. Differentiate the outer function first, then multiply by the derivative of the inner function."
+  },
+  {
+    "title": "Derivative of a Constant",
+    "formula": "d/dx [c] = 0",
+    "explanation": "The derivative of any constant is zero because a constant does not change as x changes."
+  },
+  {
+    "title": "Derivative of e^x",
+    "formula": "d/dx [e^x] = e^x",
+    "explanation": "The exponential function e^x is special because its derivative is the function itself."
+  },
+  {
+    "title": "Derivative of ln(x)",
+    "formula": "d/dx [ln(x)] = 1/x",
+    "explanation": "The derivative of the natural logarithm of x is the reciprocal of x."
+  },
+  {
+    "title": "Derivative of sin(x)",
+    "formula": "d/dx [sin(x)] = cos(x)",
+    "explanation": "The derivative of sine is cosine."
+  },
+  {
+    "title": "Derivative of cos(x)",
+    "formula": "d/dx [cos(x)] = -sin(x)",
+    "explanation": "The derivative of cosine is negative sine."
+  },
+  {
+    "title": "Derivative of tan(x)",
+    "formula": "d/dx [tan(x)] = sec²(x)",
+    "explanation": "The derivative of tangent is secant squared."
+  }
+]

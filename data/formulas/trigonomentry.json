@@ -1,0 +1,33 @@
+{
+  "title": "Trigonometry",
+  "formulas": [
+    {
+      "name": "Pythagorean Identity",
+      "formula": "sin²θ + cos²θ = 1"
+    },
+    {
+      "name": "Tangent Identity",
+      "formula": "tanθ = sinθ/cosθ"
+    },
+    {
+      "name": "Reciprocal Identity",
+      "formula": "cscθ = 1/sinθ"
+    },
+    {
+      "name": "Reciprocal Identity",
+      "formula": "secθ = 1/cosθ"
+    },
+    {
+      "name": "Reciprocal Identity",
+      "formula": "cotθ = 1/tanθ"
+    },
+    {
+      "name": "Pythagorean Identity",
+      "formula": "1 + tan²θ = sec²θ"
+    },
+    {
+      "name": "Pythagorean Identity",
+      "formula": "1 + cot²θ = csc²θ"
+    }
+  ]
+}

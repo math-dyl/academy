@@ -117,10 +117,10 @@ class MathdylBot(
             "src.cogs.general",
             "src.cogs.formulas",
             "src.cogs.daily",
-            "src.cogs.problems",
             "src.cogs.courses",
-            "src.cogs.quizzes",
-            "src.cogs.launchers"
+            "src.cogs.launchers",
+            "src.cogs.scheduler",
+            "src.cogs.ask"
         ]
 
         for extension in extensions:

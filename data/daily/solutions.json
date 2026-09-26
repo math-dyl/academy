@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Polynomial Derivative",
+    "problem": "Find the derivative of f(x) = 3x⁴ - 5x³ + 2x² - 7x + 4.",
+    "solution": "f'(x) = 12x³ - 15x² + 4x - 7",
+    "explanation": "Apply the Power Rule to each term: 3x⁴ becomes 12x³, -5x³ becomes -15x², 2x² becomes 4x, -7x becomes -7, and the constant 4 becomes 0."
+  },
+  {
+    "title": "Quadratic Equation",
+    "problem": "Solve x² - 7x + 12 = 0.",
+    "solution": "x = 3 or x = 4",
+    "explanation": "Factor the quadratic: x² - 7x + 12 = (x - 3)(x - 4). Setting each factor equal to zero gives x = 3 and x = 4."
+  },
+  {
+    "title": "Limit Evaluation",
+    "problem": "Evaluate lim(x→2) (x² + 3x - 10)/(x - 2).",
+    "solution": "7",
+    "explanation": "Factor the numerator: x² + 3x - 10 = (x - 2)(x + 5). Cancel x - 2, leaving x + 5. Substituting x = 2 gives 7."
+  },
+  {
+    "title": "Simplifying a Rational Expression",
+    "problem": "Simplify (x² - 9)/(x - 3), where x ≠ 3.",
+    "solution": "x + 3",
+    "explanation": "Factor the numerator using the difference of squares: x² - 9 = (x - 3)(x + 3). Cancel the common factor x - 3, leaving x + 3."
+  },
+  {
+    "title": "Product Rule",
+    "problem": "Find the derivative of y = x² sin(x).",
+    "solution": "y' = 2x sin(x) + x² cos(x)",
+    "explanation": "Using the Product Rule, (uv)' = u'v + uv'. Let u = x² and v = sin(x). Then u' = 2x and v' = cos(x), giving y' = 2x sin(x) + x² cos(x)."
+  },
+  {
+    "title": "Chain Rule",
+    "problem": "Find the derivative of y = (3x² + 1)⁵.",
+    "solution": "y' = 30x(3x² + 1)⁴",
+    "explanation": "Using the Chain Rule, differentiate the outer power first: 5(3x² + 1)⁴. Then multiply by the derivative of the inner function, 6x. Therefore y' = 30x(3x² + 1)⁴."
+  },
+  {
+    "title": "System of Equations",
+    "problem": "Solve the system: 2x + y = 7 and x - y = 2.",
+    "solution": "x = 3, y = 1",
+    "explanation": "Add the two equations: (2x + y) + (x - y) = 7 + 2, giving 3x = 9. Thus x = 3. Substitute x = 3 into x - y = 2 to get y = 1."
+  },
+  {
+    "title": "Exponent Laws",
+    "problem": "Simplify (x³ · x⁵)/x².",
+    "solution": "x⁶",
+    "explanation": "When multiplying powers with the same base, add the exponents: x³ · x⁵ = x⁸. When dividing, subtract the exponents: x⁸/x² = x⁶."
+  }
+]

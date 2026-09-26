@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Differentiate a Polynomial",
+    "problem": "Find the derivative of f(x) = 3x⁴ - 5x³ + 2x² - 7x + 4."
+  },
+  {
+    "title": "Evaluate a Limit",
+    "problem": "Evaluate lim(x→2) (x² + 3x - 10)/(x - 2)."
+  },
+  {
+    "title": "Solve a Quadratic Equation",
+    "problem": "Solve x² - 7x + 12 = 0."
+  },
+  {
+    "title": "Simplify an Expression",
+    "problem": "Simplify (x² - 9)/(x - 3), where x ≠ 3."
+  },
+  {
+    "title": "Derivative Using the Product Rule",
+    "problem": "Find the derivative of y = x² sin(x)."
+  },
+  {
+    "title": "Derivative Using the Chain Rule",
+    "problem": "Find the derivative of y = (3x² + 1)⁵."
+  },
+  {
+    "title": "Find the Slope",
+    "problem": "Find the slope of the tangent line to f(x) = x³ - 4x at x = 2."
+  },
+  {
+    "title": "Solve the System",
+    "problem": "Solve the system: 2x + y = 7 and x - y = 2."
+  },
+  {
+    "title": "Exponent Laws",
+    "problem": "Simplify (x³ · x⁵)/x²."
+  },
+  {
+    "title": "Radical Expression",
+    "problem": "Simplify √50 + 2√8."
+  }
+]

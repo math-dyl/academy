@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import random
-
 
 class FormulaService:
 
@@ -9,44 +7,21 @@ class FormulaService:
         self,
         content_service,
     ):
-
         self.content = content_service
 
-    def all(self) -> list[dict]:
+    def get_cheatsheet(
+        self,
+        category: str,
+    ) -> dict | None:
 
-        data = self.content.load_general(
-            "formulas.json",
-            [],
+        category = category.strip().lower()
+
+        data = self.content.load_formula(
+            f"{category}.json",
+            None,
         )
 
-        return self._as_list(data)
-
-    def random(self) -> dict | None:
-
-        items = self.all()
-
-        if not items:
+        if not isinstance(data, dict):
             return None
 
-        return random.choice(items)
-
-    @staticmethod
-    def _as_list(data):
-
-        if isinstance(data, list):
-            return data
-
-        if isinstance(data, dict):
-
-            formulas = data.get(
-                "formulas",
-                [],
-            )
-
-            if isinstance(
-                formulas,
-                list,
-            ):
-                return formulas
-
-        return []
+        return data
