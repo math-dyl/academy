@@ -1,0 +1,242 @@
+[
+  {
+    "id": "practice-1",
+    "question": "Simplify (4x + 7) + (3x - 2).",
+    "options": [
+      "7x + 5",
+      "7x + 9",
+      "x + 5",
+      "12x + 5"
+    ],
+    "answer": "7x + 5",
+    "explanation": "Combine like terms: 4x + 3x = 7x and 7 - 2 = 5. Therefore, the result is 7x + 5."
+  },
+  {
+    "id": "practice-2",
+    "question": "Simplify (9a - 4) - (3a + 2).",
+    "options": [
+      "6a - 6",
+      "6a - 2",
+      "12a - 6",
+      "6a + 6"
+    ],
+    "answer": "6a - 6",
+    "explanation": "Distribute the negative sign: 9a - 4 - 3a - 2. Combine like terms to get 6a - 6."
+  },
+  {
+    "id": "practice-3",
+    "question": "Multiply 5x² by 3x⁴.",
+    "options": [
+      "8x⁶",
+      "15x⁶",
+      "15x⁸",
+      "8x⁸"
+    ],
+    "answer": "15x⁶",
+    "explanation": "Multiply the coefficients: 5 × 3 = 15. Add the exponents of x: 2 + 4 = 6. Therefore, the answer is 15x⁶."
+  },
+  {
+    "id": "practice-4",
+    "question": "Simplify 4a(2a² - 3a + 5).",
+    "options": [
+      "8a³ - 12a² + 20a",
+      "8a² - 12a + 20",
+      "6a³ - 7a² + 9a",
+      "8a³ - 12a + 20"
+    ],
+    "answer": "8a³ - 12a² + 20a",
+    "explanation": "Distribute 4a to every term: 4a(2a²) = 8a³, 4a(-3a) = -12a², and 4a(5) = 20a."
+  },
+  {
+    "id": "practice-5",
+    "question": "Multiply (x + 4)(x + 2).",
+    "options": [
+      "x² + 6x + 8",
+      "x² + 8x + 6",
+      "x² + 4x + 8",
+      "x² + 2x + 4"
+    ],
+    "answer": "x² + 6x + 8",
+    "explanation": "Multiply each term: x² + 2x + 4x + 8. Combine 2x and 4x to get 6x."
+  },
+  {
+    "id": "practice-6",
+    "question": "Expand -3(4x - 5).",
+    "options": [
+      "-12x - 15",
+      "-12x + 15",
+      "12x - 15",
+      "12x + 15"
+    ],
+    "answer": "-12x + 15",
+    "explanation": "Distribute -3 to both terms: -3(4x) = -12x and -3(-5) = 15. Therefore, the result is -12x + 15."
+  },
+  {
+    "id": "practice-7",
+    "question": "Simplify 18x⁵ / 6x².",
+    "options": [
+      "3x³",
+      "3x⁷",
+      "12x³",
+      "3x²"
+    ],
+    "answer": "3x³",
+    "explanation": "Divide the coefficients: 18 ÷ 6 = 3. Subtract the exponents: x⁵ / x² = x³. Therefore, the answer is 3x³."
+  },
+  {
+    "id": "practice-8",
+    "question": "Simplify (16x³ + 12x² - 8x) / 4x.",
+    "options": [
+      "4x² + 3x - 2",
+      "4x³ + 3x² - 2",
+      "4x² + 3x + 2",
+      "12x² + 8x - 4"
+    ],
+    "answer": "4x² + 3x - 2",
+    "explanation": "Divide each term by 4x: 16x³/(4x) = 4x², 12x²/(4x) = 3x, and -8x/(4x) = -2."
+  },
+  {
+    "id": "practice-9",
+    "question": "Simplify (x³ × x⁴) / x².",
+    "options": [
+      "x⁵",
+      "x⁶",
+      "x⁷",
+      "x⁹"
+    ],
+    "answer": "x⁵",
+    "explanation": "First add exponents when multiplying: x³ × x⁴ = x⁷. Then subtract 2 when dividing: x⁷ / x² = x⁵."
+  },
+  {
+    "id": "practice-10",
+    "question": "Simplify 2x(x + 5) + 3x².",
+    "options": [
+      "5x² + 10x",
+      "5x² + 5x",
+      "2x² + 10x",
+      "6x² + 10x"
+    ],
+    "answer": "5x² + 10x",
+    "explanation": "Distribute 2x: 2x² + 10x. Then combine 2x² + 3x² to get 5x² + 10x."
+  },
+  {
+    "id": "practice-11",
+    "question": "Simplify 3(2x + 4) - x.",
+    "options": [
+      "5x + 12",
+      "6x + 11",
+      "5x + 4",
+      "7x + 12"
+    ],
+    "answer": "5x + 12",
+    "explanation": "Distribute 3: 6x + 12 - x. Combine 6x - x = 5x, giving 5x + 12."
+  },
+  {
+    "id": "practice-12",
+    "question": "Simplify 7(2a - 3) + 4a.",
+    "options": [
+      "18a - 21",
+      "14a - 21",
+      "18a - 3",
+      "11a - 21"
+    ],
+    "answer": "18a - 21",
+    "explanation": "Distribute 7: 14a - 21. Add 4a to get 18a - 21."
+  },
+  {
+    "id": "practice-13",
+    "question": "Simplify (3x + 2)(x + 4).",
+    "options": [
+      "3x² + 14x + 8",
+      "3x² + 12x + 8",
+      "3x² + 6x + 8",
+      "3x² + 14x + 6"
+    ],
+    "answer": "3x² + 14x + 8",
+    "explanation": "Multiply each term: 3x·x = 3x², 3x·4 = 12x, 2·x = 2x, and 2·4 = 8. Combine 12x + 2x = 14x."
+  },
+  {
+    "id": "practice-14",
+    "question": "Simplify 20a⁷ / 5a³.",
+    "options": [
+      "4a⁴",
+      "4a¹⁰",
+      "15a⁴",
+      "25a⁴"
+    ],
+    "answer": "4a⁴",
+    "explanation": "Divide the coefficients: 20 ÷ 5 = 4. Subtract the exponents: a⁷ / a³ = a⁴. Therefore, the answer is 4a⁴."
+  },
+  {
+    "id": "practice-15",
+    "question": "Simplify 2(x + 3) + 4(x - 1).",
+    "options": [
+      "6x + 2",
+      "6x + 10",
+      "2x + 2",
+      "6x - 2"
+    ],
+    "answer": "6x + 2",
+    "explanation": "Distribute: 2x + 6 + 4x - 4. Combine like terms: 2x + 4x = 6x and 6 - 4 = 2."
+  },
+  {
+    "id": "practice-16",
+    "question": "Simplify 3x² + 2x - (x² - 4x + 5).",
+    "options": [
+      "2x² + 6x - 5",
+      "4x² - 2x + 5",
+      "2x² - 2x - 5",
+      "4x² + 6x - 5"
+    ],
+    "answer": "2x² + 6x - 5",
+    "explanation": "Distribute the negative sign: 3x² + 2x - x² + 4x - 5. Combine like terms to get 2x² + 6x - 5."
+  },
+  {
+    "id": "practice-17",
+    "question": "Simplify (6x² + 9x) / 3x.",
+    "options": [
+      "2x + 3",
+      "2x² + 3x",
+      "3x + 2",
+      "2x + 9"
+    ],
+    "answer": "2x + 3",
+    "explanation": "Divide each term by 3x: 6x²/(3x) = 2x and 9x/(3x) = 3. Therefore, the result is 2x + 3."
+  },
+  {
+    "id": "practice-18",
+    "question": "Simplify 5x²(x + 2).",
+    "options": [
+      "5x³ + 10x²",
+      "5x² + 10x",
+      "5x³ + 10x",
+      "6x³ + 10x²"
+    ],
+    "answer": "5x³ + 10x²",
+    "explanation": "Distribute 5x²: 5x²(x) = 5x³ and 5x²(2) = 10x²."
+  },
+  {
+    "id": "practice-19",
+    "question": "Simplify (2x + 3)(x - 4).",
+    "options": [
+      "2x² - 5x - 12",
+      "2x² + 5x - 12",
+      "2x² - 8x + 3",
+      "2x² - 5x + 12"
+    ],
+    "answer": "2x² - 5x - 12",
+    "explanation": "Multiply each term: 2x·x = 2x², 2x(-4) = -8x, 3x = 3x, and 3(-4) = -12. Combine -8x + 3x = -5x."
+  },
+  {
+    "id": "practice-20",
+    "question": "Simplify 3(x + 2) + 2(2x - 1) - 4.",
+    "options": [
+      "7x + 2",
+      "7x + 8",
+      "5x + 2",
+      "7x - 2"
+    ],
+    "answer": "7x + 2",
+    "explanation": "Distribute: 3x + 6 + 4x - 2 - 4. Combine the x terms: 3x + 4x = 7x. Combine constants: 6 - 2 - 4 = 0. Therefore, the result is 7x."
+  }
+]

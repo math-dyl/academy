@@ -30,8 +30,43 @@ class CourseService:
                     practice.json
                     quizzes.json
 
-    Lesson examples are optional and are stored
-    directly inside lessons.json.
+    lessons.json contains the learning content
+    for the topic.
+
+    Content types may include:
+
+        - lesson
+        - example
+        - concept_check
+
+    Example:
+
+    {
+        "content": [
+            {
+                "type": "lesson",
+                "title": "Natural Numbers",
+                "content": "..."
+            },
+            {
+                "type": "example",
+                "title": "Comparing Numbers",
+                "question": "...",
+                "solution": "...",
+                "answer": "..."
+            },
+            {
+                "type": "concept_check",
+                "question": "...",
+                "options": [...],
+                "correct_answer": "B",
+                "explanation": "..."
+            }
+        ]
+    }
+
+    Practice and quiz questions remain separate
+    from the learning content.
     """
 
     REQUIRED_FILES = {
@@ -57,6 +92,7 @@ class CourseService:
     # ==================================================
 
     def discover(self) -> list[Topic]:
+
         topics: list[Topic] = []
 
         if not self.courses_dir.exists():
@@ -65,12 +101,14 @@ class CourseService:
         for course_dir in sorted(
             self.courses_dir.iterdir()
         ):
+
             if not course_dir.is_dir():
                 continue
 
             for topic_dir in sorted(
                 course_dir.iterdir()
             ):
+
                 if not topic_dir.is_dir():
                     continue
 
@@ -105,6 +143,7 @@ class CourseService:
     # ==================================================
 
     def courses(self) -> list[str]:
+
         return sorted(
             {
                 item.course
@@ -143,6 +182,7 @@ class CourseService:
         topic = topic.strip().lower()
 
         for item in self.discover():
+
             if (
                 item.course.lower() == course
                 and item.topic.lower() == topic
@@ -162,6 +202,7 @@ class CourseService:
         filename: str,
         default=None,
     ):
+
         topic_data = self.get_topic(
             course,
             topic,
@@ -243,10 +284,10 @@ class CourseService:
             return None
 
     # ==================================================
-    # LESSONS
+    # CONTENT
     # ==================================================
 
-    def lessons(
+    def content_items(
         self,
         course: str,
         topic: str,
@@ -259,7 +300,38 @@ class CourseService:
             [],
         )
 
-        return self._as_list(data)
+        return self._as_content_list(
+            data
+        )
+
+    # ==================================================
+    # LESSONS COMPATIBILITY
+    # ==================================================
+
+    def lessons(
+        self,
+        course: str,
+        topic: str,
+    ) -> list:
+
+        """
+        Compatibility method.
+
+        Returns the complete learning content,
+        including lessons, examples, and
+        concept checks.
+
+        Existing code calling:
+
+            course_service.lessons(...)
+
+        will continue to work.
+        """
+
+        return self.content_items(
+            course,
+            topic,
+        )
 
     # ==================================================
     # PRACTICE
@@ -278,7 +350,9 @@ class CourseService:
             [],
         )
 
-        return self._as_list(data)
+        return self._as_list(
+            data
+        )
 
     # ==================================================
     # QUIZZES
@@ -297,19 +371,73 @@ class CourseService:
             [],
         )
 
-        return self._as_list(data)
+        return self._as_list(
+            data
+        )
 
     # ==================================================
     # INTERNAL
     # ==================================================
 
     @staticmethod
-    def _as_list(data) -> list:
+    def _as_content_list(
+        data,
+    ) -> list:
+
+        # ----------------------------------------------
+        # Direct list
+        # ----------------------------------------------
 
         if isinstance(data, list):
+
             return data
 
+        # ----------------------------------------------
+        # Object containing content
+        # ----------------------------------------------
+
         if isinstance(data, dict):
+
+            possible_keys = [
+                "content",
+                "items",
+                "lessons",
+                "data",
+            ]
+
+            for key in possible_keys:
+
+                value = data.get(
+                    key
+                )
+
+                if isinstance(
+                    value,
+                    list,
+                ):
+                    return value
+
+        return []
+
+    # ==================================================
+    # GENERIC LIST
+    # ==================================================
+
+    @staticmethod
+    def _as_list(
+        data,
+    ) -> list:
+
+        if isinstance(
+            data,
+            list,
+        ):
+            return data
+
+        if isinstance(
+            data,
+            dict,
+        ):
 
             possible_keys = [
                 "items",
@@ -322,7 +450,9 @@ class CourseService:
 
             for key in possible_keys:
 
-                value = data.get(key)
+                value = data.get(
+                    key
+                )
 
                 if isinstance(
                     value,

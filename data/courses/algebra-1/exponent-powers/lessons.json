@@ -1,0 +1,525 @@
+{
+  "id": "exponents-and-powers",
+  "title": "Exponents and Powers",
+  "description": "Learn how exponents represent repeated multiplication and how to evaluate and simplify expressions using the laws of exponents, including zero and negative exponents, powers of powers, powers of products and quotients, fractional exponents, and scientific notation.",
+  "content": [
+    {
+      "type": "lesson",
+      "title": "What Is an Exponent?",
+      "content": "An exponent tells you how many times a number or expression is used as a factor in repeated multiplication. In the expression 3^4, the number 3 is multiplied by itself 4 times.",
+      "formula": "a^n = a × a × a × ... × a (n factors)"
+    },
+    {
+      "type": "example",
+      "title": "Understanding an Exponent",
+      "question": "What does 5^3 mean?",
+      "solution": "The exponent 3 tells us to use 5 as a factor three times. Therefore, 5^3 = 5 × 5 × 5.",
+      "answer": "5 × 5 × 5"
+    },
+    {
+      "type": "concept_check",
+      "question": "What does the exponent 4 mean in 7^4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 is added 4 times"
+        },
+        {
+          "id": "B",
+          "text": "7 is multiplied by itself 4 times"
+        },
+        {
+          "id": "C",
+          "text": "4 is multiplied by itself 7 times"
+        },
+        {
+          "id": "D",
+          "text": "7 is divided by 4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The exponent tells how many times the base is used as a factor. Thus, 7^4 = 7 × 7 × 7 × 7."
+    },
+    {
+      "type": "lesson",
+      "title": "Base and Exponent",
+      "content": "A power has two main parts: the base and the exponent. The base is the number or expression being multiplied, while the exponent tells how many times the base is used as a factor.",
+      "formula": "a^n: a = base, n = exponent"
+    },
+    {
+      "type": "example",
+      "title": "Identifying the Base and Exponent",
+      "question": "Identify the base and exponent in 9^5.",
+      "solution": "The number 9 is the base because it is being multiplied repeatedly. The number 5 is the exponent because it tells us how many times 9 is used as a factor.",
+      "answer": "Base = 9, Exponent = 5"
+    },
+    {
+      "type": "concept_check",
+      "question": "In 4^6, what is the base?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The base is the number being repeatedly multiplied. In 4^6, the base is 4."
+    },
+    {
+      "type": "lesson",
+      "title": "Writing Repeated Multiplication",
+      "content": "Repeated multiplication can be written more compactly using exponents. Count how many times the same factor appears, then use that count as the exponent.",
+      "formula": "a × a × a × a = a^4"
+    },
+    {
+      "type": "example",
+      "title": "Writing a Product as a Power",
+      "question": "Write 6 × 6 × 6 × 6 × 6 using an exponent.",
+      "solution": "The factor 6 appears five times, so the exponent is 5.",
+      "answer": "6^5"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which power represents 3 × 3 × 3 × 3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3^3"
+        },
+        {
+          "id": "B",
+          "text": "4^3"
+        },
+        {
+          "id": "C",
+          "text": "3^4"
+        },
+        {
+          "id": "D",
+          "text": "4^4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "The factor 3 appears four times, so the expression is 3^4."
+    },
+    {
+      "type": "lesson",
+      "title": "Evaluating Powers",
+      "content": "To evaluate a power, rewrite it as repeated multiplication and then calculate the product.",
+      "formula": "a^n = repeated multiplication of a, n times"
+    },
+    {
+      "type": "example",
+      "title": "Evaluating a Power",
+      "question": "Evaluate 2^5.",
+      "solution": "Rewrite the power as repeated multiplication: 2^5 = 2 × 2 × 2 × 2 × 2. Multiplying gives 32.",
+      "answer": "32"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is 4^3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "16"
+        },
+        {
+          "id": "C",
+          "text": "64"
+        },
+        {
+          "id": "D",
+          "text": "81"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "4^3 = 4 × 4 × 4 = 64."
+    },
+    {
+      "type": "lesson",
+      "title": "Exponent of 0",
+      "content": "Any nonzero number raised to the zero power equals 1. This rule is consistent with the quotient law for exponents because dividing a nonzero power by itself leaves 1.",
+      "formula": "a^0 = 1, a ≠ 0"
+    },
+    {
+      "type": "example",
+      "title": "Zero Exponent",
+      "question": "Evaluate 12^0.",
+      "solution": "Any nonzero number raised to the zero power equals 1.",
+      "answer": "1"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is (-7)^0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-7"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Since -7 is nonzero, (-7)^0 = 1."
+    },
+    {
+      "type": "lesson",
+      "title": "Negative Exponents",
+      "content": "A negative exponent indicates the reciprocal of the corresponding positive power. Move the base from the numerator to the denominator, or from the denominator to the numerator, and make the exponent positive.",
+      "formula": "a^(-n) = 1/a^n, a ≠ 0"
+    },
+    {
+      "type": "example",
+      "title": "Evaluating a Negative Exponent",
+      "question": "Rewrite 2^(-3) using a positive exponent.",
+      "solution": "Move 2 to the denominator and change the exponent from -3 to 3. Thus, 2^(-3) = 1/2^3 = 1/8.",
+      "answer": "1/8"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which is equivalent to 5^(-2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-25"
+        },
+        {
+          "id": "B",
+          "text": "1/25"
+        },
+        {
+          "id": "C",
+          "text": "25"
+        },
+        {
+          "id": "D",
+          "text": "-1/25"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "A negative exponent means reciprocal: 5^(-2) = 1/5^2 = 1/25."
+    },
+    {
+      "type": "lesson",
+      "title": "Product of Powers",
+      "content": "When multiplying powers with the same nonzero base, keep the common base and add the exponents.",
+      "formula": "a^m × a^n = a^(m+n)"
+    },
+    {
+      "type": "example",
+      "title": "Multiplying Powers",
+      "question": "Simplify x^3 × x^5.",
+      "solution": "The bases are the same, so add the exponents: x^(3+5) = x^8.",
+      "answer": "x^8"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 2^4 × 2^3.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2^7"
+        },
+        {
+          "id": "B",
+          "text": "2^12"
+        },
+        {
+          "id": "C",
+          "text": "4^7"
+        },
+        {
+          "id": "D",
+          "text": "2^1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "When multiplying powers with the same base, add the exponents: 2^4 × 2^3 = 2^(4+3) = 2^7."
+    },
+    {
+      "type": "lesson",
+      "title": "Quotient of Powers",
+      "content": "When dividing powers with the same nonzero base, keep the common base and subtract the exponent in the denominator from the exponent in the numerator.",
+      "formula": "a^m / a^n = a^(m-n), a ≠ 0"
+    },
+    {
+      "type": "example",
+      "title": "Dividing Powers",
+      "question": "Simplify y^9 / y^4.",
+      "solution": "Subtract the exponents: y^(9-4) = y^5.",
+      "answer": "y^5"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 3^8 / 3^5.",
+      "options": [
+        {
+          "id": "A",
+          "text": "3^13"
+        },
+        {
+          "id": "B",
+          "text": "3^3"
+        },
+        {
+          "id": "C",
+          "text": "3^40"
+        },
+        {
+          "id": "D",
+          "text": "3^2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "For a quotient with the same base, subtract the exponents: 3^(8-5) = 3^3."
+    },
+    {
+      "type": "lesson",
+      "title": "Power of a Power",
+      "content": "When a power is raised to another power, keep the base and multiply the exponents.",
+      "formula": "(a^m)^n = a^(mn)"
+    },
+    {
+      "type": "example",
+      "title": "Power Raised to a Power",
+      "question": "Simplify (x^3)^4.",
+      "solution": "Multiply the exponents: x^(3×4) = x^12.",
+      "answer": "x^12"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify (2^3)^4.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2^7"
+        },
+        {
+          "id": "B",
+          "text": "2^12"
+        },
+        {
+          "id": "C",
+          "text": "8^4"
+        },
+        {
+          "id": "D",
+          "text": "2^1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Multiply the exponents: (2^3)^4 = 2^(3×4) = 2^12."
+    },
+    {
+      "type": "lesson",
+      "title": "Power of a Product",
+      "content": "When a product is raised to a power, the exponent applies to every factor inside the parentheses.",
+      "formula": "(ab)^n = a^n b^n"
+    },
+    {
+      "type": "example",
+      "title": "Power of a Product",
+      "question": "Simplify (3x)^4.",
+      "solution": "Apply the exponent to both 3 and x: (3x)^4 = 3^4x^4 = 81x^4.",
+      "answer": "81x^4"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify (2x)^3.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x^3"
+        },
+        {
+          "id": "B",
+          "text": "6x^3"
+        },
+        {
+          "id": "C",
+          "text": "8x^3"
+        },
+        {
+          "id": "D",
+          "text": "8x"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "(2x)^3 = 2^3x^3 = 8x^3."
+    },
+    {
+      "type": "lesson",
+      "title": "Power of a Quotient",
+      "content": "When a quotient is raised to a power, the exponent applies to both the numerator and denominator.",
+      "formula": "(a/b)^n = a^n/b^n, b ≠ 0"
+    },
+    {
+      "type": "example",
+      "title": "Power of a Quotient",
+      "question": "Simplify (x/3)^2.",
+      "solution": "Apply the exponent to both the numerator and denominator: (x/3)^2 = x^2/3^2 = x^2/9.",
+      "answer": "x^2/9"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify (2/5)^3.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2/125"
+        },
+        {
+          "id": "B",
+          "text": "8/125"
+        },
+        {
+          "id": "C",
+          "text": "6/15"
+        },
+        {
+          "id": "D",
+          "text": "8/15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "(2/5)^3 = 2^3/5^3 = 8/125."
+    },
+    {
+      "type": "lesson",
+      "title": "Negative and Fractional Exponents",
+      "content": "A negative exponent represents a reciprocal, while a fractional exponent represents a root. The denominator of the fractional exponent indicates the root, and the numerator indicates the power.",
+      "formula": "a^(1/n) = nth root of a; a^(m/n) = nth root of (a^m)"
+    },
+    {
+      "type": "example",
+      "title": "Fractional Exponent",
+      "question": "Evaluate 16^(1/2).",
+      "solution": "A power of 1/2 represents a square root. Therefore, 16^(1/2) = √16 = 4.",
+      "answer": "4"
+    },
+    {
+      "type": "concept_check",
+      "question": "What does 27^(1/3) represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "27 squared"
+        },
+        {
+          "id": "B",
+          "text": "The square root of 27"
+        },
+        {
+          "id": "C",
+          "text": "The cube root of 27"
+        },
+        {
+          "id": "D",
+          "text": "27 divided by 3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "The denominator 3 indicates a cube root, so 27^(1/3) = ∛27 = 3."
+    },
+    {
+      "type": "lesson",
+      "title": "Scientific Notation",
+      "content": "Scientific notation is a way to write very large or very small numbers using a number between 1 and 10 multiplied by a power of 10. The exponent tells how many places the decimal point moves.",
+      "formula": "a × 10^n, where 1 ≤ |a| < 10"
+    },
+    {
+      "type": "example",
+      "title": "Writing Scientific Notation",
+      "question": "Write 4500000 in scientific notation.",
+      "solution": "Move the decimal point six places to the left to obtain 4.5. Therefore, 4500000 = 4.5 × 10^6.",
+      "answer": "4.5 × 10^6"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which is the scientific notation of 0.00032?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.2 × 10^4"
+        },
+        {
+          "id": "B",
+          "text": "3.2 × 10^-4"
+        },
+        {
+          "id": "C",
+          "text": "32 × 10^-4"
+        },
+        {
+          "id": "D",
+          "text": "0.32 × 10^-3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The decimal moves four places to the right to become 3.2, so the exponent is -4: 0.00032 = 3.2 × 10^-4."
+    },
+    {
+      "type": "lesson",
+      "title": "Applying Exponent Rules",
+      "content": "Exponent rules can be combined when simplifying expressions. First identify the structure of the expression, then apply the appropriate rule. Keep track of signs, parentheses, and whether the bases are actually the same.",
+      "formula": "a^m × a^n = a^(m+n); a^m/a^n = a^(m-n); (a^m)^n = a^(mn); (ab)^n = a^n b^n; (a/b)^n = a^n/b^n"
+    },
+    {
+      "type": "example",
+      "title": "Combining Exponent Rules",
+      "question": "Simplify (x^2)^3 × x^4.",
+      "solution": "First apply the power-of-a-power rule: (x^2)^3 = x^6. Then multiply powers with the same base: x^6 × x^4 = x^10.",
+      "answer": "x^10"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify (a^2)^3 × a^4.",
+      "options": [
+        {
+          "id": "A",
+          "text": "a^9"
+        },
+        {
+          "id": "B",
+          "text": "a^10"
+        },
+        {
+          "id": "C",
+          "text": "a^12"
+        },
+        {
+          "id": "D",
+          "text": "a^8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "First, (a^2)^3 = a^6. Then a^6 × a^4 = a^10 by adding the exponents."
+    }
+  ]
+}

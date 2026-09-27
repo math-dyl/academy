@@ -1,0 +1,488 @@
+{
+  "id": "operations-on-expressions",
+  "title": "Operations on Expressions",
+  "description": "Learn how to add, subtract, multiply, and divide algebraic expressions using like terms, the distributive property, exponent rules, and algebraic fractions.",
+  "content": [
+    {
+      "type": "lesson",
+      "title": "Adding Algebraic Expressions",
+      "content": "To add algebraic expressions, remove parentheses and combine like terms. Like terms have the same variables raised to the same powers. Add or subtract only their coefficients while keeping the variable part unchanged.",
+      "formula": "(ax + b) + (cx + d) = (a + c)x + (b + d)"
+    },
+    {
+      "type": "example",
+      "title": "Adding Two Expressions",
+      "question": "Add (3x + 5) and (4x - 2).",
+      "solution": "Write the expressions together: (3x + 5) + (4x - 2). Combine like terms: 3x + 4x = 7x and 5 - 2 = 3.",
+      "answer": "7x + 3"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is the sum of (5x + 3) and (2x + 7)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7x + 10"
+        },
+        {
+          "id": "B",
+          "text": "3x + 10"
+        },
+        {
+          "id": "C",
+          "text": "7x + 4"
+        },
+        {
+          "id": "D",
+          "text": "10x + 7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Combine like terms: 5x + 2x = 7x and 3 + 7 = 10. Therefore, the sum is 7x + 10."
+    },
+    {
+      "type": "lesson",
+      "title": "Subtracting Algebraic Expressions",
+      "content": "To subtract algebraic expressions, distribute the negative sign across the expression being subtracted, then combine like terms. Every term inside the parentheses changes sign when a negative sign is distributed.",
+      "formula": "(ax + b) - (cx + d) = ax + b - cx - d"
+    },
+    {
+      "type": "example",
+      "title": "Subtracting Expressions",
+      "question": "Subtract (3x - 4) from (8x + 5).",
+      "solution": "Write the subtraction: (8x + 5) - (3x - 4). Distribute the negative sign: 8x + 5 - 3x + 4. Combine like terms: 8x - 3x = 5x and 5 + 4 = 9.",
+      "answer": "5x + 9"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify (9x + 6) - (4x + 2).",
+      "options": [
+        {
+          "id": "A",
+          "text": "5x + 4"
+        },
+        {
+          "id": "B",
+          "text": "13x + 8"
+        },
+        {
+          "id": "C",
+          "text": "5x + 8"
+        },
+        {
+          "id": "D",
+          "text": "13x + 4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Distribute the negative sign: 9x + 6 - 4x - 2. Combine like terms to get 5x + 4."
+    },
+    {
+      "type": "lesson",
+      "title": "Multiplying a Monomial by a Monomial",
+      "content": "When multiplying monomials, multiply their numerical coefficients and use the product of powers rule for variables with the same base. Add the exponents of matching variables.",
+      "formula": "a^m × a^n = a^(m+n)"
+    },
+    {
+      "type": "example",
+      "title": "Multiplying Monomials",
+      "question": "Multiply 3x² by 4x³.",
+      "solution": "Multiply the coefficients: 3 × 4 = 12. Add the exponents of x: x² × x³ = x⁵.",
+      "answer": "12x⁵"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is the product of 5a² and 2a³?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7a⁵"
+        },
+        {
+          "id": "B",
+          "text": "10a⁵"
+        },
+        {
+          "id": "C",
+          "text": "10a⁶"
+        },
+        {
+          "id": "D",
+          "text": "7a⁶"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Multiply the coefficients: 5 × 2 = 10. Add the exponents: a² × a³ = a⁵. Therefore, the product is 10a⁵."
+    },
+    {
+      "type": "lesson",
+      "title": "Multiplying a Monomial by a Polynomial",
+      "content": "To multiply a monomial by a polynomial, use the distributive property. Multiply the monomial by every term in the polynomial, then simplify the resulting terms.",
+      "formula": "a(b + c) = ab + ac"
+    },
+    {
+      "type": "example",
+      "title": "Monomial Times Polynomial",
+      "question": "Simplify 3x(2x² + 4x - 5).",
+      "solution": "Multiply 3x by each term: 3x(2x²) = 6x³, 3x(4x) = 12x², and 3x(-5) = -15x.",
+      "answer": "6x³ + 12x² - 15x"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 2a(3a² - 4a + 5).",
+      "options": [
+        {
+          "id": "A",
+          "text": "6a³ - 8a² + 10a"
+        },
+        {
+          "id": "B",
+          "text": "6a² - 8a + 10"
+        },
+        {
+          "id": "C",
+          "text": "5a³ - 2a² + 7a"
+        },
+        {
+          "id": "D",
+          "text": "6a³ - 8a + 10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Distribute 2a to every term: 2a(3a²) = 6a³, 2a(-4a) = -8a², and 2a(5) = 10a."
+    },
+    {
+      "type": "lesson",
+      "title": "Multiplying Polynomials",
+      "content": "To multiply two polynomials, multiply every term in the first polynomial by every term in the second polynomial. After multiplying, combine like terms.",
+      "formula": "(a + b)(c + d) = ac + ad + bc + bd"
+    },
+    {
+      "type": "example",
+      "title": "Multiplying Two Binomials",
+      "question": "Multiply (x + 3)(x + 5).",
+      "solution": "Multiply each term: x(x) = x², x(5) = 5x, 3(x) = 3x, and 3(5) = 15. Combine 5x and 3x.",
+      "answer": "x² + 8x + 15"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify (x + 2)(x + 4).",
+      "options": [
+        {
+          "id": "A",
+          "text": "x² + 6x + 8"
+        },
+        {
+          "id": "B",
+          "text": "x² + 8x + 6"
+        },
+        {
+          "id": "C",
+          "text": "x² + 4x + 8"
+        },
+        {
+          "id": "D",
+          "text": "x² + 2x + 4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Multiply each term: x² + 4x + 2x + 8. Combine 4x + 2x to get 6x, giving x² + 6x + 8."
+    },
+    {
+      "type": "lesson",
+      "title": "Distributive Property in Multiplication",
+      "content": "The distributive property allows multiplication to be applied to every term inside parentheses. This is especially useful when expanding algebraic expressions.",
+      "formula": "a(b + c) = ab + ac"
+    },
+    {
+      "type": "example",
+      "title": "Using the Distributive Property",
+      "question": "Expand -4(2x - 3).",
+      "solution": "Multiply -4 by each term: -4(2x) = -8x and -4(-3) = 12.",
+      "answer": "-8x + 12"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which expression is equivalent to 5(2x - 3)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10x - 15"
+        },
+        {
+          "id": "B",
+          "text": "10x - 3"
+        },
+        {
+          "id": "C",
+          "text": "7x - 15"
+        },
+        {
+          "id": "D",
+          "text": "10x + 15"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Distribute 5 to both terms: 5(2x) = 10x and 5(-3) = -15. Therefore, the result is 10x - 15."
+    },
+    {
+      "type": "lesson",
+      "title": "Dividing Monomials",
+      "content": "When dividing monomials with the same variable base, divide the coefficients and subtract the exponents of matching variables.",
+      "formula": "a^m / a^n = a^(m-n)"
+    },
+    {
+      "type": "example",
+      "title": "Dividing Monomials",
+      "question": "Simplify 12x⁵ / 3x².",
+      "solution": "Divide the coefficients: 12 ÷ 3 = 4. Subtract the exponents: x⁵ / x² = x³.",
+      "answer": "4x³"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 20a⁶ / 5a².",
+      "options": [
+        {
+          "id": "A",
+          "text": "4a⁴"
+        },
+        {
+          "id": "B",
+          "text": "4a⁸"
+        },
+        {
+          "id": "C",
+          "text": "15a⁴"
+        },
+        {
+          "id": "D",
+          "text": "25a⁴"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Divide the coefficients: 20 ÷ 5 = 4. Subtract the exponents: a⁶ / a² = a⁴. Therefore, the answer is 4a⁴."
+    },
+    {
+      "type": "lesson",
+      "title": "Dividing a Polynomial by a Monomial",
+      "content": "To divide a polynomial by a monomial, divide every term of the polynomial by the monomial. Simplify each term separately using the quotient rule for exponents.",
+      "formula": "(a + b + c) / d = a/d + b/d + c/d"
+    },
+    {
+      "type": "example",
+      "title": "Polynomial Divided by a Monomial",
+      "question": "Simplify (12x³ + 8x² - 4x) / 4x.",
+      "solution": "Divide each term by 4x: 12x³ / 4x = 3x², 8x² / 4x = 2x, and -4x / 4x = -1.",
+      "answer": "3x² + 2x - 1"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify (15x³ - 10x² + 5x) / 5x.",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x² - 2x + 1"
+        },
+        {
+          "id": "B",
+          "text": "3x³ - 2x² + 1"
+        },
+        {
+          "id": "C",
+          "text": "10x² - 5x + 1"
+        },
+        {
+          "id": "D",
+          "text": "3x² - 2x - 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Divide each term by 5x: 15x³/(5x) = 3x², -10x²/(5x) = -2x, and 5x/(5x) = 1."
+    },
+    {
+      "type": "lesson",
+      "title": "Operations with Exponents",
+      "content": "Exponent rules help simplify expressions during multiplication and division. When multiplying powers with the same base, add exponents. When dividing powers with the same base, subtract exponents. When raising a power to another power, multiply the exponents.",
+      "formula": "a^m × a^n = a^(m+n), a^m / a^n = a^(m-n), (a^m)^n = a^(mn)"
+    },
+    {
+      "type": "example",
+      "title": "Applying Exponent Rules",
+      "question": "Simplify (x³ × x⁵) / x².",
+      "solution": "First multiply x³ and x⁵ by adding the exponents: x⁸. Then divide by x² and subtract the exponents: x⁸⁻² = x⁶.",
+      "answer": "x⁶"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify (a⁴ × a³) / a².",
+      "options": [
+        {
+          "id": "A",
+          "text": "a⁵"
+        },
+        {
+          "id": "B",
+          "text": "a⁶"
+        },
+        {
+          "id": "C",
+          "text": "a⁹"
+        },
+        {
+          "id": "D",
+          "text": "a¹"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Add the exponents when multiplying: a⁴ × a³ = a⁷. Then subtract 2 when dividing: a⁷ / a² = a⁵."
+    },
+    {
+      "type": "lesson",
+      "title": "Simplifying After Operations",
+      "content": "After performing an operation such as addition, subtraction, multiplication, or division, always look for additional simplification. This may include combining like terms, applying exponent rules, or reducing numerical coefficients.",
+      "formula": "Perform the operation → Apply exponent rules → Combine like terms → Write in simplest form"
+    },
+    {
+      "type": "example",
+      "title": "Simplifying After Multiplication",
+      "question": "Simplify 2x(x + 3) + 4x².",
+      "solution": "First distribute 2x: 2x(x + 3) = 2x² + 6x. Then combine like terms with 4x²: 2x² + 4x² + 6x = 6x² + 6x.",
+      "answer": "6x² + 6x"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 3x(x + 2) + 2x².",
+      "options": [
+        {
+          "id": "A",
+          "text": "5x² + 6x"
+        },
+        {
+          "id": "B",
+          "text": "5x² + 2x"
+        },
+        {
+          "id": "C",
+          "text": "3x² + 6x"
+        },
+        {
+          "id": "D",
+          "text": "6x² + 5x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Distribute 3x: 3x² + 6x. Then add 2x²: 3x² + 2x² + 6x = 5x² + 6x."
+    },
+    {
+      "type": "lesson",
+      "title": "Combining Multiple Operations",
+      "content": "Expressions may contain several operations at once. Follow the correct order: simplify parentheses first, perform multiplication and division, then perform addition and subtraction. After each step, combine like terms when possible.",
+      "formula": "Parentheses → Exponents → Multiplication/Division → Addition/Subtraction"
+    },
+    {
+      "type": "example",
+      "title": "Multiple Operations",
+      "question": "Simplify 2(x + 3) + 3x - 4.",
+      "solution": "Distribute 2: 2x + 6 + 3x - 4. Combine like terms: 2x + 3x = 5x and 6 - 4 = 2.",
+      "answer": "5x + 2"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 3(2x - 1) + 2x + 5.",
+      "options": [
+        {
+          "id": "A",
+          "text": "8x + 2"
+        },
+        {
+          "id": "B",
+          "text": "6x + 4"
+        },
+        {
+          "id": "C",
+          "text": "8x - 2"
+        },
+        {
+          "id": "D",
+          "text": "5x + 2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Distribute 3: 6x - 3 + 2x + 5. Combine like terms: 6x + 2x = 8x and -3 + 5 = 2. Therefore, the result is 8x + 2."
+    },
+    {
+      "type": "lesson",
+      "title": "Algebraic Fractions — Introduction",
+      "content": "An algebraic fraction is a fraction containing variables in the numerator, denominator, or both. Algebraic fractions can often be simplified by factoring and canceling common nonzero factors. When adding or subtracting algebraic fractions, a common denominator is usually required.",
+      "formula": "a/b + c/b = (a + c)/b, where b ≠ 0"
+    },
+    {
+      "type": "example",
+      "title": "Simplifying an Algebraic Fraction",
+      "question": "Simplify 6x² / 3x.",
+      "solution": "Divide the coefficients: 6 ÷ 3 = 2. Subtract the exponents of x: x² / x = x.",
+      "answer": "2x"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 8x³ / 4x.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x²"
+        },
+        {
+          "id": "B",
+          "text": "4x²"
+        },
+        {
+          "id": "C",
+          "text": "2x³"
+        },
+        {
+          "id": "D",
+          "text": "12x²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Divide the coefficients: 8 ÷ 4 = 2. Subtract the exponents: x³ / x = x². Therefore, the simplified expression is 2x²."
+    },
+    {
+      "type": "lesson",
+      "title": "Checking Your Work",
+      "content": "After performing operations on expressions, check your result by expanding carefully, combining terms again, or substituting a simple value for the variable into both the original and simplified expressions. If both forms give the same value, the simplification is consistent.",
+      "formula": "Original expression = Simplified expression"
+    },
+    {
+      "type": "example",
+      "title": "Checking an Equivalent Expression",
+      "question": "Check whether 2(x + 3) + x is equivalent to 3x + 6.",
+      "solution": "Expand the original expression: 2(x + 3) + x = 2x + 6 + x = 3x + 6. Both expressions are identical after simplification.",
+      "answer": "Yes, they are equivalent."
+    },
+    {
+      "type": "concept_check",
+      "question": "Which expression is equivalent to 2(x + 4) + 3x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5x + 8"
+        },
+        {
+          "id": "B",
+          "text": "5x + 4"
+        },
+        {
+          "id": "C",
+          "text": "2x + 12"
+        },
+        {
+          "id": "D",
+          "text": "6x + 8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Distribute 2: 2x + 8 + 3x. Combine like terms: 2x + 3x = 5x. Therefore, the equivalent expression is 5x + 8."
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "id": "simplifying-expressions",
+  "title": "Simplifying Expressions",
+  "description": "Learn how to simplify algebraic expressions by identifying and combining like terms, applying the distributive property, handling negative terms, fractions, and exponents, and recognizing equivalent expressions.",
+  "content": [
+    {
+      "type": "lesson",
+      "title": "What Does Simplifying Mean?",
+      "content": "Simplifying an algebraic expression means rewriting it in an equivalent form that is easier to understand or use. Simplification usually involves combining like terms, applying the distributive property, removing parentheses, and performing arithmetic operations.",
+      "formula": "Simplified expression = an equivalent expression with fewer or combined terms"
+    },
+    {
+      "type": "example",
+      "title": "Basic Simplification",
+      "question": "Simplify 3x + 5x.",
+      "solution": "Both terms contain x, so they are like terms. Add their coefficients: 3 + 5 = 8.",
+      "answer": "8x"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is the main goal when simplifying an algebraic expression?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Change the value of the expression"
+        },
+        {
+          "id": "B",
+          "text": "Rewrite the expression in an equivalent and simpler form"
+        },
+        {
+          "id": "C",
+          "text": "Remove all variables"
+        },
+        {
+          "id": "D",
+          "text": "Always make the expression equal to zero"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Simplifying rewrites an expression into an equivalent form without changing its value."
+    },
+    {
+      "type": "lesson",
+      "title": "Identifying Like Terms",
+      "content": "Like terms are terms that have exactly the same variables raised to the same exponents. Their coefficients may be different. For example, 3x and 7x are like terms, while 3x and 3x² are not.",
+      "formula": "Like terms: same variable part and same exponents"
+    },
+    {
+      "type": "lesson",
+      "title": "Like Terms vs. Unlike Terms",
+      "content": "Terms such as 4x and -2x are like terms because they have the same variable part. Terms such as 4x and 4y are unlike terms because their variables are different. Similarly, x² and x³ are unlike terms because their exponents are different.",
+      "formula": "Like terms → same variable(s) with the same exponent(s)"
+    },
+    {
+      "type": "example",
+      "title": "Finding Like Terms",
+      "question": "Which terms in 5x + 3y - 2x + 7 are like terms?",
+      "solution": "The terms 5x and -2x both contain x to the first power, so they are like terms. The 3y and 7 do not match either of them.",
+      "answer": "5x and -2x"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which pair contains like terms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x and 3x²"
+        },
+        {
+          "id": "B",
+          "text": "4x and 4y"
+        },
+        {
+          "id": "C",
+          "text": "7a² and -3a²"
+        },
+        {
+          "id": "D",
+          "text": "5 and 5x"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "7a² and -3a² have the same variable part, a², so they are like terms."
+    },
+    {
+      "type": "lesson",
+      "title": "Combining Like Terms",
+      "content": "To combine like terms, add or subtract their coefficients while keeping the common variable part unchanged. Only like terms can be combined.",
+      "formula": "ax + bx = (a + b)x"
+    },
+    {
+      "type": "example",
+      "title": "Combining Like Terms",
+      "question": "Simplify 7x + 4x - 3x.",
+      "solution": "Combine the coefficients of x: 7 + 4 - 3 = 8. Keep x unchanged.",
+      "answer": "8x"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 9a - 4a + 2a.",
+      "options": [
+        {
+          "id": "A",
+          "text": "7a"
+        },
+        {
+          "id": "B",
+          "text": "5a"
+        },
+        {
+          "id": "C",
+          "text": "7a²"
+        },
+        {
+          "id": "D",
+          "text": "15a"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Combine the coefficients: 9 - 4 + 2 = 7, so the simplified expression is 7a."
+    },
+    {
+      "type": "lesson",
+      "title": "Simplifying Constants",
+      "content": "Constants are numbers without variables. Constants can be combined using ordinary arithmetic. For example, 8 + 5 - 3 simplifies to 10.",
+      "formula": "Constants are combined using arithmetic operations"
+    },
+    {
+      "type": "example",
+      "title": "Combining Constants",
+      "question": "Simplify 4x + 7 + 3x - 2.",
+      "solution": "Combine the x terms: 4x + 3x = 7x. Then combine the constants: 7 - 2 = 5.",
+      "answer": "7x + 5"
+    },
+    {
+      "type": "lesson",
+      "title": "Simplifying Expressions with Multiple Terms",
+      "content": "For expressions with several terms, group and combine like terms. A useful strategy is to collect all terms with the same variable part and then combine the constants.",
+      "formula": "ax + bx + c + d = (a + b)x + (c + d)"
+    },
+    {
+      "type": "example",
+      "title": "Multiple Terms",
+      "question": "Simplify 6x + 4 - 2x + 7 + 3x.",
+      "solution": "Combine the x terms: 6x - 2x + 3x = 7x. Combine the constants: 4 + 7 = 11.",
+      "answer": "7x + 11"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 5x + 3 + 2x - 8.",
+      "options": [
+        {
+          "id": "A",
+          "text": "7x - 5"
+        },
+        {
+          "id": "B",
+          "text": "7x + 11"
+        },
+        {
+          "id": "C",
+          "text": "3x - 5"
+        },
+        {
+          "id": "D",
+          "text": "7x + 5"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Combine 5x + 2x = 7x and 3 - 8 = -5. Therefore, the simplified expression is 7x - 5."
+    },
+    {
+      "type": "lesson",
+      "title": "Using the Distributive Property",
+      "content": "The distributive property allows a factor outside parentheses to be multiplied by every term inside the parentheses. This is useful for removing parentheses before combining like terms.",
+      "formula": "a(b + c) = ab + ac"
+    },
+    {
+      "type": "example",
+      "title": "Applying the Distributive Property",
+      "question": "Simplify 3(x + 4).",
+      "solution": "Multiply 3 by both terms inside the parentheses: 3(x) + 3(4) = 3x + 12.",
+      "answer": "3x + 12"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which expression is equivalent to 5(x - 2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5x - 2"
+        },
+        {
+          "id": "B",
+          "text": "5x - 10"
+        },
+        {
+          "id": "C",
+          "text": "5x + 10"
+        },
+        {
+          "id": "D",
+          "text": "x - 10"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Multiply 5 by both terms: 5(x - 2) = 5x - 10."
+    },
+    {
+      "type": "lesson",
+      "title": "Removing Parentheses",
+      "content": "Parentheses can often be removed using the distributive property. When a positive factor is outside parentheses, distribute it to every term. When a negative sign precedes parentheses, each term inside changes sign.",
+      "formula": "-(a + b) = -a - b"
+    },
+    {
+      "type": "example",
+      "title": "Removing Parentheses with a Negative Sign",
+      "question": "Simplify 7x - (3x + 5).",
+      "solution": "Distribute the negative sign: 7x - 3x - 5. Then combine like terms: 7x - 3x = 4x.",
+      "answer": "4x - 5"
+    },
+    {
+      "type": "lesson",
+      "title": "Simplifying Expressions with Negative Terms",
+      "content": "Negative coefficients can be combined just like positive coefficients. Pay close attention to the signs when adding or subtracting terms.",
+      "formula": "ax + (-bx) = (a - b)x"
+    },
+    {
+      "type": "example",
+      "title": "Negative Terms",
+      "question": "Simplify -6x + 9x - 4.",
+      "solution": "Combine the x terms: -6x + 9x = 3x. The constant -4 remains.",
+      "answer": "3x - 4"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify -8a + 3a - 6.",
+      "options": [
+        {
+          "id": "A",
+          "text": "11a - 6"
+        },
+        {
+          "id": "B",
+          "text": "-5a - 6"
+        },
+        {
+          "id": "C",
+          "text": "-5a + 6"
+        },
+        {
+          "id": "D",
+          "text": "5a - 6"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Combine the coefficients: -8 + 3 = -5. Therefore, the expression simplifies to -5a - 6."
+    },
+    {
+      "type": "lesson",
+      "title": "Simplifying Expressions with Fractions",
+      "content": "Fractions can appear as coefficients or constants. Like terms with fractional coefficients can still be combined by adding or subtracting their coefficients.",
+      "formula": "(a/b)x + (c/b)x = ((a + c)/b)x"
+    },
+    {
+      "type": "example",
+      "title": "Fractional Coefficients",
+      "question": "Simplify (1/2)x + (3/4)x.",
+      "solution": "The terms are like terms because both contain x. Find a common denominator: 1/2 = 2/4. Then add: 2/4 + 3/4 = 5/4.",
+      "answer": "(5/4)x"
+    },
+    {
+      "type": "lesson",
+      "title": "Simplifying Expressions with Exponents",
+      "content": "Terms with the same variables and the same exponents are like terms. Exponents must match exactly before terms can be combined. For example, 3x² and 5x² are like terms, but x² and x³ are not.",
+      "formula": "ax^n + bx^n = (a + b)x^n"
+    },
+    {
+      "type": "example",
+      "title": "Combining Terms with Exponents",
+      "question": "Simplify 4x² + 7x² - 3x.",
+      "solution": "The terms 4x² and 7x² are like terms, so they combine to 11x². The -3x term is unlike them and remains unchanged.",
+      "answer": "11x² - 3x"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which pair can be combined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x² and 5x"
+        },
+        {
+          "id": "B",
+          "text": "4x³ and -2x³"
+        },
+        {
+          "id": "C",
+          "text": "7x and 7x²"
+        },
+        {
+          "id": "D",
+          "text": "2x² and 2x³"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "4x³ and -2x³ have the same variable and exponent, so they are like terms."
+    },
+    {
+      "type": "lesson",
+      "title": "Multi-Step Simplification",
+      "content": "Multi-step simplification may require several operations. A common strategy is to first distribute, then remove parentheses, identify like terms, and finally combine those terms.",
+      "formula": "Distribute → Remove parentheses → Combine like terms"
+    },
+    {
+      "type": "example",
+      "title": "Multi-Step Simplification",
+      "question": "Simplify 3(2x - 4) + 5x + 6.",
+      "solution": "First distribute 3: 6x - 12 + 5x + 6. Then combine like terms: 6x + 5x = 11x and -12 + 6 = -6.",
+      "answer": "11x - 6"
+    },
+    {
+      "type": "concept_check",
+      "question": "Simplify 2(3x + 4) - x + 5.",
+      "options": [
+        {
+          "id": "A",
+          "text": "5x + 13"
+        },
+        {
+          "id": "B",
+          "text": "7x + 9"
+        },
+        {
+          "id": "C",
+          "text": "5x + 9"
+        },
+        {
+          "id": "D",
+          "text": "6x + 9"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Distribute 2 to get 6x + 8 - x + 5. Combine like terms: 6x - x = 5x and 8 + 5 = 13, so the result is 5x + 13."
+    },
+    {
+      "type": "lesson",
+      "title": "Equivalent Expressions",
+      "content": "Equivalent expressions have the same value for every valid value of the variable, even if they look different. Simplifying an expression produces an equivalent expression.",
+      "formula": "Expression A = Expression B for all valid variable values"
+    },
+    {
+      "type": "example",
+      "title": "Recognizing Equivalent Expressions",
+      "question": "Are 3(x + 2) and 3x + 6 equivalent?",
+      "solution": "Use the distributive property: 3(x + 2) = 3x + 6. Therefore, the two expressions are equivalent.",
+      "answer": "Yes, they are equivalent."
+    },
+    {
+      "type": "lesson",
+      "title": "Checking Equivalent Expressions",
+      "content": "Equivalent expressions can be checked by simplifying both expressions and comparing their results. You can also substitute the same value for the variable in both expressions and verify that they produce the same value.",
+      "formula": "If A and B simplify to the same expression, then A and B are equivalent."
+    },
+    {
+      "type": "example",
+      "title": "Checking by Substitution",
+      "question": "Check whether 2(x + 3) and 2x + 6 are equivalent by using x = 4.",
+      "solution": "For 2(x + 3): 2(4 + 3) = 14. For 2x + 6: 2(4) + 6 = 14. Both expressions have the same value, supporting that they are equivalent.",
+      "answer": "Yes, they are equivalent."
+    },
+    {
+      "type": "concept_check",
+      "question": "Which expression is equivalent to 4(x + 3) - 2x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x + 12"
+        },
+        {
+          "id": "B",
+          "text": "6x + 12"
+        },
+        {
+          "id": "C",
+          "text": "2x + 3"
+        },
+        {
+          "id": "D",
+          "text": "4x + 10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Distribute 4 to get 4x + 12 - 2x. Combine like terms: 4x - 2x = 2x, giving 2x + 12."
+    },
+    {
+      "type": "example",
+      "title": "Complete Simplification",
+      "question": "Simplify 4(2x - 3) + 2x - 5 + 3x.",
+      "solution": "Distribute 4: 8x - 12 + 2x - 5 + 3x. Combine the x terms: 8x + 2x + 3x = 13x. Combine the constants: -12 - 5 = -17.",
+      "answer": "13x - 17"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which is the simplified form of 3(2x - 1) + 4x + 7?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10x + 4"
+        },
+        {
+          "id": "B",
+          "text": "6x + 4"
+        },
+        {
+          "id": "C",
+          "text": "10x + 7"
+        },
+        {
+          "id": "D",
+          "text": "6x + 6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Distribute 3: 6x - 3 + 4x + 7. Combine like terms: 6x + 4x = 10x and -3 + 7 = 4."
+    }
+  ]
+}

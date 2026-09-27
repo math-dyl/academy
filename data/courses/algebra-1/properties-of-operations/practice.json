@@ -1,0 +1,242 @@
+[
+  {
+    "id": "practice-1",
+    "question": "Which of the following is a natural number?",
+    "options": [
+      "-3",
+      "0",
+      "6",
+      "1/2"
+    ],
+    "answer": "6",
+    "explanation": "Natural numbers in this course begin with 1 and include positive counting numbers such as 6."
+  },
+  {
+    "id": "practice-2",
+    "question": "Which number is a whole number but not a natural number?",
+    "options": [
+      "-2",
+      "0",
+      "1",
+      "5"
+    ],
+    "answer": "0",
+    "explanation": "Whole numbers include 0, while natural numbers in this course begin with 1."
+  },
+  {
+    "id": "practice-3",
+    "question": "Which of the following is an integer?",
+    "options": [
+      "2.5",
+      "3/4",
+      "-7",
+      "√2"
+    ],
+    "answer": "-7",
+    "explanation": "Integers include positive and negative whole numbers and zero. -7 is a negative whole number."
+  },
+  {
+    "id": "practice-4",
+    "question": "Which number is NOT an integer?",
+    "options": [
+      "-8",
+      "0",
+      "15",
+      "4.5"
+    ],
+    "answer": "4.5",
+    "explanation": "Integers do not contain decimal or fractional parts, so 4.5 is not an integer."
+  },
+  {
+    "id": "practice-5",
+    "question": "Which number is rational?",
+    "options": [
+      "√2",
+      "π",
+      "3/7",
+      "√5"
+    ],
+    "answer": "3/7",
+    "explanation": "3/7 is a ratio of two integers with a nonzero denominator, so it is rational."
+  },
+  {
+    "id": "practice-6",
+    "question": "Is 0.25 a rational number?",
+    "options": [
+      "Yes",
+      "No",
+      "Only sometimes",
+      "Cannot be determined"
+    ],
+    "answer": "Yes",
+    "explanation": "0.25 can be written as 25/100, which simplifies to 1/4. Therefore, it is rational."
+  },
+  {
+    "id": "practice-7",
+    "question": "Which number is irrational?",
+    "options": [
+      "4",
+      "1/2",
+      "0.75",
+      "√3"
+    ],
+    "answer": "√3",
+    "explanation": "√3 cannot be written as a ratio of two integers, so it is irrational."
+  },
+  {
+    "id": "practice-8",
+    "question": "Which statement describes irrational numbers?",
+    "options": [
+      "They can always be written as fractions.",
+      "Their decimals always terminate.",
+      "Their decimals are non-terminating and non-repeating.",
+      "They are always integers."
+    ],
+    "answer": "Their decimals are non-terminating and non-repeating.",
+    "explanation": "Irrational numbers cannot be written as a ratio of two integers and have non-terminating, non-repeating decimal representations."
+  },
+  {
+    "id": "practice-9",
+    "question": "Which number is a real number?",
+    "options": [
+      "√2",
+      "π",
+      "-5",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "√2, π, and -5 are all real numbers. Real numbers include both rational and irrational numbers."
+  },
+  {
+    "id": "practice-10",
+    "question": "Which number is NOT a real number?",
+    "options": [
+      "√2",
+      "-8",
+      "3/4",
+      "√-1"
+    ],
+    "answer": "√-1",
+    "explanation": "√-1 is not a real number. It is associated with the imaginary unit i."
+  },
+  {
+    "id": "practice-11",
+    "question": "Which classification is correct for the number 7?",
+    "options": [
+      "Natural only",
+      "Natural and whole only",
+      "Natural, whole, integer, rational, and real",
+      "Integer and irrational only"
+    ],
+    "answer": "Natural, whole, integer, rational, and real",
+    "explanation": "7 is natural, so it is also whole and an integer. Every integer is rational, and every rational number is real."
+  },
+  {
+    "id": "practice-12",
+    "question": "Which classification is correct for -4?",
+    "options": [
+      "Natural, whole, integer",
+      "Integer, rational, real",
+      "Irrational and real",
+      "Whole and rational"
+    ],
+    "answer": "Integer, rational, real",
+    "explanation": "-4 is an integer. It can be written as -4/1, making it rational, and all rational numbers are real."
+  },
+  {
+    "id": "practice-13",
+    "question": "Which statement correctly describes number set relationships?",
+    "options": [
+      "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real",
+      "Real ⊂ Rational ⊂ Integers",
+      "Integers ⊂ Natural ⊂ Whole",
+      "Rational ⊂ Irrational ⊂ Real"
+    ],
+    "answer": "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real",
+    "explanation": "Each set is contained in the next: natural, whole, integer, rational, and real."
+  },
+  {
+    "id": "practice-14",
+    "question": "Which statement is true?",
+    "options": [
+      "Every integer is a natural number.",
+      "Every whole number is an integer.",
+      "Every irrational number is rational.",
+      "Every real number is an integer."
+    ],
+    "answer": "Every whole number is an integer.",
+    "explanation": "Whole numbers such as 0, 1, 2, and 3 are all integers."
+  },
+  {
+    "id": "practice-15",
+    "question": "Which number is greater?",
+    "options": [
+      "-8",
+      "-3",
+      "-10",
+      "-12"
+    ],
+    "answer": "-3",
+    "explanation": "On the number line, -3 is farther to the right than -8, -10, and -12, so it is the greatest."
+  },
+  {
+    "id": "practice-16",
+    "question": "Which list is ordered from least to greatest?",
+    "options": [
+      "4, 1, -2, -5",
+      "-5, -2, 1, 4",
+      "-2, -5, 1, 4",
+      "1, -2, -5, 4"
+    ],
+    "answer": "-5, -2, 1, 4",
+    "explanation": "Numbers increase from left to right on the number line, so -5, -2, 1, 4 is the correct order."
+  },
+  {
+    "id": "practice-17",
+    "question": "What is the value of |-13|?",
+    "options": [
+      "-13",
+      "-1",
+      "0",
+      "13"
+    ],
+    "answer": "13",
+    "explanation": "Absolute value represents distance from zero. -13 is 13 units from zero, so |-13| = 13."
+  },
+  {
+    "id": "practice-18",
+    "question": "Which number is farthest to the left on the number line?",
+    "options": [
+      "-2",
+      "5",
+      "-9",
+      "1"
+    ],
+    "answer": "-9",
+    "explanation": "Numbers become smaller as you move left. Among the choices, -9 is the smallest."
+  },
+  {
+    "id": "practice-19",
+    "question": "Which number belongs to the integers but not the whole numbers?",
+    "options": [
+      "0",
+      "4",
+      "-6",
+      "1/2"
+    ],
+    "answer": "-6",
+    "explanation": "Integers include negative whole numbers, while whole numbers do not include negative numbers."
+  },
+  {
+    "id": "practice-20",
+    "question": "Which statement correctly describes the real number system?",
+    "options": [
+      "Real numbers contain only integers.",
+      "Real numbers contain only rational numbers.",
+      "Real numbers consist of rational and irrational numbers.",
+      "Real numbers contain only natural numbers."
+    ],
+    "answer": "Real numbers consist of rational and irrational numbers.",
+    "explanation": "The real number system includes both rational and irrational numbers."
+  }
+]

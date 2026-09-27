@@ -1,0 +1,242 @@
+[
+  {
+    "id": "quiz-1",
+    "question": "Which of the following is an algebraic expression?",
+    "options": [
+      "4x + 7",
+      "x = 7",
+      "12 > 5",
+      "3 = 3"
+    ],
+    "answer": "4x + 7",
+    "explanation": "4x + 7 is an algebraic expression because it contains a variable, a constant, and an operation without an equality or comparison statement."
+  },
+  {
+    "id": "quiz-2",
+    "question": "What is the coefficient of x² in 9x² - 4x + 6?",
+    "options": [
+      "9",
+      "-4",
+      "6",
+      "2"
+    ],
+    "answer": "9",
+    "explanation": "The coefficient is the number multiplying the variable term. In 9x², the coefficient is 9."
+  },
+  {
+    "id": "quiz-3",
+    "question": "What is the constant term in 7x³ - 2x + 15?",
+    "options": [
+      "7x³",
+      "-2x",
+      "15",
+      "3"
+    ],
+    "answer": "15",
+    "explanation": "A constant term contains no variable. Therefore, 15 is the constant term."
+  },
+  {
+    "id": "quiz-4",
+    "question": "How many terms are in 5x² - 3x + 8?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3",
+    "explanation": "The terms are 5x², -3x, and 8. Therefore, the expression has three terms."
+  },
+  {
+    "id": "quiz-5",
+    "question": "Which expression represents 'eight more than a number x'?",
+    "options": [
+      "x - 8",
+      "8 - x",
+      "8x",
+      "x + 8"
+    ],
+    "answer": "x + 8",
+    "explanation": "The phrase 'eight more than x' means add 8 to x, giving x + 8."
+  },
+  {
+    "id": "quiz-6",
+    "question": "Which expression represents 'five less than three times a number y'?",
+    "options": [
+      "5 - 3y",
+      "3y - 5",
+      "3(y - 5)",
+      "5y - 3"
+    ],
+    "answer": "3y - 5",
+    "explanation": "Three times y is 3y. Five less than that quantity means subtract 5, giving 3y - 5."
+  },
+  {
+    "id": "quiz-7",
+    "question": "Which expression represents 'the product of 6 and a number n'?",
+    "options": [
+      "6 + n",
+      "n - 6",
+      "6n",
+      "n/6"
+    ],
+    "answer": "6n",
+    "explanation": "The word 'product' indicates multiplication. Therefore, the product of 6 and n is 6n."
+  },
+  {
+    "id": "quiz-8",
+    "question": "Which expression represents 'the quotient of x and 4'?",
+    "options": [
+      "4x",
+      "x + 4",
+      "x - 4",
+      "x/4"
+    ],
+    "answer": "x/4",
+    "explanation": "The quotient of x and 4 means x divided by 4, written as x/4."
+  },
+  {
+    "id": "quiz-9",
+    "question": "Which expression is equivalent to x⁴ written as repeated multiplication?",
+    "options": [
+      "x + x + x + x",
+      "4x",
+      "x × x × x × x",
+      "x + 4"
+    ],
+    "answer": "x × x × x × x",
+    "explanation": "An exponent of 4 means the base x is used as a factor four times."
+  },
+  {
+    "id": "quiz-10",
+    "question": "Which of the following is a monomial?",
+    "options": [
+      "3x²",
+      "x + 5",
+      "x² + 2x + 1",
+      "7 - x"
+    ],
+    "answer": "3x²",
+    "explanation": "A monomial is a one-term expression. 3x² contains only one term."
+  },
+  {
+    "id": "quiz-11",
+    "question": "Which of the following is a binomial?",
+    "options": [
+      "7x",
+      "x² + 4",
+      "x² + 3x + 2",
+      "9"
+    ],
+    "answer": "x² + 4",
+    "explanation": "A binomial contains exactly two terms. x² + 4 has two terms."
+  },
+  {
+    "id": "quiz-12",
+    "question": "Which of the following is a trinomial?",
+    "options": [
+      "5x²",
+      "x + 7",
+      "x² - 4x + 3",
+      "12"
+    ],
+    "answer": "x² - 4x + 3",
+    "explanation": "A trinomial contains exactly three terms. The expression x² - 4x + 3 has three terms."
+  },
+  {
+    "id": "quiz-13",
+    "question": "Which expression is a polynomial?",
+    "options": [
+      "4/x + 2",
+      "√x + 1",
+      "6x³ - 2x + 5",
+      "x⁻² + 3"
+    ],
+    "answer": "6x³ - 2x + 5",
+    "explanation": "6x³ - 2x + 5 is a polynomial because the variable has only nonnegative integer exponents."
+  },
+  {
+    "id": "quiz-14",
+    "question": "What is the degree of 8x⁵ - 3x² + 7?",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "8"
+    ],
+    "answer": "5",
+    "explanation": "The degree of a single-variable polynomial is the greatest exponent of the variable. The highest exponent is 5."
+  },
+  {
+    "id": "quiz-15",
+    "question": "Which expression represents 'the sum of twice a number x and 9'?",
+    "options": [
+      "2x - 9",
+      "2(x + 9)",
+      "2x + 9",
+      "9x + 2"
+    ],
+    "answer": "2x + 9",
+    "explanation": "Twice x is 2x, and the sum of 2x and 9 is 2x + 9."
+  },
+  {
+    "id": "quiz-16",
+    "question": "Which statement correctly identifies the parts of 6x² - 5x + 11?",
+    "options": [
+      "6 and -5 are coefficients, and 11 is the constant",
+      "6x² and -5x are constants, and 11 is a variable",
+      "x² and x are coefficients, and 11 is a variable",
+      "6 is the variable, -5 is the constant, and x is a coefficient"
+    ],
+    "answer": "6 and -5 are coefficients, and 11 is the constant",
+    "explanation": "The numbers multiplying the variables are 6 and -5, while 11 is the term containing no variable."
+  },
+  {
+    "id": "quiz-17",
+    "question": "How many terms are in 4x⁴ - 3x³ + 2x² - x + 9?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "5",
+    "explanation": "The expression contains five terms: 4x⁴, -3x³, 2x², -x, and 9."
+  },
+  {
+    "id": "quiz-18",
+    "question": "What is the degree of 3x⁶ + 5x⁴ - 2x + 1?",
+    "options": [
+      "1",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "explanation": "The greatest exponent of x in the expression is 6, so the degree is 6."
+  },
+  {
+    "id": "quiz-19",
+    "question": "Which expression represents 'half of a number a increased by 6'?",
+    "options": [
+      "a/2 + 6",
+      "2a + 6",
+      "(a + 6)/2",
+      "a - 6/2"
+    ],
+    "answer": "a/2 + 6",
+    "explanation": "Half of a is a/2. Increasing that quantity by 6 gives a/2 + 6."
+  },
+  {
+    "id": "quiz-20",
+    "question": "Which statement correctly describes 9x³ - 4x² + 7x - 12?",
+    "options": [
+      "It is a binomial with degree 3",
+      "It is a trinomial with degree 4",
+      "It is a polynomial with four terms and degree 3",
+      "It is a monomial with degree 12"
+    ],
+    "answer": "It is a polynomial with four terms and degree 3",
+    "explanation": "The expression has four terms: 9x³, -4x², 7x, and -12. Its highest exponent is 3, so it is a polynomial with degree 3."
+  }
+]

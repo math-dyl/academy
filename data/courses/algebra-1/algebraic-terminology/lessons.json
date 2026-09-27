@@ -1,0 +1,439 @@
+{
+  "id": "algebraic-terminology",
+  "title": "Algebraic Terminology",
+  "description": "Learn the fundamental language of algebra, including variables, constants, coefficients, terms, factors, mathematical symbols, like terms, unlike terms, and the parts of algebraic expressions.",
+  "content": [
+    {
+      "type": "lesson",
+      "title": "What Is Algebra?",
+      "content": "Algebra is a branch of mathematics that uses numbers, letters, and symbols to represent quantities and relationships. Unlike arithmetic, which often works with known values, algebra allows us to represent unknown or changing values using variables. Algebraic expressions and equations can be used to describe patterns, solve problems, and model real-world situations."
+    },
+    {
+      "type": "example",
+      "title": "Representing an Unknown",
+      "question": "A number increased by 5 can be represented using the variable x. How can this situation be written as an algebraic expression?",
+      "solution": "The unknown number is represented by x. Increasing a number by 5 means adding 5 to it.",
+      "answer": "x + 5"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is one purpose of algebra?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To represent unknown or changing quantities"
+        },
+        {
+          "id": "B",
+          "text": "To eliminate all mathematical symbols"
+        },
+        {
+          "id": "C",
+          "text": "To work only with positive integers"
+        },
+        {
+          "id": "D",
+          "text": "To avoid using numbers"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Algebra uses numbers, variables, and symbols to represent quantities, relationships, unknowns, and patterns."
+    },
+    {
+      "type": "lesson",
+      "title": "Variables",
+      "content": "A variable is a letter or symbol used to represent a value that can change or an unknown quantity. Common variables include x, y, a, b, and n. A variable can represent different values depending on the situation."
+    },
+    {
+      "type": "example",
+      "title": "Identifying a Variable",
+      "question": "In the expression 4x + 7, which symbol is the variable?",
+      "solution": "The letter x represents the quantity that can change or remain unknown.",
+      "answer": "x"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which part of 8y - 3 represents a variable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "y"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "-"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The letter y is the variable because it represents a value that can change or an unknown quantity."
+    },
+    {
+      "type": "lesson",
+      "title": "Constants",
+      "content": "A constant is a value that does not change within a given algebraic expression or situation. Constants are usually written as numbers. For example, in the expression 3x + 8, the number 8 is a constant because it does not contain a variable."
+    },
+    {
+      "type": "example",
+      "title": "Identifying a Constant",
+      "question": "What is the constant in the expression 5x + 12?",
+      "solution": "The number 12 does not contain a variable and represents a fixed value.",
+      "answer": "12"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which number is the constant in 7x - 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "x"
+        },
+        {
+          "id": "C",
+          "text": "-4"
+        },
+        {
+          "id": "D",
+          "text": "-"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "-4 is the constant term because it has no variable and represents a fixed value."
+    },
+    {
+      "type": "lesson",
+      "title": "Coefficients",
+      "content": "A coefficient is a number that multiplies a variable in a term. In the term 6x, the number 6 is the coefficient of x. When a variable has no number written in front of it, its coefficient is understood to be 1. For example, x has a coefficient of 1, while -x has a coefficient of -1."
+    },
+    {
+      "type": "example",
+      "title": "Identifying a Coefficient",
+      "question": "What is the coefficient of y in the term -9y?",
+      "solution": "The number multiplying y is -9, so -9 is the coefficient of y.",
+      "answer": "-9"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is the coefficient of x in -4x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-4"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "x"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The coefficient is the number multiplying the variable. In -4x, the coefficient of x is -4."
+    },
+    {
+      "type": "lesson",
+      "title": "Numerical Coefficients",
+      "content": "A numerical coefficient is the numerical factor that multiplies a variable or group of variables in a term. For example, in 7xy, the numerical coefficient is 7. In -3a², the numerical coefficient is -3. If no numerical coefficient is written, the coefficient is usually understood to be 1 or -1 depending on the sign."
+    },
+    {
+      "type": "example",
+      "title": "Finding the Numerical Coefficient",
+      "question": "What is the numerical coefficient of the term -12x²y?",
+      "solution": "The number multiplying the variables x²y is -12.",
+      "answer": "-12"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is the numerical coefficient of 5ab²?",
+      "options": [
+        {
+          "id": "A",
+          "text": "a"
+        },
+        {
+          "id": "B",
+          "text": "b²"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "ab²"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "The numerical coefficient is the number multiplying the variables. In 5ab², it is 5."
+    },
+    {
+      "type": "lesson",
+      "title": "Terms",
+      "content": "A term is a number, variable, or product of numbers and variables separated from other parts of an expression by addition or subtraction signs. For example, the expression 4x + 7y - 3 has three terms: 4x, 7y, and -3. Each term may contain a coefficient, variables, and exponents."
+    },
+    {
+      "type": "example",
+      "title": "Identifying Terms",
+      "question": "How many terms are in the expression 3x² - 5x + 8?",
+      "solution": "The expression is separated into terms by addition and subtraction. The terms are 3x², -5x, and 8.",
+      "answer": "3 terms"
+    },
+    {
+      "type": "concept_check",
+      "question": "How many terms are in 6x + 2y - 9?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "The terms are 6x, 2y, and -9, so the expression contains three terms."
+    },
+    {
+      "type": "lesson",
+      "title": "Constant Terms",
+      "content": "A constant term is a term that contains only a number and no variable. It represents a fixed value within an algebraic expression. For example, in 2x² - 5x + 9, the constant term is 9."
+    },
+    {
+      "type": "example",
+      "title": "Identifying the Constant Term",
+      "question": "What is the constant term in 4x² + 3x - 11?",
+      "solution": "The term that contains no variable is -11.",
+      "answer": "-11"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is the constant term in 6x + 2y + 15?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6x"
+        },
+        {
+          "id": "B",
+          "text": "2y"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "15 is the only term that contains no variable, so it is the constant term."
+    },
+    {
+      "type": "lesson",
+      "title": "Factors",
+      "content": "Factors are numbers, variables, or expressions that are multiplied together to form a product. In the term 6xy, the factors are 6, x, and y. In 3(x + 2), the factors are 3 and (x + 2)."
+    },
+    {
+      "type": "example",
+      "title": "Identifying Factors",
+      "question": "What are the factors of 8x?",
+      "solution": "The term 8x represents 8 multiplied by x. Therefore, its factors are 8 and x.",
+      "answer": "8 and x"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which are the factors of 5ab?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5, a, and b"
+        },
+        {
+          "id": "B",
+          "text": "5ab only"
+        },
+        {
+          "id": "C",
+          "text": "5 + a + b"
+        },
+        {
+          "id": "D",
+          "text": "5a + b"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "5ab means 5 × a × b, so the factors are 5, a, and b."
+    },
+    {
+      "type": "lesson",
+      "title": "Mathematical Symbols",
+      "content": "Mathematical symbols are used to represent operations, relationships, and quantities. Common algebraic symbols include + for addition, - for subtraction, × or implied multiplication, ÷ or a fraction bar for division, = for equality, < for less than, > for greater than, ≤ for less than or equal to, and ≥ for greater than or equal to."
+    },
+    {
+      "type": "example",
+      "title": "Interpreting a Symbol",
+      "question": "What does the symbol ≥ mean?",
+      "solution": "The symbol ≥ combines greater than and equal to. It means the quantity on the left is greater than or equal to the quantity on the right.",
+      "answer": "Greater than or equal to"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which symbol means 'less than'?",
+      "options": [
+        {
+          "id": "A",
+          "text": ">"
+        },
+        {
+          "id": "B",
+          "text": "<"
+        },
+        {
+          "id": "C",
+          "text": "≥"
+        },
+        {
+          "id": "D",
+          "text": "="
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The symbol < means that the quantity on the left is less than the quantity on the right."
+    },
+    {
+      "type": "lesson",
+      "title": "Algebraic Terminology in Context",
+      "content": "Algebraic terms work together to describe the parts of an expression. For example, in 5x² + 3x - 7, the expression has three terms: 5x², 3x, and -7. The numerical coefficient of 5x² is 5, the numerical coefficient of 3x is 3, x is a variable, and -7 is the constant term."
+    },
+    {
+      "type": "example",
+      "title": "Analyzing an Expression",
+      "question": "In the expression 8x² - 4x + 6, identify the terms, the coefficient of x², the coefficient of x, and the constant term.",
+      "solution": "The terms are 8x², -4x, and 6. The coefficient of x² is 8, the coefficient of x is -4, and the constant term is 6.",
+      "answer": "Terms: 8x², -4x, 6; coefficients: 8 and -4; constant term: 6"
+    },
+    {
+      "type": "concept_check",
+      "question": "In 7x² - 3x + 10, which statement is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 is the constant term"
+        },
+        {
+          "id": "B",
+          "text": "-3 is the coefficient of x"
+        },
+        {
+          "id": "C",
+          "text": "10 is the coefficient of x²"
+        },
+        {
+          "id": "D",
+          "text": "x² is the constant term"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "-3 multiplies x, so it is the coefficient of x. The constant term is 10."
+    },
+    {
+      "type": "lesson",
+      "title": "Like Terms and Unlike Terms",
+      "content": "Like terms are terms that have exactly the same variables raised to the same exponents. Their numerical coefficients may be different. For example, 3x and -7x are like terms, while 3x and 3x² are unlike terms. Terms with different variables or different exponents are unlike terms."
+    },
+    {
+      "type": "example",
+      "title": "Identifying Like Terms",
+      "question": "Which term is like 5x²?",
+      "solution": "A like term must have the same variable x raised to the same exponent 2. Therefore, -3x² is like 5x².",
+      "answer": "-3x²"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which pair consists of like terms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4x and 4x²"
+        },
+        {
+          "id": "B",
+          "text": "3a and -8a"
+        },
+        {
+          "id": "C",
+          "text": "5x and 5y"
+        },
+        {
+          "id": "D",
+          "text": "2m² and 2m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "3a and -8a have the same variable a raised to the same exponent, so they are like terms."
+    },
+    {
+      "type": "lesson",
+      "title": "Identifying the Parts of an Expression",
+      "content": "To analyze an algebraic expression, identify its terms first. Then examine each term for its numerical coefficient, variables, exponents, and factors. If a term contains no variable, it is a constant term. For example, in 4x² - 6xy + 9, the terms are 4x², -6xy, and 9. The numerical coefficients are 4, -6, and 9; the variables are x and y; and 9 is the constant term."
+    },
+    {
+      "type": "example",
+      "title": "Breaking Down an Expression",
+      "question": "Identify the terms, numerical coefficients, variables, and constant term in 3x² - 5xy + 8.",
+      "solution": "The terms are 3x², -5xy, and 8. The numerical coefficients are 3, -5, and 8. The variables are x and y. The constant term is 8.",
+      "answer": "Terms: 3x², -5xy, 8; numerical coefficients: 3, -5, 8; variables: x, y; constant term: 8"
+    },
+    {
+      "type": "concept_check",
+      "question": "In the expression 6x² - 4xy + 12, which statement is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6x² is the constant term"
+        },
+        {
+          "id": "B",
+          "text": "-4xy has a numerical coefficient of -4"
+        },
+        {
+          "id": "C",
+          "text": "12 contains the variable x"
+        },
+        {
+          "id": "D",
+          "text": "x² and xy are like terms"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "In -4xy, the numerical coefficient is -4. The term 12 is the constant, and x² and xy are unlike terms because their variable parts differ."
+    }
+  ]
+}

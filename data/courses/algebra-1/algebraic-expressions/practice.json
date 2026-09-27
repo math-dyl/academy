@@ -1,0 +1,242 @@
+[
+  {
+    "id": "practice-1",
+    "question": "Which of the following is an algebraic expression?",
+    "options": [
+      "5x + 3",
+      "7 = 2 + 5",
+      "12 > 8",
+      "x = 4"
+    ],
+    "answer": "5x + 3",
+    "explanation": "5x + 3 is an algebraic expression because it contains a variable, a number, and an operation without an equality or comparison statement."
+  },
+  {
+    "id": "practice-2",
+    "question": "How many terms are in the expression 4x² - 7x + 5?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3",
+    "explanation": "The terms are 4x², -7x, and 5. Therefore, the expression has three terms."
+  },
+  {
+    "id": "practice-3",
+    "question": "What is the constant term in 8x² - 3x + 11?",
+    "options": [
+      "8x²",
+      "-3x",
+      "11",
+      "x"
+    ],
+    "answer": "11",
+    "explanation": "A constant term contains no variable. Therefore, 11 is the constant term."
+  },
+  {
+    "id": "practice-4",
+    "question": "What is the coefficient of x in -9x + 4?",
+    "options": [
+      "9",
+      "-9",
+      "4",
+      "x"
+    ],
+    "answer": "-9",
+    "explanation": "The coefficient is the number multiplying the variable. In -9x, the coefficient of x is -9."
+  },
+  {
+    "id": "practice-5",
+    "question": "Which expression represents 'five more than a number x'?",
+    "options": [
+      "x - 5",
+      "5 - x",
+      "x + 5",
+      "5x"
+    ],
+    "answer": "x + 5",
+    "explanation": "Five more than x means adding 5 to x, giving x + 5."
+  },
+  {
+    "id": "practice-6",
+    "question": "Which expression represents 'three less than twice a number x'?",
+    "options": [
+      "3 - 2x",
+      "2x - 3",
+      "2(x - 3)",
+      "3x - 2"
+    ],
+    "answer": "2x - 3",
+    "explanation": "Twice x is 2x. Three less than that quantity means subtract 3, giving 2x - 3."
+  },
+  {
+    "id": "practice-7",
+    "question": "Which expression represents 'seven times y'?",
+    "options": [
+      "7 + y",
+      "y - 7",
+      "7y",
+      "y/7"
+    ],
+    "answer": "7y",
+    "explanation": "Seven times y means 7 multiplied by y, which is written as 7y."
+  },
+  {
+    "id": "practice-8",
+    "question": "Which expression represents 'the quotient of x and 6'?",
+    "options": [
+      "6x",
+      "x + 6",
+      "x - 6",
+      "x/6"
+    ],
+    "answer": "x/6",
+    "explanation": "The quotient of x and 6 means x divided by 6, written as x/6."
+  },
+  {
+    "id": "practice-9",
+    "question": "What does x³ mean?",
+    "options": [
+      "x + x + x",
+      "x × x × x",
+      "3x",
+      "x + 3"
+    ],
+    "answer": "x × x × x",
+    "explanation": "The exponent 3 means x is used as a factor three times, so x³ = x × x × x."
+  },
+  {
+    "id": "practice-10",
+    "question": "Which of the following is a one-term expression?",
+    "options": [
+      "4x + 7",
+      "x² - 3x",
+      "6x³",
+      "x + 2 + 5"
+    ],
+    "answer": "6x³",
+    "explanation": "6x³ contains only one term, so it is a one-term expression or monomial."
+  },
+  {
+    "id": "practice-11",
+    "question": "Which of the following is a two-term expression?",
+    "options": [
+      "5x",
+      "x + 8",
+      "x² + 3x + 2",
+      "7"
+    ],
+    "answer": "x + 8",
+    "explanation": "x + 8 contains two terms: x and 8. Therefore, it is a two-term expression or binomial."
+  },
+  {
+    "id": "practice-12",
+    "question": "Which of the following is a three-term expression?",
+    "options": [
+      "7x",
+      "x - 4",
+      "x² + 5x + 6",
+      "12"
+    ],
+    "answer": "x² + 5x + 6",
+    "explanation": "The expression has three terms: x², 5x, and 6. Therefore, it is a trinomial."
+  },
+  {
+    "id": "practice-13",
+    "question": "Which expression is a polynomial?",
+    "options": [
+      "3/x + 2",
+      "√x + 4",
+      "5x² - 2x + 1",
+      "x⁻¹ + 3"
+    ],
+    "answer": "5x² - 2x + 1",
+    "explanation": "5x² - 2x + 1 is a polynomial because the variable has only nonnegative integer exponents."
+  },
+  {
+    "id": "practice-14",
+    "question": "What is the degree of 6x⁴ - 3x² + 7?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "7"
+    ],
+    "answer": "4",
+    "explanation": "The degree is the greatest exponent of the variable. The highest exponent of x is 4."
+  },
+  {
+    "id": "practice-15",
+    "question": "Which expression represents 'the sum of a number x and 12'?",
+    "options": [
+      "x - 12",
+      "12 - x",
+      "12x",
+      "x + 12"
+    ],
+    "answer": "x + 12",
+    "explanation": "The word 'sum' indicates addition, so the expression is x + 12."
+  },
+  {
+    "id": "practice-16",
+    "question": "In the expression 7x³ - 4x² + 9x - 5, which is the constant term?",
+    "options": [
+      "7x³",
+      "-4x²",
+      "9x",
+      "-5"
+    ],
+    "answer": "-5",
+    "explanation": "-5 is the only term without a variable, so it is the constant term."
+  },
+  {
+    "id": "practice-17",
+    "question": "In the expression -6a² + 5a - 10, what is the coefficient of a²?",
+    "options": [
+      "6",
+      "-6",
+      "5",
+      "-10"
+    ],
+    "answer": "-6",
+    "explanation": "The coefficient of a² is the number multiplying a². Therefore, the coefficient is -6."
+  },
+  {
+    "id": "practice-18",
+    "question": "Which expression represents 'the product of 4 and a number n, decreased by 9'?",
+    "options": [
+      "4(n - 9)",
+      "4n + 9",
+      "4n - 9",
+      "9 - 4n"
+    ],
+    "answer": "4n - 9",
+    "explanation": "The product of 4 and n is 4n. Decreased by 9 means subtract 9, giving 4n - 9."
+  },
+  {
+    "id": "practice-19",
+    "question": "How many terms are in the expression 3x⁴ - 2x³ + x² - 5x + 8?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "5",
+    "explanation": "The terms are 3x⁴, -2x³, x², -5x, and 8. Therefore, there are five terms."
+  },
+  {
+    "id": "practice-20",
+    "question": "Which statement correctly describes the expression 9x³ - 5x + 2?",
+    "options": [
+      "It has two terms and degree 3",
+      "It has three terms and degree 2",
+      "It has three terms and degree 3",
+      "It has four terms and degree 3"
+    ],
+    "answer": "It has three terms and degree 3",
+    "explanation": "The terms are 9x³, -5x, and 2, so there are three terms. The highest exponent is 3, so the degree is 3."
+  }
+]

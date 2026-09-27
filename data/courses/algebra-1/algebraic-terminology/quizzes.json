@@ -1,0 +1,242 @@
+[
+  {
+    "id": "quiz-1",
+    "question": "Which statement best describes algebra?",
+    "options": [
+      "A branch of mathematics that uses symbols to represent quantities and relationships",
+      "A method used only for counting whole numbers",
+      "A system that uses only geometric shapes",
+      "A method that avoids using variables"
+    ],
+    "answer": "A branch of mathematics that uses symbols to represent quantities and relationships",
+    "explanation": "Algebra uses numbers, variables, and mathematical symbols to represent quantities, unknowns, patterns, and relationships."
+  },
+  {
+    "id": "quiz-2",
+    "question": "In the expression 9x + 4, which part is the variable?",
+    "options": [
+      "9",
+      "x",
+      "4",
+      "+"
+    ],
+    "answer": "x",
+    "explanation": "x is the variable because it represents a value that can change or an unknown quantity."
+  },
+  {
+    "id": "quiz-3",
+    "question": "Which statement correctly describes a constant?",
+    "options": [
+      "A value that can change",
+      "A fixed value that does not contain a variable",
+      "A number that must always be negative",
+      "A symbol used only for multiplication"
+    ],
+    "answer": "A fixed value that does not contain a variable",
+    "explanation": "A constant represents a fixed value and does not contain a variable."
+  },
+  {
+    "id": "quiz-4",
+    "question": "What is the constant term in 6x² + 3x - 11?",
+    "options": [
+      "6x²",
+      "3x",
+      "-11",
+      "11x"
+    ],
+    "answer": "-11",
+    "explanation": "-11 is the only term that contains no variable, so it is the constant term."
+  },
+  {
+    "id": "quiz-5",
+    "question": "What is the coefficient of x in -7x?",
+    "options": [
+      "7",
+      "-7",
+      "x",
+      "-x"
+    ],
+    "answer": "-7",
+    "explanation": "The coefficient is the number multiplying the variable. In -7x, the coefficient of x is -7."
+  },
+  {
+    "id": "quiz-6",
+    "question": "What is the coefficient of y² in 5y²?",
+    "options": [
+      "2",
+      "5",
+      "y",
+      "y²"
+    ],
+    "answer": "5",
+    "explanation": "5 is the numerical factor multiplying y², so it is the coefficient of y²."
+  },
+  {
+    "id": "quiz-7",
+    "question": "What is the numerical coefficient of -12ab?",
+    "options": [
+      "-12",
+      "12",
+      "ab",
+      "-ab"
+    ],
+    "answer": "-12",
+    "explanation": "The numerical coefficient is the number multiplying the variables. In -12ab, the numerical coefficient is -12."
+  },
+  {
+    "id": "quiz-8",
+    "question": "How many terms are in the expression 4x² - 7x + 9?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3",
+    "explanation": "The expression has three terms: 4x², -7x, and 9."
+  },
+  {
+    "id": "quiz-9",
+    "question": "Which is a term in the expression 8a² + 5a - 6?",
+    "options": [
+      "8a²",
+      "a² + 5a",
+      "5a - 6",
+      "8a² + 5a"
+    ],
+    "answer": "8a²",
+    "explanation": "Terms are separated by addition or subtraction signs. 8a² is one of the three terms in the expression."
+  },
+  {
+    "id": "quiz-10",
+    "question": "What are the factors of 7xy?",
+    "options": [
+      "7, x, and y",
+      "7x and y + 1",
+      "7 + x + y",
+      "7xy only"
+    ],
+    "answer": "7, x, and y",
+    "explanation": "7xy represents 7 × x × y, so its factors are 7, x, and y."
+  },
+  {
+    "id": "quiz-11",
+    "question": "Which symbol means 'less than or equal to'?",
+    "options": [
+      "≥",
+      "≤",
+      ">",
+      "="
+    ],
+    "answer": "≤",
+    "explanation": "The symbol ≤ means that the quantity on the left is less than or equal to the quantity on the right."
+  },
+  {
+    "id": "quiz-12",
+    "question": "In the expression 8x² - 5xy + 12, which statement is correct?",
+    "options": [
+      "8 is the coefficient of x²",
+      "-5 is the constant term",
+      "12 is the coefficient of xy",
+      "x² is the constant term"
+    ],
+    "answer": "8 is the coefficient of x²",
+    "explanation": "8 multiplies x², making it the coefficient of x². The constant term is 12."
+  },
+  {
+    "id": "quiz-13",
+    "question": "Which pair consists of like terms?",
+    "options": [
+      "5x and -3x",
+      "5x and -3x²",
+      "4a and 4b",
+      "7m² and 7m"
+    ],
+    "answer": "5x and -3x",
+    "explanation": "5x and -3x have the same variable x with the same exponent, so they are like terms."
+  },
+  {
+    "id": "quiz-14",
+    "question": "Which pair consists of unlike terms?",
+    "options": [
+      "3x and 8x",
+      "-4a and 9a",
+      "5y² and -2y²",
+      "6x and 6x²"
+    ],
+    "answer": "6x and 6x²",
+    "explanation": "6x and 6x² have different exponents on x, so they are unlike terms."
+  },
+  {
+    "id": "quiz-15",
+    "question": "In the expression 7x² - 4xy + 9, which variables are present?",
+    "options": [
+      "x only",
+      "y only",
+      "x and y",
+      "7 and 9"
+    ],
+    "answer": "x and y",
+    "explanation": "x appears in 7x² and both x and y appear in -4xy. Therefore, the variables present are x and y."
+  },
+  {
+    "id": "quiz-16",
+    "question": "Which statement correctly describes the expression -5a + 13?",
+    "options": [
+      "-5 is the variable",
+      "a is the constant term",
+      "-5 is the coefficient of a",
+      "13 is the coefficient of a"
+    ],
+    "answer": "-5 is the coefficient of a",
+    "explanation": "-5 multiplies the variable a, so it is the coefficient of a. The constant term is 13."
+  },
+  {
+    "id": "quiz-17",
+    "question": "Which term is like 4x³?",
+    "options": [
+      "7x",
+      "-2x³",
+      "5x²",
+      "4y³"
+    ],
+    "answer": "-2x³",
+    "explanation": "-2x³ has the same variable x raised to the same exponent 3 as 4x³, so they are like terms."
+  },
+  {
+    "id": "quiz-18",
+    "question": "In the expression 3x² - 8xy + 15, which term is the constant term?",
+    "options": [
+      "3x²",
+      "-8xy",
+      "15",
+      "x²"
+    ],
+    "answer": "15",
+    "explanation": "A constant term contains no variable. Therefore, 15 is the constant term."
+  },
+  {
+    "id": "quiz-19",
+    "question": "In the expression -6ab + 10, which statement is correct?",
+    "options": [
+      "-6 is the numerical coefficient of ab",
+      "a and b are constants",
+      "10 is the coefficient of ab",
+      "-6ab is the constant term"
+    ],
+    "answer": "-6 is the numerical coefficient of ab",
+    "explanation": "In -6ab, -6 is the numerical coefficient and a and b are variables. The constant term is 10."
+  },
+  {
+    "id": "quiz-20",
+    "question": "In the expression 9x² - 4xy + 7, which statement correctly identifies its parts?",
+    "options": [
+      "9 is the coefficient of x², -4 is the coefficient of xy, and 7 is the constant term",
+      "9 is the constant term, -4 is the variable, and 7 is a coefficient",
+      "x² and xy are constants, and 7 is a variable",
+      "9x² is the constant term, -4xy is a coefficient, and 7 is a variable"
+    ],
+    "answer": "9 is the coefficient of x², -4 is the coefficient of xy, and 7 is the constant term",
+    "explanation": "The expression has three terms: 9x², -4xy, and 7. The numerical coefficients are 9 and -4, while 7 is the constant term."
+  }
+]

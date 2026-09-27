@@ -26,19 +26,13 @@ class CourseCog(commands.Cog):
         interaction: discord.Interaction,
     ):
 
-        courses = (
-            self.bot
-            .course_service
-            .courses()
-        )
+        courses = self.bot.course_service.courses()
 
         if not courses:
-
             await interaction.response.send_message(
                 "No courses are currently available.",
                 ephemeral=True,
             )
-
             return
 
         description = "\n".join(
@@ -74,12 +68,10 @@ async def setup(bot):
 
 
 # ======================================================
-# LESSON VIEW
+# LESSON / CONTENT VIEW
 # ======================================================
 
-class LessonView(
-    discord.ui.View
-):
+class LessonView(discord.ui.View):
 
     def __init__(
         self,
@@ -94,22 +86,34 @@ class LessonView(
         )
 
         self.bot = bot
-
         self.course = course
         self.topic = topic
 
+        # Contains all content blocks:
+        #
+        # lesson
+        # example
+        # concept_check
+        #
         self.lessons = lessons
 
         self.index = 0
 
+        # Concept-check state
+        self.concept_answered = False
+        self.selected_answer = None
+
         self.update_buttons()
 
     # ==================================================
-    # CURRENT LESSON
+    # CURRENT CONTENT
     # ==================================================
 
     @property
     def current(self):
+
+        if not self.lessons:
+            return {}
 
         return self.lessons[
             self.index
@@ -121,19 +125,59 @@ class LessonView(
 
     def make_embed(self):
 
-        lesson = self.current
+        item = self.current
+
+        item_type = item.get(
+            "type",
+            "lesson",
+        )
+
+        if item_type == "lesson":
+
+            return self.make_lesson_embed(
+                item
+            )
+
+        if item_type == "example":
+
+            return self.make_example_embed(
+                item
+            )
+
+        if item_type == "concept_check":
+
+            return self.make_concept_check_embed(
+                item
+            )
+
+        return make_embed(
+            item.get(
+                "title",
+                "Content",
+            ),
+            item.get(
+                "content",
+                "No content available.",
+            ),
+        )
+
+    # ==================================================
+    # LESSON EMBED
+    # ==================================================
+
+    def make_lesson_embed(
+        self,
+        lesson,
+    ):
 
         title = lesson.get(
             "title",
-            f"Lesson {self.index + 1}",
+            "Lesson",
         )
 
         content = lesson.get(
             "content",
-            lesson.get(
-                "description",
-                "",
-            ),
+            "",
         )
 
         embed = make_embed(
@@ -141,6 +185,7 @@ class LessonView(
             content,
         )
 
+        # Formula is optional.
         formula = lesson.get(
             "formula"
         )
@@ -153,48 +198,288 @@ class LessonView(
                 inline=False,
             )
 
-        example = lesson.get(
-            "example"
+        self.add_footer(
+            embed
         )
 
-        if example:
+        return embed
+
+    # ==================================================
+    # EXAMPLE EMBED
+    # ==================================================
+
+    def make_example_embed(
+        self,
+        example,
+    ):
+
+        title = example.get(
+            "title",
+            "Example",
+        )
+
+        embed = make_embed(
+            title,
+            "",
+        )
+
+        question = example.get(
+            "question"
+        )
+
+        if question:
+
+            embed.add_field(
+                name="Question",
+                value=question,
+                inline=False,
+            )
+
+        content = example.get(
+            "content"
+        )
+
+        if content:
 
             embed.add_field(
                 name="Example",
-                value=str(example),
+                value=content,
                 inline=False,
             )
 
-        # ==============================================
-        # FINAL LESSON
-        # ==============================================
+        solution = example.get(
+            "solution"
+        )
 
-        if self.index == len(
-            self.lessons
-        ) - 1:
+        if solution:
 
             embed.add_field(
-                name="Lesson Complete",
+                name="Solution",
+                value=solution,
+                inline=False,
+            )
+
+        answer = example.get(
+            "answer"
+        )
+
+        if answer:
+
+            embed.add_field(
+                name="Answer",
+                value=answer,
+                inline=False,
+            )
+
+        self.add_footer(
+            embed
+        )
+
+        return embed
+
+    # ==================================================
+    # CONCEPT CHECK EMBED
+    # ==================================================
+
+    def make_concept_check_embed(
+        self,
+        concept_check,
+    ):
+
+        question = concept_check.get(
+            "question",
+            "Concept Check",
+        )
+
+        embed = make_embed(
+            "Concept Check",
+            question,
+        )
+
+        options = concept_check.get(
+            "options",
+            [],
+        )
+
+        # ==================================================
+        # BEFORE ANSWER
+        # ==================================================
+
+        if not self.concept_answered:
+
+            if options:
+
+                option_text = "\n".join(
+                    f"**{option.get('id', '')}.** "
+                    f"{option.get('text', '')}"
+                    for option in options
+                )
+
+                embed.add_field(
+                    name="Choose an answer",
+                    value=option_text,
+                    inline=False,
+                )
+
+        # ==================================================
+        # AFTER ANSWER
+        # ==================================================
+
+        else:
+
+            correct_answer = concept_check.get(
+                "correct_answer"
+            )
+
+            selected_answer = self.selected_answer
+
+            # --------------------------------------------------
+            # Find selected option
+            # --------------------------------------------------
+
+            selected_option = next(
+                (
+                    option
+                    for option in options
+                    if option.get("id")
+                    == selected_answer
+                ),
+                None,
+            )
+
+            selected_text = (
+                selected_option.get("text")
+                if selected_option
+                else str(selected_answer)
+            )
+
+            # --------------------------------------------------
+            # Find correct option
+            # --------------------------------------------------
+
+            correct_option = next(
+                (
+                    option
+                    for option in options
+                    if option.get("id")
+                    == correct_answer
+                ),
+                None,
+            )
+
+            correct_text = (
+                correct_option.get("text")
+                if correct_option
+                else str(correct_answer)
+            )
+
+            # --------------------------------------------------
+            # Determine result
+            # --------------------------------------------------
+
+            is_correct = (
+                selected_answer
+                == correct_answer
+            )
+
+            if is_correct:
+
+                embed.add_field(
+                    name="Result",
+                    value="✅ **Correct!**",
+                    inline=False,
+                )
+
+            else:
+
+                embed.add_field(
+                    name="Result",
+                    value="❌ **Not quite.**",
+                    inline=False,
+                )
+
+            # --------------------------------------------------
+            # Your Answer
+            # --------------------------------------------------
+
+            embed.add_field(
+                name="Your Answer",
                 value=(
-                    "You have completed all lessons "
-                    "for this topic.\n\n"
-                    "Choose **Practice** to reinforce "
-                    "what you learned, or **Quiz** to "
-                    "test your understanding."
+                    f"**{selected_answer}.** "
+                    f"{selected_text}"
                 ),
                 inline=False,
             )
+
+            # --------------------------------------------------
+            # Correct Answer
+            # --------------------------------------------------
+
+            embed.add_field(
+                name="Correct Answer",
+                value=(
+                    f"**{correct_answer}.** "
+                    f"{correct_text}"
+                ),
+                inline=False,
+            )
+
+            # --------------------------------------------------
+            # Explanation
+            # --------------------------------------------------
+
+            explanation = concept_check.get(
+                "explanation"
+            )
+
+            if explanation:
+
+                embed.add_field(
+                    name="Explanation",
+                    value=explanation,
+                    inline=False,
+                )
+
+        self.add_footer(
+            embed
+        )
+
+        return embed
+
+    # ==================================================
+    # FOOTER
+    # ==================================================
+
+    def add_footer(
+        self,
+        embed,
+    ):
+
+        item = self.current
+
+        item_type = item.get(
+            "type",
+            "lesson",
+        )
+
+        type_name = {
+            "lesson": "Lesson",
+            "example": "Example",
+            "concept_check": "Concept Check",
+        }.get(
+            item_type,
+            "Content",
+        )
 
         embed.set_footer(
             text=(
                 f"{self.course} / "
                 f"{self.topic} • "
-                f"Lesson {self.index + 1}/"
+                f"{type_name} "
+                f"{self.index + 1}/"
                 f"{len(self.lessons)}"
             )
         )
-
-        return embed
 
     # ==================================================
     # BUTTONS
@@ -204,14 +489,69 @@ class LessonView(
 
         self.clear_items()
 
-        # ==============================================
+        item = self.current
+
+        item_type = item.get(
+            "type",
+            "lesson",
+        )
+
+        # ==================================================
+        # CONCEPT CHECK ANSWERS
+        # ==================================================
+
+        if (
+            item_type == "concept_check"
+            and not self.concept_answered
+        ):
+
+            options = item.get(
+                "options",
+                [],
+            )
+
+            for option in options:
+
+                answer_id = option.get(
+                    "id"
+                )
+
+                if not answer_id:
+                    continue
+
+                button = discord.ui.Button(
+                    label=answer_id,
+                    style=discord.ButtonStyle.primary,
+                    row=0,
+                )
+
+                async def callback(
+                    interaction: discord.Interaction,
+                    answer_id=answer_id,
+                ):
+
+                    await self.answer_concept_check(
+                        interaction,
+                        answer_id,
+                    )
+
+                button.callback = callback
+
+                self.add_item(
+                    button
+                )
+
+        # ==================================================
         # PREVIOUS
-        # ==============================================
+        # ==================================================
 
         previous = discord.ui.Button(
             label="Previous",
             style=discord.ButtonStyle.secondary,
-            disabled=self.index == 0,
+            disabled=(
+                self.index == 0
+            ),
+            row=1,
         )
 
         previous.callback = (
@@ -222,16 +562,26 @@ class LessonView(
             previous
         )
 
-        # ==============================================
+        # ==================================================
         # NEXT
-        # ==============================================
+        # ==================================================
+
+        # Don't allow the user to skip an unanswered
+        # concept check.
+
+        concept_check_locked = (
+            item_type == "concept_check"
+            and not self.concept_answered
+        )
 
         next_button = discord.ui.Button(
             label="Next",
             style=discord.ButtonStyle.primary,
             disabled=(
                 self.index >= len(self.lessons) - 1
+                or concept_check_locked
             ),
+            row=1,
         )
 
         next_button.callback = (
@@ -242,9 +592,9 @@ class LessonView(
             next_button
         )
 
-        # ==============================================
-        # PRACTICE / QUIZ
-        # ==============================================
+        # ==================================================
+        # FINAL CONTENT
+        # ==================================================
 
         if self.index == len(
             self.lessons
@@ -252,12 +602,14 @@ class LessonView(
 
             practice = discord.ui.Button(
                 label="Practice",
-                style=discord.ButtonStyle.success,
+                style=discord.ButtonStyle.primary,
+                row=2,
             )
 
             quiz = discord.ui.Button(
                 label="Quiz",
-                style=discord.ButtonStyle.primary,
+                style=discord.ButtonStyle.success,
+                row=2,
             )
 
             practice.callback = (
@@ -276,13 +628,14 @@ class LessonView(
                 quiz
             )
 
-        # ==============================================
+        # ==================================================
         # CLOSE
-        # ==============================================
+        # ==================================================
 
         close = discord.ui.Button(
             label="Close",
             style=discord.ButtonStyle.danger,
+            row=1,
         )
 
         close.callback = (
@@ -294,6 +647,73 @@ class LessonView(
         )
 
     # ==================================================
+    # CONCEPT CHECK ANSWER
+    # ==================================================
+
+    async def answer_concept_check(
+        self,
+        interaction: discord.Interaction,
+        answer: str,
+    ):
+
+        item = self.current
+
+        # ==================================================
+        # SAFETY CHECK
+        # ==================================================
+
+        if item.get("type") != "concept_check":
+
+            await interaction.response.send_message(
+                "This is not a concept check.",
+                ephemeral=True,
+            )
+
+            return
+
+        # ==================================================
+        # PREVENT DOUBLE ANSWER
+        # ==================================================
+
+        if self.concept_answered:
+
+            await interaction.response.send_message(
+                "You have already answered this "
+                "concept check.",
+                ephemeral=True,
+            )
+
+            return
+
+        # ==================================================
+        # ACKNOWLEDGE INTERACTION FIRST
+        # ==================================================
+
+        await interaction.response.defer()
+
+        # ==================================================
+        # SAVE ANSWER
+        # ==================================================
+
+        self.selected_answer = answer
+        self.concept_answered = True
+
+        # ==================================================
+        # UPDATE BUTTONS
+        # ==================================================
+
+        self.update_buttons()
+
+        # ==================================================
+        # UPDATE ORIGINAL MESSAGE
+        # ==================================================
+
+        await interaction.edit_original_response(
+            embed=self.make_embed(),
+            view=self,
+        )
+
+    # ==================================================
     # PREVIOUS
     # ==================================================
 
@@ -302,12 +722,38 @@ class LessonView(
         interaction: discord.Interaction,
     ):
 
+        # ==================================================
+        # ACKNOWLEDGE INTERACTION FIRST
+        # ==================================================
+
+        await interaction.response.defer()
+
+        # ==================================================
+        # MOVE BACK
+        # ==================================================
+
         if self.index > 0:
+
             self.index -= 1
+
+        # ==================================================
+        # RESET CONCEPT CHECK
+        # ==================================================
+
+        self.concept_answered = False
+        self.selected_answer = None
+
+        # ==================================================
+        # UPDATE VIEW
+        # ==================================================
 
         self.update_buttons()
 
-        await interaction.response.edit_message(
+        # ==================================================
+        # UPDATE MESSAGE
+        # ==================================================
+
+        await interaction.edit_original_response(
             embed=self.make_embed(),
             view=self,
         )
@@ -321,15 +767,59 @@ class LessonView(
         interaction: discord.Interaction,
     ):
 
+        # ==================================================
+        # PREVENT SKIPPING CONCEPT CHECK
+        # ==================================================
+
+        item = self.current
+
+        if (
+            item.get("type") == "concept_check"
+            and not self.concept_answered
+        ):
+
+            await interaction.response.send_message(
+                "Please answer the concept check "
+                "before continuing.",
+                ephemeral=True,
+            )
+
+            return
+
+        # ==================================================
+        # ACKNOWLEDGE INTERACTION FIRST
+        # ==================================================
+
+        await interaction.response.defer()
+
+        # ==================================================
+        # MOVE FORWARD
+        # ==================================================
+
         if self.index < len(
             self.lessons
         ) - 1:
 
             self.index += 1
 
+        # ==================================================
+        # RESET CONCEPT CHECK
+        # ==================================================
+
+        self.concept_answered = False
+        self.selected_answer = None
+
+        # ==================================================
+        # UPDATE VIEW
+        # ==================================================
+
         self.update_buttons()
 
-        await interaction.response.edit_message(
+        # ==================================================
+        # UPDATE MESSAGE
+        # ==================================================
+
+        await interaction.edit_original_response(
             embed=self.make_embed(),
             view=self,
         )
@@ -429,10 +919,24 @@ class LessonView(
         interaction: discord.Interaction,
     ):
 
-        self.clear_items()
+        # ==================================================
+        # ACKNOWLEDGE INTERACTION
+        # ==================================================
 
-        await interaction.response.edit_message(
+        await interaction.response.defer()
+
+        # ==================================================
+        # STOP VIEW
+        # ==================================================
+
+        self.stop()
+
+        # ==================================================
+        # REMOVE COMPONENTS
+        # ==================================================
+
+        await interaction.edit_original_response(
             content="Learning session closed.",
             embed=None,
-            view=self,
+            view=None,
         )

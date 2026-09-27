@@ -118,5 +118,125 @@
     ],
     "answer": "π",
     "explanation": "π is irrational because its decimal representation is non-terminating and non-repeating."
+  },
+  {
+    "id": "quiz-11",
+    "question": "Which statement correctly describes integers?",
+    "options": [
+      "Integers include only positive numbers.",
+      "Integers include positive whole numbers, negative whole numbers, and zero.",
+      "Integers include only fractions.",
+      "Integers include only irrational numbers."
+    ],
+    "answer": "Integers include positive whole numbers, negative whole numbers, and zero.",
+    "explanation": "The integers are ..., -3, -2, -1, 0, 1, 2, 3, ... and include both positive and negative whole numbers."
+  },
+  {
+    "id": "quiz-12",
+    "question": "Which decimal is irrational?",
+    "options": [
+      "0.25",
+      "0.75",
+      "0.333333...",
+      "3.141592653589793..."
+    ],
+    "answer": "3.141592653589793...",
+    "explanation": "The decimal representation of π is non-terminating and non-repeating, making it irrational."
+  },
+  {
+    "id": "quiz-13",
+    "question": "Which number belongs to the natural, whole, integer, rational, and real number sets?",
+    "options": [
+      "7",
+      "-7",
+      "√7",
+      "1/7"
+    ],
+    "answer": "7",
+    "explanation": "7 is a natural number. Therefore, it is also a whole number, integer, rational number, and real number."
+  },
+  {
+    "id": "quiz-14",
+    "question": "Which classification is correct for -5?",
+    "options": [
+      "Natural, whole, integer",
+      "Whole, integer, rational",
+      "Integer, rational, real",
+      "Irrational, real"
+    ],
+    "answer": "Integer, rational, real",
+    "explanation": "-5 is an integer. Every integer is rational because it can be written as a fraction with denominator 1, and every rational number is real."
+  },
+  {
+    "id": "quiz-15",
+    "question": "Which number is greater?",
+    "options": [
+      "-8",
+      "-2",
+      "-10",
+      "-15"
+    ],
+    "answer": "-2",
+    "explanation": "On the number line, -2 is farther to the right than -8, -10, and -15, so it is the greatest."
+  },
+  {
+    "id": "quiz-16",
+    "question": "Which list is arranged from least to greatest?",
+    "options": [
+      "5, 2, 0, -3",
+      "-3, 0, 2, 5",
+      "0, -3, 2, 5",
+      "2, -3, 0, 5"
+    ],
+    "answer": "-3, 0, 2, 5",
+    "explanation": "Numbers increase from left to right on the number line, so -3, 0, 2, 5 is the correct order."
+  },
+  {
+    "id": "quiz-17",
+    "question": "What is the value of |-9|?",
+    "options": [
+      "-9",
+      "-1",
+      "0",
+      "9"
+    ],
+    "answer": "9",
+    "explanation": "Absolute value represents distance from zero. Since -9 is 9 units from zero, |-9| = 9."
+  },
+  {
+    "id": "quiz-18",
+    "question": "Which number is farthest to the left on the number line?",
+    "options": [
+      "-2",
+      "4",
+      "-6",
+      "1"
+    ],
+    "answer": "-6",
+    "explanation": "The farther left a number is on the number line, the smaller it is. Therefore, -6 is farthest to the left."
+  },
+  {
+    "id": "quiz-19",
+    "question": "Which statement about number sets is correct?",
+    "options": [
+      "Every integer is a natural number.",
+      "Every whole number is an integer.",
+      "Every rational number is irrational.",
+      "Every real number is an integer."
+    ],
+    "answer": "Every whole number is an integer.",
+    "explanation": "Whole numbers such as 0, 1, 2, and 3 are all integers. However, negative integers are not whole numbers."
+  },
+  {
+    "id": "quiz-20",
+    "question": "Which statement correctly describes the real number system?",
+    "options": [
+      "Real numbers contain only integers.",
+      "Real numbers contain only rational numbers.",
+      "Real numbers consist of rational and irrational numbers.",
+      "Real numbers contain only natural numbers."
+    ],
+    "answer": "Real numbers consist of rational and irrational numbers.",
+    "explanation": "The real number system includes every rational and irrational number that can be represented on the real number line."
   }
 ]

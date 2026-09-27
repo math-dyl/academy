@@ -1,0 +1,242 @@
+[
+  {
+    "id": "quiz-1",
+    "question": "Which set contains the positive counting numbers 1, 2, 3, 4, and so on?",
+    "options": [
+      "Natural numbers",
+      "Whole numbers",
+      "Integers",
+      "Irrational numbers"
+    ],
+    "answer": "Natural numbers",
+    "explanation": "Natural numbers are the positive counting numbers. In this course, they begin with 1."
+  },
+  {
+    "id": "quiz-2",
+    "question": "Which number is a whole number but not a natural number?",
+    "options": [
+      "-1",
+      "0",
+      "1",
+      "5"
+    ],
+    "answer": "0",
+    "explanation": "Whole numbers include 0, while natural numbers in this course begin with 1."
+  },
+  {
+    "id": "quiz-3",
+    "question": "Which of the following is an integer?",
+    "options": [
+      "2.5",
+      "3/4",
+      "-6",
+      "√5"
+    ],
+    "answer": "-6",
+    "explanation": "Integers include positive and negative whole numbers and zero. Therefore, -6 is an integer."
+  },
+  {
+    "id": "quiz-4",
+    "question": "Which number is NOT an integer?",
+    "options": [
+      "-10",
+      "0",
+      "8",
+      "3.5"
+    ],
+    "answer": "3.5",
+    "explanation": "Integers do not contain decimal or fractional parts. Therefore, 3.5 is not an integer."
+  },
+  {
+    "id": "quiz-5",
+    "question": "Which of the following is a rational number?",
+    "options": [
+      "√2",
+      "π",
+      "5/8",
+      "√7"
+    ],
+    "answer": "5/8",
+    "explanation": "5/8 is a ratio of two integers with a nonzero denominator, so it is rational."
+  },
+  {
+    "id": "quiz-6",
+    "question": "Which decimal represents a rational number?",
+    "options": [
+      "0.75",
+      "√2",
+      "π",
+      "√3"
+    ],
+    "answer": "0.75",
+    "explanation": "0.75 is a terminating decimal and can be written as 3/4, so it is rational."
+  },
+  {
+    "id": "quiz-7",
+    "question": "Which number is irrational?",
+    "options": [
+      "4",
+      "1/3",
+      "0.125",
+      "√5"
+    ],
+    "answer": "√5",
+    "explanation": "√5 cannot be expressed as a ratio of two integers, so it is irrational."
+  },
+  {
+    "id": "quiz-8",
+    "question": "Which statement correctly describes irrational numbers?",
+    "options": [
+      "They can always be written as fractions.",
+      "Their decimal representations always terminate.",
+      "Their decimal representations are non-terminating and non-repeating.",
+      "They are always integers."
+    ],
+    "answer": "Their decimal representations are non-terminating and non-repeating.",
+    "explanation": "Irrational numbers cannot be written as a ratio of two integers and have non-terminating, non-repeating decimal representations."
+  },
+  {
+    "id": "quiz-9",
+    "question": "Which of the following is a real number?",
+    "options": [
+      "√2",
+      "π",
+      "-7",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "√2 and π are irrational real numbers, while -7 is a rational real number. Therefore, all three are real numbers."
+  },
+  {
+    "id": "quiz-10",
+    "question": "Which number is NOT a real number?",
+    "options": [
+      "√2",
+      "-5",
+      "3/4",
+      "√-1"
+    ],
+    "answer": "√-1",
+    "explanation": "√-1 is not a real number. It is associated with the imaginary unit i."
+  },
+  {
+    "id": "quiz-11",
+    "question": "Which classification is correct for the number 9?",
+    "options": [
+      "Natural only",
+      "Natural and whole only",
+      "Natural, whole, integer, rational, and real",
+      "Integer and irrational only"
+    ],
+    "answer": "Natural, whole, integer, rational, and real",
+    "explanation": "9 is a natural number. Therefore, it is also a whole number, integer, rational number, and real number."
+  },
+  {
+    "id": "quiz-12",
+    "question": "Which classification is correct for -8?",
+    "options": [
+      "Natural, whole, integer",
+      "Integer, rational, real",
+      "Irrational and real",
+      "Whole and irrational"
+    ],
+    "answer": "Integer, rational, real",
+    "explanation": "-8 is an integer. It can be written as -8/1, making it rational, and every rational number is real."
+  },
+  {
+    "id": "quiz-13",
+    "question": "Which statement correctly shows the relationship between the number sets?",
+    "options": [
+      "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real",
+      "Real ⊂ Rational ⊂ Integers ⊂ Whole",
+      "Integers ⊂ Natural ⊂ Whole ⊂ Real",
+      "Rational ⊂ Irrational ⊂ Real"
+    ],
+    "answer": "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real",
+    "explanation": "Natural numbers are contained within whole numbers, whole numbers within integers, integers within rational numbers, and rational numbers within real numbers."
+  },
+  {
+    "id": "quiz-14",
+    "question": "Which statement about number sets is correct?",
+    "options": [
+      "Every integer is a natural number.",
+      "Every whole number is an integer.",
+      "Every rational number is irrational.",
+      "Every real number is an integer."
+    ],
+    "answer": "Every whole number is an integer.",
+    "explanation": "Whole numbers such as 0, 1, 2, and 3 are all integers. However, not every integer is a whole number because negative integers are not whole numbers."
+  },
+  {
+    "id": "quiz-15",
+    "question": "Which number is greatest?",
+    "options": [
+      "-12",
+      "-4",
+      "-9",
+      "-15"
+    ],
+    "answer": "-4",
+    "explanation": "On the number line, -4 is farthest to the right among the choices, so it is the greatest."
+  },
+  {
+    "id": "quiz-16",
+    "question": "Which list is arranged from least to greatest?",
+    "options": [
+      "6, 2, -1, -4",
+      "-4, -1, 2, 6",
+      "-1, -4, 2, 6",
+      "2, -1, -4, 6"
+    ],
+    "answer": "-4, -1, 2, 6",
+    "explanation": "Numbers increase from left to right on the number line, so -4, -1, 2, 6 is the correct order."
+  },
+  {
+    "id": "quiz-17",
+    "question": "What is the value of |-14|?",
+    "options": [
+      "-14",
+      "-7",
+      "0",
+      "14"
+    ],
+    "answer": "14",
+    "explanation": "Absolute value represents distance from zero. Since -14 is 14 units from zero, |-14| = 14."
+  },
+  {
+    "id": "quiz-18",
+    "question": "Which number is farthest to the left on the number line?",
+    "options": [
+      "-3",
+      "2",
+      "-8",
+      "5"
+    ],
+    "answer": "-8",
+    "explanation": "Numbers become smaller as you move to the left on the number line. Therefore, -8 is farthest to the left."
+  },
+  {
+    "id": "quiz-19",
+    "question": "Which number belongs to the integers but not the whole numbers?",
+    "options": [
+      "0",
+      "6",
+      "-5",
+      "1/2"
+    ],
+    "answer": "-5",
+    "explanation": "Integers include negative whole numbers, but whole numbers do not include negative numbers. Therefore, -5 is an integer but not a whole number."
+  },
+  {
+    "id": "quiz-20",
+    "question": "Which statement correctly describes the real number system?",
+    "options": [
+      "Real numbers contain only integers.",
+      "Real numbers contain only rational numbers.",
+      "Real numbers consist of rational and irrational numbers.",
+      "Real numbers contain only natural numbers."
+    ],
+    "answer": "Real numbers consist of rational and irrational numbers.",
+    "explanation": "The real number system consists of both rational and irrational numbers. These numbers can be represented on the real number line."
+  }
+]

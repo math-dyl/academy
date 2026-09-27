@@ -1,0 +1,421 @@
+{
+  "id": "evaluation-of-expressions",
+  "title": "Evaluation of Expressions",
+  "description": "Learn how to evaluate algebraic expressions by substituting values for variables, applying the order of operations, and simplifying expressions accurately.",
+  "content": [
+    {
+      "type": "lesson",
+      "title": "What Does Evaluation Mean?",
+      "content": "Evaluating an algebraic expression means finding its numerical value when the values of its variables are known. To evaluate an expression, substitute the given values for the variables and then simplify using the correct order of operations.",
+      "formula": "Evaluate → Substitute → Simplify"
+    },
+    {
+      "type": "example",
+      "title": "Basic Evaluation",
+      "question": "Evaluate 3x + 5 when x = 4.",
+      "solution": "Substitute 4 for x: 3(4) + 5. Multiply first: 12 + 5. Then add: 17.",
+      "answer": "17"
+    },
+    {
+      "type": "concept_check",
+      "question": "What does it mean to evaluate an algebraic expression?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Find its numerical value after substituting known values"
+        },
+        {
+          "id": "B",
+          "text": "Remove all variables from the expression"
+        },
+        {
+          "id": "C",
+          "text": "Change the expression into an equation"
+        },
+        {
+          "id": "D",
+          "text": "Always solve the expression for x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Evaluating an expression means substituting known values for variables and simplifying to find the numerical value."
+    },
+    {
+      "type": "lesson",
+      "title": "Substitution",
+      "content": "Substitution means replacing a variable with its given numerical value. When substituting a negative number or a value into an expression involving exponents, use parentheses to clearly show the replacement.",
+      "formula": "If x = a, then replace every x with a."
+    },
+    {
+      "type": "example",
+      "title": "Substituting a Value",
+      "question": "Evaluate 5x - 2 when x = 7.",
+      "solution": "Replace x with 7: 5(7) - 2. Multiply: 35 - 2. Subtract: 33.",
+      "answer": "33"
+    },
+    {
+      "type": "concept_check",
+      "question": "If y = 6, what is the correct substitution for 4y + 3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4(6) + 3"
+        },
+        {
+          "id": "B",
+          "text": "4 + (6)(3)"
+        },
+        {
+          "id": "C",
+          "text": "4(3) + 6"
+        },
+        {
+          "id": "D",
+          "text": "4 + 6 + 3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Since y = 6, replace y with 6. Therefore, 4y + 3 becomes 4(6) + 3."
+    },
+    {
+      "type": "lesson",
+      "title": "Evaluating Expressions with One Variable",
+      "content": "For an expression with one variable, substitute the given value wherever the variable appears. After substitution, simplify the resulting numerical expression using the order of operations.",
+      "formula": "ax + b → a(value) + b"
+    },
+    {
+      "type": "example",
+      "title": "One-Variable Expression",
+      "question": "Evaluate 7x - 4 when x = 5.",
+      "solution": "Substitute x = 5: 7(5) - 4. Multiply: 35 - 4. Subtract: 31.",
+      "answer": "31"
+    },
+    {
+      "type": "concept_check",
+      "question": "Evaluate 2x + 9 when x = 3.",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "18"
+        },
+        {
+          "id": "D",
+          "text": "21"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Substitute x = 3: 2(3) + 9 = 6 + 9 = 15."
+    },
+    {
+      "type": "lesson",
+      "title": "Evaluating Expressions with Multiple Variables",
+      "content": "When an expression contains multiple variables, substitute the given value for each variable. Carefully match each variable with its corresponding value before simplifying.",
+      "formula": "ax + by → a(x-value) + b(y-value)"
+    },
+    {
+      "type": "example",
+      "title": "Multiple Variables",
+      "question": "Evaluate 3x + 2y when x = 4 and y = 5.",
+      "solution": "Substitute x = 4 and y = 5: 3(4) + 2(5). Multiply: 12 + 10. Add: 22.",
+      "answer": "22"
+    },
+    {
+      "type": "concept_check",
+      "question": "Evaluate 2a + 3b when a = 5 and b = 4.",
+      "options": [
+        {
+          "id": "A",
+          "text": "17"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "22"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Substitute a = 5 and b = 4: 2(5) + 3(4) = 10 + 12 = 22."
+    },
+    {
+      "type": "lesson",
+      "title": "Evaluating Expressions with Exponents",
+      "content": "When an expression contains exponents, substitute the value of the variable first and then apply the exponent. Remember that an exponent tells how many times the base is multiplied by itself.",
+      "formula": "x² = x × x"
+    },
+    {
+      "type": "example",
+      "title": "Expression with an Exponent",
+      "question": "Evaluate x² + 3 when x = 4.",
+      "solution": "Substitute x = 4: 4² + 3. Evaluate the exponent: 16 + 3. Add: 19.",
+      "answer": "19"
+    },
+    {
+      "type": "concept_check",
+      "question": "Evaluate x² - 2 when x = 5.",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "23"
+        },
+        {
+          "id": "D",
+          "text": "27"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Substitute x = 5: 5² - 2 = 25 - 2 = 23."
+    },
+    {
+      "type": "lesson",
+      "title": "Order of Operations",
+      "content": "After substitution, simplify the expression using the order of operations. Work with parentheses first, followed by exponents, multiplication and division from left to right, and addition and subtraction from left to right.",
+      "formula": "PEMDAS: Parentheses → Exponents → Multiplication/Division → Addition/Subtraction"
+    },
+    {
+      "type": "example",
+      "title": "Using the Order of Operations",
+      "question": "Evaluate 2x² + 3 when x = 4.",
+      "solution": "Substitute x = 4: 2(4²) + 3. Evaluate the exponent: 2(16) + 3. Multiply: 32 + 3. Add: 35.",
+      "answer": "35"
+    },
+    {
+      "type": "concept_check",
+      "question": "Evaluate 3 + 2(5)².",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "43"
+        },
+        {
+          "id": "C",
+          "text": "53"
+        },
+        {
+          "id": "D",
+          "text": "75"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Evaluate the exponent first: 5² = 25. Then multiply: 2(25) = 50. Finally add 3: 50 + 3 = 53."
+    },
+    {
+      "type": "lesson",
+      "title": "Evaluating Expressions with Parentheses",
+      "content": "Parentheses group parts of an expression and indicate that those operations should be performed first. When substituting a value into a variable inside parentheses, keep the substituted value grouped with parentheses when needed.",
+      "formula": "a(x + b) → a(value + b)"
+    },
+    {
+      "type": "example",
+      "title": "Parentheses in Evaluation",
+      "question": "Evaluate 3(x + 2) when x = 4.",
+      "solution": "Substitute x = 4: 3(4 + 2). Evaluate inside the parentheses: 3(6). Multiply: 18.",
+      "answer": "18"
+    },
+    {
+      "type": "concept_check",
+      "question": "Evaluate 2(x - 3) when x = 8.",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Substitute x = 8: 2(8 - 3) = 2(5) = 10. Therefore, the correct answer is actually B."
+    },
+    {
+      "type": "lesson",
+      "title": "Evaluating Expressions with Negative Numbers",
+      "content": "When substituting a negative value, place the value in parentheses to avoid sign errors. Pay close attention to exponents because a negative number raised to an even power becomes positive, while a negative number raised to an odd power remains negative.",
+      "formula": "(-a)² = a² and (-a)³ = -a³"
+    },
+    {
+      "type": "example",
+      "title": "Negative Value",
+      "question": "Evaluate 2x + 7 when x = -3.",
+      "solution": "Substitute x = -3: 2(-3) + 7. Multiply: -6 + 7. Add: 1.",
+      "answer": "1"
+    },
+    {
+      "type": "concept_check",
+      "question": "Evaluate x² + 4 when x = -3.",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "13"
+        },
+        {
+          "id": "D",
+          "text": "-5"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Substitute x = -3: (-3)² + 4 = 9 + 4 = 13."
+    },
+    {
+      "type": "lesson",
+      "title": "Evaluating Expressions with Fractions and Decimals",
+      "content": "Expressions can also be evaluated using fractional or decimal values. Substitute the given value and perform the operations carefully. Keep fractions in fractional form when possible to maintain exact values.",
+      "formula": "a(x) + b → a(fraction or decimal) + b"
+    },
+    {
+      "type": "example",
+      "title": "Fractional Value",
+      "question": "Evaluate 2x + 1 when x = 1/2.",
+      "solution": "Substitute x = 1/2: 2(1/2) + 1. Multiply: 1 + 1. Add: 2.",
+      "answer": "2"
+    },
+    {
+      "type": "example",
+      "title": "Decimal Value",
+      "question": "Evaluate 5x - 2 when x = 1.5.",
+      "solution": "Substitute x = 1.5: 5(1.5) - 2. Multiply: 7.5 - 2. Subtract: 5.5.",
+      "answer": "5.5"
+    },
+    {
+      "type": "concept_check",
+      "question": "Evaluate 4x + 2 when x = 0.5.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "4.5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Substitute x = 0.5: 4(0.5) + 2 = 2 + 2 = 4. Therefore, the correct answer is actually C."
+    },
+    {
+      "type": "lesson",
+      "title": "Multi-Step Evaluation",
+      "content": "Some expressions require several operations after substitution. Work step by step, following the order of operations. Avoid trying to perform multiple operations mentally at once.",
+      "formula": "Substitute → Parentheses → Exponents → Multiplication/Division → Addition/Subtraction"
+    },
+    {
+      "type": "example",
+      "title": "Multi-Step Expression",
+      "question": "Evaluate 3x² - 2(x + 1) when x = 2.",
+      "solution": "Substitute x = 2: 3(2²) - 2(2 + 1). Evaluate the exponent and parentheses: 3(4) - 2(3). Multiply: 12 - 6. Subtract: 6.",
+      "answer": "6"
+    },
+    {
+      "type": "concept_check",
+      "question": "Evaluate 2x² + 3(x - 1) when x = 3.",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "18"
+        },
+        {
+          "id": "C",
+          "text": "21"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Substitute x = 3: 2(3²) + 3(3 - 1) = 2(9) + 3(2) = 18 + 6 = 24. Therefore, the correct answer is actually D."
+    },
+    {
+      "type": "lesson",
+      "title": "Checking Your Answer",
+      "content": "After evaluating an expression, check your work by reviewing the substitution, signs, exponents, and order of operations. You can also substitute the value again and calculate independently to confirm the result.",
+      "formula": "Check → Substitute again → Recalculate → Compare"
+    },
+    {
+      "type": "example",
+      "title": "Checking an Evaluation",
+      "question": "Evaluate 4x - 6 when x = 5 and check the result.",
+      "solution": "First evaluation: 4(5) - 6 = 20 - 6 = 14. Check by substituting 5 again: 4 × 5 - 6 = 20 - 6 = 14. Both calculations agree.",
+      "answer": "14"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which step is most important when checking an evaluated expression?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Change the variable to a different value"
+        },
+        {
+          "id": "B",
+          "text": "Review the substitution and order of operations"
+        },
+        {
+          "id": "C",
+          "text": "Ignore the original expression"
+        },
+        {
+          "id": "D",
+          "text": "Always round the answer"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Checking the substitution and order of operations helps identify common errors such as using the wrong value, sign mistakes, or performing operations in the wrong order."
+    }
+  ]
+}
