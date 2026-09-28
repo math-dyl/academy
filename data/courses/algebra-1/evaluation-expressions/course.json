@@ -1,7 +1,7 @@
 {
-  "title": "Algebraic Terminology",
-  "description": "Learn the fundamental terms and language of algebra, including variables, constants, coefficients, terms, expressions, equations, and mathematical operations.",
+  "title": "Evaluating Expressions",
+  "description": "Learn how to evaluate algebraic expressions by substituting given values for variables and applying the correct order of operations to find the value of an expression.",
   "course": "algebra-1",
-  "topic": "algebraic-terminology",
+  "topic": "evaluation-expressions",
   "channel_id": "1545439867109122208"
 }
