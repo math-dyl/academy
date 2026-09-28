@@ -1,0 +1,20 @@
+{
+  "id": "simplifying-expressions",
+  "title": "Simplifying Expressions",
+  "description": "Learn how to simplify algebraic expressions by identifying like terms, combining coefficients and constants, applying the distributive property, and solving multi-step simplification problems.",
+  "content": [
+    {
+      "type": "lesson",
+      "title": "What Does Simplifying Mean?",
+      "content": "Simplifying an algebraic expression means rewriting it in an equivalent form that is easier to understand or use. Simplification involves combining like terms and performing arithmetic operations without changing the value of the expression.",
+      "formula": "Simplified expression = an equivalent expression with fewer or combined terms"
+    },
+    {
+      "type": "example",
+      "title": "Basic Simplification",
+      "question": "Simplify 3x + 5x.",
+      "solution": "Both terms contain x, so they are like terms. Add their coefficients: 3 + 5 = 8.",
+      "answer": "8x"
+    }
+  ]
+}

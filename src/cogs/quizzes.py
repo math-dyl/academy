@@ -310,6 +310,7 @@ class QuizView(
                 self.bot
                 .pdf_service
                 .create_quiz_pdf(
+                    username=interaction.user.display_name,
                     course=self.course,
                     topic=self.topic,
                     questions=self.questions,

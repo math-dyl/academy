@@ -1,0 +1,62 @@
+[
+  {
+    "id": "quiz-1",
+    "question": "Which expression is equivalent to 5x + 3x - 2?",
+    "options": [
+      "8x - 2",
+      "8x + 2",
+      "2x - 2",
+      "5x + 1"
+    ],
+    "answer": "8x - 2",
+    "explanation": "Combine the like terms 5x and 3x: 5x + 3x = 8x. The constant -2 remains, giving 8x - 2."
+  },
+  {
+    "id": "quiz-2",
+    "question": "Simplify 10a - 4a + 7 - 3.",
+    "options": [
+      "6a + 4",
+      "14a + 4",
+      "6a + 10",
+      "14a - 4"
+    ],
+    "answer": "6a + 4",
+    "explanation": "Combine like terms: 10a - 4a = 6a and 7 - 3 = 4. Therefore, the simplified expression is 6a + 4."
+  },
+  {
+    "id": "quiz-3",
+    "question": "Simplify 3(2x + 5) - x.",
+    "options": [
+      "5x + 15",
+      "6x + 15",
+      "5x + 5",
+      "7x + 15"
+    ],
+    "answer": "5x + 15",
+    "explanation": "Distribute 3: 3(2x + 5) = 6x + 15. Then combine 6x - x = 5x, giving 5x + 15."
+  },
+  {
+    "id": "quiz-4",
+    "question": "Which pair contains like terms?",
+    "options": [
+      "4x² and 4x",
+      "7ab and -3ab",
+      "5y and 5y²",
+      "6 and 6x"
+    ],
+    "answer": "7ab and -3ab",
+    "explanation": "7ab and -3ab have the same variables with the same exponents, so they are like terms and can be combined."
+  },
+  {
+    "id": "quiz-5",
+    "question": "Simplify 2(3x - 4) + 4(x + 1).",
+    "options": [
+      "10x - 4",
+      "10x - 8",
+      "6x - 4",
+      "10x + 4"
+    ],
+    "answer": "10x - 4",
+    "explanation": "Distribute: 2(3x - 4) = 6x - 8 and 4(x + 1) = 4x + 4. Combine like terms: 6x + 4x = 10x and -8 + 4 = -4. The result is 10x - 4."
+  }
+]

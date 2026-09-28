@@ -1,0 +1,62 @@
+[
+  {
+    "id": "practice-1",
+    "question": "Simplify 6x + 9x.",
+    "options": [
+      "15x",
+      "54x",
+      "15",
+      "3x"
+    ],
+    "answer": "15x",
+    "explanation": "6x and 9x are like terms, so add their coefficients: 6 + 9 = 15. The result is 15x."
+  },
+  {
+    "id": "practice-2",
+    "question": "Simplify 12a - 7a + 3.",
+    "options": [
+      "19a + 3",
+      "5a + 3",
+      "5a - 3",
+      "19a - 3"
+    ],
+    "answer": "5a + 3",
+    "explanation": "Combine the like terms: 12a - 7a = 5a. The constant 3 remains, giving 5a + 3."
+  },
+  {
+    "id": "practice-3",
+    "question": "Which pair contains like terms?",
+    "options": [
+      "4x and 4x²",
+      "6a² and -9a²",
+      "3x and 3y",
+      "8 and 8x"
+    ],
+    "answer": "6a² and -9a²",
+    "explanation": "6a² and -9a² have the same variable part, a², so they are like terms."
+  },
+  {
+    "id": "practice-4",
+    "question": "Simplify 8x + 5 - 3x + 2.",
+    "options": [
+      "5x + 7",
+      "11x + 7",
+      "5x + 3",
+      "11x + 3"
+    ],
+    "answer": "5x + 7",
+    "explanation": "Combine the x terms: 8x - 3x = 5x. Combine the constants: 5 + 2 = 7. Therefore, the simplified expression is 5x + 7."
+  },
+  {
+    "id": "practice-5",
+    "question": "Simplify 4(2x + 3).",
+    "options": [
+      "8x + 3",
+      "8x + 12",
+      "6x + 12",
+      "8x + 7"
+    ],
+    "answer": "8x + 12",
+    "explanation": "Use the distributive property: 4(2x + 3) = 4(2x) + 4(3) = 8x + 12."
+  }
+]

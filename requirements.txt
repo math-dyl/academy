@@ -8,3 +8,4 @@ reportlab
 fastapi
 uvicorn
 openai
+pypdf

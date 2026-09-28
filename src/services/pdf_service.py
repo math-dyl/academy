@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 from io import BytesIO
+from pathlib import Path
 from xml.sax.saxutils import escape
+
+from pypdf import PdfReader, PdfWriter
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
@@ -24,11 +27,22 @@ from reportlab.platypus import (
 class PDFService:
 
     # ==================================================
+    # TEMPLATE
+    # ==================================================
+
+    TEMPLATE_PATH = (
+        Path(__file__).resolve().parents[2]
+        / "template"
+        / "mathdyl_academy_template.pdf"
+    )
+
+    # ==================================================
     # CREATE QUIZ PDF
     # ==================================================
 
     def create_quiz_pdf(
         self,
+        username: str,
         course: str,
         topic: str,
         questions: list[dict],
@@ -53,8 +67,8 @@ class PDFService:
             pagesize=letter,
             rightMargin=0.6 * inch,
             leftMargin=0.6 * inch,
-            topMargin=0.6 * inch,
-            bottomMargin=0.6 * inch,
+            topMargin=1.2 * inch,
+            bottomMargin=1.2 * inch,
         )
 
         styles = getSampleStyleSheet()
@@ -112,14 +126,14 @@ class PDFService:
 
         story.append(
             Paragraph(
-                "Mathdyl Academy",
+                "Quiz Reviewer",
                 title_style,
             )
         )
 
         story.append(
             Paragraph(
-                "Quiz Review",
+                "Practice Questions with Answers and Explanations",
                 subtitle_style,
             )
         )
@@ -131,11 +145,31 @@ class PDFService:
         info_data = [
             [
                 Paragraph(
+                    "<b>Username</b>",
+                    normal_style,
+                ),
+                Paragraph(
+                    escape(str(username)),
+                    normal_style,
+                ),
+                "",
+                "",
+            ],
+            [
+                Paragraph(
                     "<b>Course</b>",
                     normal_style,
                 ),
                 Paragraph(
                     escape(str(course)),
+                    normal_style,
+                ),
+                Paragraph(
+                    "<b>Score</b>",
+                    normal_style,
+                ),
+                Paragraph(
+                    f"{score}/{total}",
                     normal_style,
                 ),
             ],
@@ -148,18 +182,6 @@ class PDFService:
                     escape(str(topic)),
                     normal_style,
                 ),
-            ],
-            [
-                Paragraph(
-                    "<b>Score</b>",
-                    normal_style,
-                ),
-                Paragraph(
-                    f"{score}/{total}",
-                    normal_style,
-                ),
-            ],
-            [
                 Paragraph(
                     "<b>Percentage</b>",
                     normal_style,
@@ -174,14 +196,21 @@ class PDFService:
         info_table = Table(
             info_data,
             colWidths=[
-                1.4 * inch,
-                5.3 * inch,
+                1.0 * inch,
+                2.35 * inch,
+                1.2 * inch,
+                2.15 * inch,
             ],
         )
 
         info_table.setStyle(
             TableStyle(
                 [
+                    (
+                        "SPAN",
+                        (1, 0),
+                        (3, 0),
+                    ),
                     (
                         "GRID",
                         (0, 0),
@@ -431,8 +460,7 @@ class PDFService:
 
         story.append(
             Paragraph(
-                "Mathdyl Academy • "
-                "Keep learning. Keep building.",
+                "===== NOTHING FOLLOWS =====",
                 subtitle_style,
             )
         )
@@ -441,6 +469,41 @@ class PDFService:
             story
         )
 
+        # ==================================================
+        # APPLY PDF TEMPLATE
+        # ==================================================
+
         buffer.seek(0)
 
-        return buffer
+        generated_pdf = PdfReader(
+            buffer
+        )
+
+        template_pdf = PdfReader(
+            str(self.TEMPLATE_PATH)
+        )
+
+        template_page = template_pdf.pages[0]
+
+        writer = PdfWriter()
+
+        for page in generated_pdf.pages:
+
+            page.merge_page(
+                template_page,
+                over=False,
+            )
+
+            writer.add_page(
+                page
+            )
+
+        final_buffer = BytesIO()
+
+        writer.write(
+            final_buffer
+        )
+
+        final_buffer.seek(0)
+
+        return final_buffer
