@@ -2,10 +2,14 @@ from __future__ import annotations
 
 import discord
 
+import logging
+import os
+
 from discord.ext import commands
 
 from ..utils.embeds import make_embed
 
+logger = logging.getLogger(__name__)
 
 class QuizzesCog(
     commands.Cog
@@ -278,6 +282,86 @@ class QuizView(
             else 0
         )
 
+        # ==============================================
+        # SAVE QUIZ RESULT TO DATABASE
+        # ==============================================
+
+        try:
+
+            result = await self.bot.database_service.save_complete_quiz(
+                user_id=interaction.user.id,
+                course=self.course,
+                topic=self.topic,
+                score=self.score,
+                total_items=total,
+                answers=[
+                    {
+                        "question_id": str(index + 1),
+                        "selected_answer": answer["user_answer"],
+                        "correct_answer": answer["correct_answer"],
+                        "is_correct": answer["correct"],
+                    }
+                    for index, answer in enumerate(
+                        self.answers
+                    )
+                ],
+            )
+
+        except Exception as error:
+
+            logger.exception(
+                "Failed to save quiz result."
+            )
+
+            result = None
+
+        # ==============================================
+        # SEND RESULT TO ADMIN CHANNEL
+        # ==============================================
+
+        if result:
+
+            channel_id = int(
+                os.getenv(
+                    "QUIZ_RESULTS_CHANNEL_ID",
+                    "0",
+                )
+            )
+
+            if channel_id:
+
+                channel = self.bot.get_channel(
+                    channel_id
+                )
+
+                if channel:
+
+                    admin_embed = discord.Embed(
+                        title="Quiz Completed",
+                        description=(
+                            f"**Student:** "
+                            f"{interaction.user.mention}\n"
+                            f"**Course:** "
+                            f"{self.course}\n"
+                            f"**Topic:** "
+                            f"{self.topic}\n\n"
+                            f"**Score:** "
+                            f"{self.score}/{total}\n"
+                            f"**Percentage:** "
+                            f"{percentage:.1f}%"
+                        )
+                    )
+
+                    admin_embed.set_footer(
+                        text=(
+                            f"Attempt ID: "
+                            f"{result['attempt_id']}"
+                        )
+                    )
+
+                    await channel.send(
+                        embed=admin_embed
+                    )
         # ==============================================
         # COMPLETION EMBED
         # ==============================================

@@ -1,27 +1,18 @@
 from __future__ import annotations
 
 import discord
-
 from discord import app_commands
 from discord.ext import commands
 
 from ..utils.embeds import make_embed
 
+from ..services.equation_service import EquationService
 
-class FormulaCog(
-    commands.Cog
-):
 
-    def __init__(
-        self,
-        bot,
-    ):
-
+class FormulaCog(commands.Cog):
+    def __init__(self, bot):
         self.bot = bot
-
-    # ==================================================
-    # FORMULA HELPER
-    # ==================================================
+        self.equation_service = EquationService()
 
     async def send_formula(
         self,
@@ -29,84 +20,104 @@ class FormulaCog(
         category: str,
         category_name: str,
     ):
-
-        cheatsheet = (
-            self.bot
-            .formula_service
-            .get_cheatsheet(
-                category
-            )
-        )
+        cheatsheet = self.bot.formula_service.get_cheatsheet(category)
 
         if not cheatsheet:
-
             await interaction.response.send_message(
-                f"No {category_name.lower()} "
-                "cheatsheet was found.",
+                f"No {category_name.lower()} cheatsheet was found.",
                 ephemeral=True,
             )
-
             return
 
-        title = cheatsheet.get(
-            "title",
-            category_name,
-        )
-
-        formulas = cheatsheet.get(
-            "formulas",
-            [],
-        )
+        title = cheatsheet.get("title", category_name)
+        formulas = cheatsheet.get("formulas", [])
 
         if not formulas:
-
             await interaction.response.send_message(
-                f"No formulas were found in "
-                f"the {category_name.lower()} cheatsheet.",
+                f"No formulas were found in the {category_name.lower()} cheatsheet.",
                 ephemeral=True,
             )
-
             return
 
-        embed = make_embed(
-            title,
-            "",
-        )
+        # --------------------------------------------------
+        # Prepare formulas
+        # --------------------------------------------------
+
+        formula_blocks = []
 
         for item in formulas:
-
-            name = item.get(
-                "name",
-                "Formula",
-            )
-
-            formula = item.get(
-                "formula",
-                "",
-            )
+            name = item.get("name", "Formula")
+            formula = item.get("formula", "").strip()
 
             if not formula:
                 continue
 
-            embed.add_field(
-                name=name,
-                value=f"`{formula}`",
-                inline=False,
+            formula_blocks.append(
+                {
+                    "name": name,
+                    "formula": formula,
+                }
             )
 
-        embed.set_footer(
-            text=(
-                f"Mathdyl Academy • "
-                f"{category_name} Cheatsheet"
+        if not formula_blocks:
+            await interaction.response.send_message(
+                f"No valid formulas were found in the {category_name.lower()} cheatsheet.",
+                ephemeral=True,
             )
-        )
+            return
 
-        await interaction.response.send_message(
-            embed=embed
-        )
+        try:
+            # --------------------------------------------------
+            # Render complete cheatsheet as ONE image
+            # --------------------------------------------------
+
+            image = self.equation_service.render_formula_cheatsheet(
+                title=title,
+                formulas=formula_blocks,
+            )
+
+            filename = f"{category}_formulas.png"
+
+            file = discord.File(
+                image,
+                filename=filename,
+            )
+
+            # --------------------------------------------------
+            # Embed
+            # --------------------------------------------------
+
+            embed = make_embed(
+                title,
+                "",
+            )
+
+            embed.set_image(
+                url=f"attachment://{filename}"
+            )
+
+            embed.set_footer(
+                text=f"Mathdyl Academy • {category_name} Cheatsheet"
+            )
+
+            await interaction.response.send_message(
+                embed=embed,
+                file=file,
+            )
+
+        except Exception as error:
+            # Keep the command from completely failing
+            await interaction.response.send_message(
+                f"Failed to render the {category_name.lower()} cheatsheet.",
+                ephemeral=True,
+            )
+
+            print(
+                f"[FormulaCog] Failed to render {category}: {error}"
+            )
 
     # ==================================================
-    # /limit_formula
+    # COMMANDS
     # ==================================================
 
     @app_commands.command(
@@ -117,16 +128,11 @@ class FormulaCog(
         self,
         interaction: discord.Interaction,
     ):
-
         await self.send_formula(
             interaction,
             "limits",
             "Limit Formula",
         )
-
-    # ==================================================
-    # /derivative_formula
-    # ==================================================
 
     @app_commands.command(
         name="derivative_formula",
@@ -136,16 +142,11 @@ class FormulaCog(
         self,
         interaction: discord.Interaction,
     ):
-
         await self.send_formula(
             interaction,
             "derivatives",
             "Derivative Formula",
         )
-
-    # ==================================================
-    # /integral_formula
-    # ==================================================
 
     @app_commands.command(
         name="integral_formula",
@@ -155,16 +156,11 @@ class FormulaCog(
         self,
         interaction: discord.Interaction,
     ):
-
         await self.send_formula(
             interaction,
             "integrals",
             "Integral Formula",
         )
-
-    # ==================================================
-    # /quadratic_formula
-    # ==================================================
 
     @app_commands.command(
         name="quadratic_formula",
@@ -174,16 +170,11 @@ class FormulaCog(
         self,
         interaction: discord.Interaction,
     ):
-
         await self.send_formula(
             interaction,
             "quadratic",
             "Quadratic Formula",
         )
-
-    # ==================================================
-    # /trigonometry
-    # ==================================================
 
     @app_commands.command(
         name="trigonometry",
@@ -193,7 +184,6 @@ class FormulaCog(
         self,
         interaction: discord.Interaction,
     ):
-
         await self.send_formula(
             interaction,
             "trigonometry",
@@ -202,7 +192,4 @@ class FormulaCog(
 
 
 async def setup(bot):
-
-    await bot.add_cog(
-        FormulaCog(bot)
-    )
+    await bot.add_cog(FormulaCog(bot))

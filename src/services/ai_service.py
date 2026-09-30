@@ -7,6 +7,8 @@ from typing import AsyncGenerator
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
 
+from .equation_service import EquationService
+
 
 # ==================================================
 # ENVIRONMENT
@@ -37,22 +39,29 @@ class AIService:
 
     def __init__(self):
 
-        # ------------------------------------------
-        # Read API key
-        # ------------------------------------------
+        # ==========================================
+        # EQUATION SERVICE
+        # ==========================================
+
+        self.equation_service = (
+            EquationService()
+        )
+
+        # ==========================================
+        # API CONFIGURATION
+        # ==========================================
 
         self.api_key = os.getenv(
             "AI_API_KEY",
             "",
         ).strip()
 
-        # ------------------------------------------
-        # Determine AI mode
-        # ------------------------------------------
+        # ==========================================
+        # LOCAL OLLAMA
+        # ==========================================
 
         if self.api_key.lower() == "false":
 
-            # Local Ollama mode
             self.enabled = True
             self.local_mode = True
 
@@ -66,12 +75,14 @@ class AIService:
                 "qwen2.5:7b",
             )
 
-            # Ollama does not require a real API key
             self.client_api_key = "ollama"
+
+        # ==========================================
+        # API MODE
+        # ==========================================
 
         elif self.api_key:
 
-            # API mode
             self.enabled = True
             self.local_mode = False
 
@@ -85,11 +96,16 @@ class AIService:
                 "gpt-4o-mini",
             )
 
-            self.client_api_key = self.api_key
+            self.client_api_key = (
+                self.api_key
+            )
+
+        # ==========================================
+        # DISABLED
+        # ==========================================
 
         else:
 
-            # AI disabled
             self.enabled = False
             self.local_mode = False
 
@@ -97,9 +113,9 @@ class AIService:
             self.model = ""
             self.client_api_key = ""
 
-        # ------------------------------------------
-        # Streaming
-        # ------------------------------------------
+        # ==========================================
+        # STREAMING
+        # ==========================================
 
         self.streaming = (
             os.getenv(
@@ -109,9 +125,9 @@ class AIService:
             == "true"
         )
 
-        # ------------------------------------------
-        # Load prompt
-        # ------------------------------------------
+        # ==========================================
+        # SYSTEM PROMPT
+        # ==========================================
 
         if PROMPT_PATH.exists():
 
@@ -125,9 +141,9 @@ class AIService:
 
             self.system_prompt = ""
 
-        # ------------------------------------------
-        # Create client only when enabled
-        # ------------------------------------------
+        # ==========================================
+        # CLIENT
+        # ==========================================
 
         self.client = None
 
@@ -142,15 +158,19 @@ class AIService:
     # STATUS
     # ==================================================
 
-    def is_enabled(self) -> bool:
+    def is_enabled(
+        self,
+    ) -> bool:
 
         return self.enabled
 
     # ==================================================
-    # MODE
+    # LOCAL MODE
     # ==================================================
 
-    def is_local(self) -> bool:
+    def is_local(
+        self,
+    ) -> bool:
 
         return (
             self.enabled
@@ -158,13 +178,30 @@ class AIService:
         )
 
     # ==================================================
-    # NORMAL RESPONSE
+    # PARSE AI RESPONSE
+    # ==================================================
+
+    def parse_response(
+        self,
+        content: str,
+    ):
+
+        return (
+            self
+            .equation_service
+            .parse(
+                content
+            )
+        )
+
+    # ==================================================
+    # NORMAL AI REQUEST
     # ==================================================
 
     async def ask(
         self,
         question: str,
-    ) -> str:
+    ) -> list[tuple[str, str]]:
 
         if not self.enabled:
 
@@ -172,20 +209,25 @@ class AIService:
                 "AI Assistant is disabled."
             )
 
-        response = await self.client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {
-                    "role": "system",
-                    "content": self.system_prompt,
-                },
-                {
-                    "role": "user",
-                    "content": question,
-                },
-            ],
-            temperature=0.2,
-            stream=False,
+        response = (
+            await self.client
+            .chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            self.system_prompt
+                        ),
+                    },
+                    {
+                        "role": "user",
+                        "content": question,
+                    },
+                ],
+                temperature=0.2,
+                stream=False,
+            )
         )
 
         content = (
@@ -193,12 +235,14 @@ class AIService:
             .choices[0]
             .message
             .content
+        ) or ""
+
+        return self.parse_response(
+            content
         )
 
-        return content or ""
-
     # ==================================================
-    # STREAMING RESPONSE
+    # STREAMING AI REQUEST
     # ==================================================
 
     async def ask_stream(
@@ -212,29 +256,39 @@ class AIService:
                 "AI Assistant is disabled."
             )
 
-        stream = await self.client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {
-                    "role": "system",
-                    "content": self.system_prompt,
-                },
-                {
-                    "role": "user",
-                    "content": question,
-                },
-            ],
-            temperature=0.2,
-            stream=True,
+        stream = (
+            await self.client
+            .chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            self.system_prompt
+                        ),
+                    },
+                    {
+                        "role": "user",
+                        "content": question,
+                    },
+                ],
+                temperature=0.2,
+                stream=True,
+            )
         )
 
         async for chunk in stream:
 
             if not chunk.choices:
+
                 continue
 
-            delta = chunk.choices[0].delta
+            delta = (
+                chunk
+                .choices[0]
+                .delta
+            )
 
             if delta.content:
 
-                yield delta.content 
+                yield delta.content

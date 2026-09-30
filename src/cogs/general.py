@@ -101,7 +101,7 @@ class GeneralCog(commands.Cog):
 
         await interaction.response.send_message(
             embed=embed,
-            ephemeral=True,
+            ephemeral=False
         )
 
 

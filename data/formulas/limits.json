@@ -3,31 +3,31 @@
   "formulas": [
     {
       "name": "Constant Law",
-      "formula": "lim(x→a) c = c"
+      "formula": "\\lim_{x \\to a} c = c"
     },
     {
       "name": "Identity Law",
-      "formula": "lim(x→a) x = a"
+      "formula": "\\lim_{x \\to a} x = a"
     },
     {
       "name": "Sum Law",
-      "formula": "lim(x→a)[f(x)+g(x)] = L+M"
+      "formula": "\\lim_{x \\to a} [f(x) + g(x)] = L + M"
     },
     {
       "name": "Difference Law",
-      "formula": "lim(x→a)[f(x)-g(x)] = L-M"
+      "formula": "\\lim_{x \\to a} [f(x) - g(x)] = L - M"
     },
     {
       "name": "Product Law",
-      "formula": "lim(x→a)[f(x)g(x)] = LM"
+      "formula": "\\lim_{x \\to a} [f(x)g(x)] = LM"
     },
     {
       "name": "Quotient Law",
-      "formula": "lim(x→a)[f(x)/g(x)] = L/M"
+      "formula": "\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{L}{M}"
     },
     {
       "name": "Power Law",
-      "formula": "lim(x→a)[f(x)]ⁿ = Lⁿ"
+      "formula": "\\lim_{x \\to a} [f(x)]^n = L^n"
     }
   ]
 }

@@ -11,6 +11,7 @@ from .services.ai_service import AIService
 from .services.content_service import ContentService
 from .services.course_service import CourseService
 from .services.daily_service import DailyService
+from .services.database_service import DatabaseService
 from .services.formula_service import FormulaService
 from .services.pdf_service import PDFService
 from .services.problem_service import ProblemService
@@ -96,6 +97,14 @@ class MathdylBot(
         )
 
         # ==========================================
+        # DATABASE
+        # ==========================================
+
+        self.database_service = (
+            DatabaseService()
+        )
+
+        # ==========================================
         # PDF
         # ==========================================
 
@@ -113,6 +122,20 @@ class MathdylBot(
 
     async def setup_hook(self):
 
+        # ==========================================
+        # DATABASE CONNECTION
+        # ==========================================
+
+        await self.database_service.connect()
+
+        logging.info(
+            "PostgreSQL database connected."
+        )
+
+        # ==========================================
+        # EXTENSIONS
+        # ==========================================
+
         extensions = [
             "src.cogs.general",
             "src.cogs.formulas",
@@ -120,7 +143,7 @@ class MathdylBot(
             "src.cogs.courses",
             "src.cogs.launchers",
             "src.cogs.scheduler",
-            "src.cogs.ask"
+            "src.cogs.ask",
         ]
 
         for extension in extensions:
@@ -165,6 +188,20 @@ class MathdylBot(
                 self.course_service.discover()
             ),
         )
+
+    async def close(self):
+
+        logging.info(
+            "Closing PostgreSQL database..."
+        )
+
+        await self.database_service.close()
+
+        logging.info(
+            "PostgreSQL database closed."
+        )
+
+        await super().close()
 
 
 async def main():
