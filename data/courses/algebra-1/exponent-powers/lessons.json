@@ -7,7 +7,13 @@
       "type": "lesson",
       "title": "What Is an Exponent?",
       "content": "An exponent tells you how many times a number or expression is used as a factor in repeated multiplication. In the expression 3^4, the number 3 is multiplied by itself 4 times.",
-      "formula": "a^n = a × a × a × ... × a (n factors)"
+      "formula": "a^n = a × a × a × ... × a"
+    },
+    {
+      "type": "lesson",
+      "title": "Base and Exponent",
+      "content": "A power has two main parts: the base and the exponent. The base is the number or expression being multiplied, while the exponent tells how many times the base is used as a factor.",
+      "formula": "a^n: a = base, n = exponent"
     },
     {
       "type": "example",
@@ -15,36 +21,6 @@
       "question": "What does 5^3 mean?",
       "solution": "The exponent 3 tells us to use 5 as a factor three times. Therefore, 5^3 = 5 × 5 × 5.",
       "answer": "5 × 5 × 5"
-    },
-    {
-      "type": "concept_check",
-      "question": "What does the exponent 4 mean in 7^4?",
-      "options": [
-        {
-          "id": "A",
-          "text": "7 is added 4 times"
-        },
-        {
-          "id": "B",
-          "text": "7 is multiplied by itself 4 times"
-        },
-        {
-          "id": "C",
-          "text": "4 is multiplied by itself 7 times"
-        },
-        {
-          "id": "D",
-          "text": "7 is divided by 4"
-        }
-      ],
-      "correct_answer": "B",
-      "explanation": "The exponent tells how many times the base is used as a factor. Thus, 7^4 = 7 × 7 × 7 × 7."
-    },
-    {
-      "type": "lesson",
-      "title": "Base and Exponent",
-      "content": "A power has two main parts: the base and the exponent. The base is the number or expression being multiplied, while the exponent tells how many times the base is used as a factor.",
-      "formula": "a^n: a = base, n = exponent"
     },
     {
       "type": "example",
@@ -84,11 +60,23 @@
       "formula": "a × a × a × a = a^4"
     },
     {
+      "type": "lesson",
+      "title": "Evaluating Powers",
+      "content": "To evaluate a power, rewrite it as repeated multiplication and then calculate the product."
+    },
+    {
       "type": "example",
       "title": "Writing a Product as a Power",
       "question": "Write 6 × 6 × 6 × 6 × 6 using an exponent.",
       "solution": "The factor 6 appears five times, so the exponent is 5.",
       "answer": "6^5"
+    },
+    {
+      "type": "example",
+      "title": "Evaluating a Power",
+      "question": "Evaluate 2^5.",
+      "solution": "Rewrite the power as repeated multiplication: 2^5 = 2 × 2 × 2 × 2 × 2. Multiplying gives 32.",
+      "answer": "32"
     },
     {
       "type": "concept_check",
@@ -115,41 +103,11 @@
       "explanation": "The factor 3 appears four times, so the expression is 3^4."
     },
     {
-      "type": "lesson",
-      "title": "Evaluating Powers",
-      "content": "To evaluate a power, rewrite it as repeated multiplication and then calculate the product.",
-      "formula": "a^n = repeated multiplication of a, n times"
-    },
-    {
       "type": "example",
-      "title": "Evaluating a Power",
-      "question": "Evaluate 2^5.",
-      "solution": "Rewrite the power as repeated multiplication: 2^5 = 2 × 2 × 2 × 2 × 2. Multiplying gives 32.",
-      "answer": "32"
-    },
-    {
-      "type": "concept_check",
+      "title": "Evaluating a Larger Power",
       "question": "What is 4^3?",
-      "options": [
-        {
-          "id": "A",
-          "text": "12"
-        },
-        {
-          "id": "B",
-          "text": "16"
-        },
-        {
-          "id": "C",
-          "text": "64"
-        },
-        {
-          "id": "D",
-          "text": "81"
-        }
-      ],
-      "correct_answer": "C",
-      "explanation": "4^3 = 4 × 4 × 4 = 64."
+      "solution": "Rewrite the power as repeated multiplication: 4^3 = 4 × 4 × 4 = 64.",
+      "answer": "64"
     },
     {
       "type": "lesson",
@@ -163,30 +121,6 @@
       "question": "Evaluate 12^0.",
       "solution": "Any nonzero number raised to the zero power equals 1.",
       "answer": "1"
-    },
-    {
-      "type": "concept_check",
-      "question": "What is (-7)^0?",
-      "options": [
-        {
-          "id": "A",
-          "text": "-7"
-        },
-        {
-          "id": "B",
-          "text": "0"
-        },
-        {
-          "id": "C",
-          "text": "1"
-        },
-        {
-          "id": "D",
-          "text": "7"
-        }
-      ],
-      "correct_answer": "C",
-      "explanation": "Since -7 is nonzero, (-7)^0 = 1."
     },
     {
       "type": "lesson",
@@ -224,6 +158,30 @@
       ],
       "correct_answer": "B",
       "explanation": "A negative exponent means reciprocal: 5^(-2) = 1/5^2 = 1/25."
+    },
+    {
+      "type": "concept_check",
+      "question": "What is (-7)^0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-7"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Since -7 is nonzero, (-7)^0 = 1."
     },
     {
       "type": "lesson",
@@ -350,6 +308,19 @@
       "answer": "81x^4"
     },
     {
+      "type": "lesson",
+      "title": "Power of a Quotient",
+      "content": "When a quotient is raised to a power, the exponent applies to both the numerator and denominator.",
+      "formula": "(a/b)^n = a^n/b^n, b ≠ 0"
+    },
+    {
+      "type": "example",
+      "title": "Power of a Quotient",
+      "question": "Simplify (x/3)^2.",
+      "solution": "Apply the exponent to both the numerator and denominator: (x/3)^2 = x^2/3^2 = x^2/9.",
+      "answer": "x^2/9"
+    },
+    {
       "type": "concept_check",
       "question": "Simplify (2x)^3.",
       "options": [
@@ -372,19 +343,6 @@
       ],
       "correct_answer": "C",
       "explanation": "(2x)^3 = 2^3x^3 = 8x^3."
-    },
-    {
-      "type": "lesson",
-      "title": "Power of a Quotient",
-      "content": "When a quotient is raised to a power, the exponent applies to both the numerator and denominator.",
-      "formula": "(a/b)^n = a^n/b^n, b ≠ 0"
-    },
-    {
-      "type": "example",
-      "title": "Power of a Quotient",
-      "question": "Simplify (x/3)^2.",
-      "solution": "Apply the exponent to both the numerator and denominator: (x/3)^2 = x^2/3^2 = x^2/9.",
-      "answer": "x^2/9"
     },
     {
       "type": "concept_check",

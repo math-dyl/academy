@@ -6,8 +6,7 @@
     {
       "type": "lesson",
       "title": "What Does Simplifying Mean?",
-      "content": "Simplifying an algebraic expression means rewriting it in an equivalent form that is easier to understand or use. Simplification usually involves combining like terms, applying the distributive property, removing parentheses, and performing arithmetic operations.",
-      "formula": "Simplified expression = an equivalent expression with fewer or combined terms"
+      "content": "Simplifying an algebraic expression means rewriting it in an equivalent form that is easier to understand or use. Simplification usually involves combining like terms, applying the distributive property, removing parentheses, and performing arithmetic operations."
     },
     {
       "type": "example",
@@ -15,30 +14,6 @@
       "question": "Simplify 3x + 5x.",
       "solution": "Both terms contain x, so they are like terms. Add their coefficients: 3 + 5 = 8.",
       "answer": "8x"
-    },
-    {
-      "type": "concept_check",
-      "question": "What is the main goal when simplifying an algebraic expression?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Change the value of the expression"
-        },
-        {
-          "id": "B",
-          "text": "Rewrite the expression in an equivalent and simpler form"
-        },
-        {
-          "id": "C",
-          "text": "Remove all variables"
-        },
-        {
-          "id": "D",
-          "text": "Always make the expression equal to zero"
-        }
-      ],
-      "correct_answer": "B",
-      "explanation": "Simplifying rewrites an expression into an equivalent form without changing its value."
     },
     {
       "type": "lesson",
@@ -97,34 +72,9 @@
       "answer": "8x"
     },
     {
-      "type": "concept_check",
-      "question": "Simplify 9a - 4a + 2a.",
-      "options": [
-        {
-          "id": "A",
-          "text": "7a"
-        },
-        {
-          "id": "B",
-          "text": "5a"
-        },
-        {
-          "id": "C",
-          "text": "7a²"
-        },
-        {
-          "id": "D",
-          "text": "15a"
-        }
-      ],
-      "correct_answer": "A",
-      "explanation": "Combine the coefficients: 9 - 4 + 2 = 7, so the simplified expression is 7a."
-    },
-    {
       "type": "lesson",
       "title": "Simplifying Constants",
-      "content": "Constants are numbers without variables. Constants can be combined using ordinary arithmetic. For example, 8 + 5 - 3 simplifies to 10.",
-      "formula": "Constants are combined using arithmetic operations"
+      "content": "Constants are numbers without variables. Constants can be combined using ordinary arithmetic. For example, 8 + 5 - 3 simplifies to 10."
     },
     {
       "type": "example",
@@ -171,6 +121,30 @@
       "explanation": "Combine 5x + 2x = 7x and 3 - 8 = -5. Therefore, the simplified expression is 7x - 5."
     },
     {
+      "type": "concept_check",
+      "question": "What is the main goal when simplifying an algebraic expression?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Change the value of the expression"
+        },
+        {
+          "id": "B",
+          "text": "Rewrite the expression in an equivalent and simpler form"
+        },
+        {
+          "id": "C",
+          "text": "Remove all variables"
+        },
+        {
+          "id": "D",
+          "text": "Always make the expression equal to zero"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Simplifying rewrites an expression into an equivalent form without changing its value."
+    },
+    {
       "type": "lesson",
       "title": "Using the Distributive Property",
       "content": "The distributive property allows a factor outside parentheses to be multiplied by every term inside the parentheses. This is useful for removing parentheses before combining like terms.",
@@ -182,6 +156,19 @@
       "question": "Simplify 3(x + 4).",
       "solution": "Multiply 3 by both terms inside the parentheses: 3(x) + 3(4) = 3x + 12.",
       "answer": "3x + 12"
+    },
+    {
+      "type": "lesson",
+      "title": "Removing Parentheses",
+      "content": "Parentheses can often be removed using the distributive property. When a positive factor is outside parentheses, distribute it to every term. When a negative sign precedes parentheses, each term inside changes sign.",
+      "formula": "-(a + b) = -a - b"
+    },
+    {
+      "type": "example",
+      "title": "Removing Parentheses with a Negative Sign",
+      "question": "Simplify 7x - (3x + 5).",
+      "solution": "Distribute the negative sign: 7x - 3x - 5. Then combine like terms: 7x - 3x = 4x.",
+      "answer": "4x - 5"
     },
     {
       "type": "concept_check",
@@ -206,19 +193,6 @@
       ],
       "correct_answer": "B",
       "explanation": "Multiply 5 by both terms: 5(x - 2) = 5x - 10."
-    },
-    {
-      "type": "lesson",
-      "title": "Removing Parentheses",
-      "content": "Parentheses can often be removed using the distributive property. When a positive factor is outside parentheses, distribute it to every term. When a negative sign precedes parentheses, each term inside changes sign.",
-      "formula": "-(a + b) = -a - b"
-    },
-    {
-      "type": "example",
-      "title": "Removing Parentheses with a Negative Sign",
-      "question": "Simplify 7x - (3x + 5).",
-      "solution": "Distribute the negative sign: 7x - 3x - 5. Then combine like terms: 7x - 3x = 4x.",
-      "answer": "4x - 5"
     },
     {
       "type": "lesson",
@@ -321,6 +295,13 @@
       "answer": "11x - 6"
     },
     {
+      "type": "example",
+      "title": "Complete Simplification",
+      "question": "Simplify 4(2x - 3) + 2x - 5 + 3x.",
+      "solution": "Distribute 4: 8x - 12 + 2x - 5 + 3x. Combine the x terms: 8x + 2x + 3x = 13x. Combine the constants: -12 - 5 = -17.",
+      "answer": "13x - 17"
+    },
+    {
       "type": "concept_check",
       "question": "Simplify 2(3x + 4) - x + 5.",
       "options": [
@@ -393,13 +374,6 @@
       ],
       "correct_answer": "A",
       "explanation": "Distribute 4 to get 4x + 12 - 2x. Combine like terms: 4x - 2x = 2x, giving 2x + 12."
-    },
-    {
-      "type": "example",
-      "title": "Complete Simplification",
-      "question": "Simplify 4(2x - 3) + 2x - 5 + 3x.",
-      "solution": "Distribute 4: 8x - 12 + 2x - 5 + 3x. Combine the x terms: 8x + 2x + 3x = 13x. Combine the constants: -12 - 5 = -17.",
-      "answer": "13x - 17"
     },
     {
       "type": "concept_check",

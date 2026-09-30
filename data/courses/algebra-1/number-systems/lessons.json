@@ -6,7 +6,8 @@
     {
       "type": "lesson",
       "title": "What Are Numbers?",
-      "content": "Numbers are symbols used to represent quantities, values, measurements, and positions. In mathematics and algebra, numbers are used to describe quantities and perform mathematical operations."
+      "content": "Numbers are symbols used to represent quantities, values, measurements, and positions. In mathematics and algebra, numbers are used to describe quantities and perform mathematical operations.",
+      "key_terms": "numbers, quantities, values, measurements, positions"
     },
     {
       "type": "example",
@@ -39,48 +40,16 @@
       "correct_answer": "A",
       "explanation": "Numbers are commonly used to represent quantities, values, measurements, positions, and many other mathematical ideas."
     },
-
     {
       "type": "lesson",
       "title": "Natural Numbers",
-      "content": "Natural numbers are commonly used for counting. In this course, natural numbers begin with 1 and continue without end: 1, 2, 3, 4, 5, and so on."
+      "content": "Natural numbers are commonly used for counting. In this course, natural numbers begin with 1 and continue without end: 1, 2, 3, 4, 5, and so on.",
+      "key_terms": "natural numbers, counting numbers"
     },
-    {
-      "type": "example",
-      "title": "Identifying Natural Numbers",
-      "question": "Which of the following numbers are natural numbers: 1, 4, 7, and 10?",
-      "solution": "All four numbers are positive counting numbers and therefore belong to the natural numbers.",
-      "answer": "1, 4, 7, and 10"
-    },
-    {
-      "type": "concept_check",
-      "question": "Which number is a natural number?",
-      "options": [
-        {
-          "id": "A",
-          "text": "-3"
-        },
-        {
-          "id": "B",
-          "text": "0"
-        },
-        {
-          "id": "C",
-          "text": "6"
-        },
-        {
-          "id": "D",
-          "text": "-1.5"
-        }
-      ],
-      "correct_answer": "C",
-      "explanation": "Under the definition used in this course, natural numbers begin with 1 and include positive counting numbers such as 6."
-    },
-
     {
       "type": "lesson",
       "title": "Whole Numbers",
-      "content": "Whole numbers include all natural numbers together with zero. They are 0, 1, 2, 3, 4, and so on."
+      "content": "Whole numbers include all natural numbers together with zero. They are 0, 1, 2, 3, 4, and so on. The key difference is that whole numbers include 0, while natural numbers in this course begin with 1."
     },
     {
       "type": "example",
@@ -113,11 +82,11 @@
       "correct_answer": "B",
       "explanation": "Whole numbers include 0, while natural numbers in this course begin with 1."
     },
-
     {
       "type": "lesson",
       "title": "Integers",
-      "content": "Integers include positive whole numbers, negative whole numbers, and zero. They are ..., -3, -2, -1, 0, 1, 2, 3, ..."
+      "content": "Integers include positive whole numbers, negative whole numbers, and zero. They extend the whole numbers in both directions: ..., -3, -2, -1, 0, 1, 2, 3, ...",
+      "key_terms": "integers, positive integers, negative integers, zero"
     },
     {
       "type": "example",
@@ -150,12 +119,12 @@
       "correct_answer": "D",
       "explanation": "Integers are whole numbers that can be positive, negative, or zero. 2.5 has a decimal part, so it is not an integer."
     },
-
     {
       "type": "lesson",
       "title": "Rational Numbers",
       "content": "A rational number is any number that can be written as a fraction a/b, where a and b are integers and b is not zero. Rational numbers include integers, fractions, terminating decimals, and repeating decimals.",
-      "formula": "a/b, where a, b ∈ ℤ and b ≠ 0"
+      "formula": "a/b, where a, b ∈ ℤ and b ≠ 0",
+      "key_terms": "rational numbers, numerator, denominator, terminating decimal, repeating decimal"
     },
     {
       "type": "example",
@@ -188,11 +157,11 @@
       "correct_answer": "C",
       "explanation": "3/5 is already written as a ratio of two integers, so it is a rational number."
     },
-
     {
       "type": "lesson",
       "title": "Irrational Numbers",
-      "content": "Irrational numbers are numbers that cannot be written as a ratio of two integers. Their decimal representations are non-terminating and non-repeating. Common examples include π, √2, and √3."
+      "content": "Irrational numbers are numbers that cannot be written as a ratio of two integers. Their decimal representations are non-terminating and non-repeating. Common examples include π, √2, and √3.",
+      "key_terms": "irrational numbers, non-terminating decimals, non-repeating decimals"
     },
     {
       "type": "example",
@@ -225,11 +194,11 @@
       "correct_answer": "C",
       "explanation": "√2 cannot be expressed as a ratio of two integers, so it is irrational."
     },
-
     {
       "type": "lesson",
       "title": "Real Numbers",
-      "content": "Real numbers include all rational and irrational numbers. Every number that can be represented as a point on the real number line is a real number."
+      "content": "Real numbers include all rational and irrational numbers. Every number that can be represented as a point on the real number line is a real number.",
+      "key_terms": "real numbers, rational numbers, irrational numbers, real number line"
     },
     {
       "type": "example",
@@ -262,11 +231,11 @@
       "correct_answer": "D",
       "explanation": "√-1 is not a real number. It is associated with the imaginary unit i."
     },
-
     {
       "type": "lesson",
       "title": "Classifying Numbers",
-      "content": "A number can belong to more than one number set. For example, 5 is a natural number, whole number, integer, rational number, and real number. Classification means identifying all the number sets to which a number belongs."
+      "content": "A number can belong to more than one number set. For example, 5 is a natural number, whole number, integer, rational number, and real number. Classification means identifying all the number sets to which a number belongs.",
+      "key_terms": "classification, natural numbers, whole numbers, integers, rational numbers, real numbers"
     },
     {
       "type": "example",
@@ -274,6 +243,13 @@
       "question": "Which number sets contain 5?",
       "solution": "The number 5 is a natural number. Therefore, it is also a whole number, integer, rational number, and real number.",
       "answer": "Natural, Whole, Integer, Rational, Real"
+    },
+    {
+      "type": "example",
+      "title": "Classifying -3",
+      "question": "Which number sets contain -3?",
+      "solution": "-3 is an integer. Since every integer is also rational and every rational number is real, -3 belongs to the integer, rational, and real number sets.",
+      "answer": "Integer, Rational, Real"
     },
     {
       "type": "concept_check",
@@ -299,11 +275,12 @@
       "correct_answer": "A",
       "explanation": "5 is a natural number, so it is also a whole number, integer, rational number, and real number."
     },
-
     {
       "type": "lesson",
       "title": "Comparing and Ordering Real Numbers",
-      "content": "Real numbers can be compared using greater than (>), less than (<), and equal to (=). A number farther to the right on the number line is greater than a number farther to the left."
+      "content": "Real numbers can be compared using greater than (>), less than (<), and equal to (=). A number farther to the right on the number line is greater than a number farther to the left.",
+      "formula": "a > b, a < b, or a = b",
+      "key_terms": "greater than, less than, equal to, comparison, ordering"
     },
     {
       "type": "example",
@@ -311,6 +288,13 @@
       "question": "Which is greater: -2 or -5?",
       "solution": "On the number line, -2 is located to the right of -5. Therefore, -2 is greater.",
       "answer": "-2"
+    },
+    {
+      "type": "example",
+      "title": "Ordering Real Numbers",
+      "question": "Order the numbers -3, 1, -1, and 4 from least to greatest.",
+      "solution": "On the number line, numbers farther to the left are smaller. Therefore, the order is -3, -1, 1, 4.",
+      "answer": "-3, -1, 1, 4"
     },
     {
       "type": "concept_check",
@@ -336,12 +320,12 @@
       "correct_answer": "B",
       "explanation": "-3 is farther to the right on the number line than -7, so -3 is greater than -7."
     },
-
     {
       "type": "lesson",
       "title": "Absolute Value",
       "content": "The absolute value of a number represents its distance from zero on the number line. Since distance cannot be negative, absolute value is always non-negative.",
-      "formula": "|a| ≥ 0"
+      "formula": "|a| ≥ 0",
+      "key_terms": "absolute value, distance from zero, non-negative"
     },
     {
       "type": "example",
@@ -374,11 +358,11 @@
       "correct_answer": "D",
       "explanation": "Absolute value represents distance from zero. Since -12 is 12 units from zero, |-12| = 12."
     },
-
     {
       "type": "lesson",
       "title": "Number Line",
-      "content": "A number line represents numbers as points along a line. Numbers increase as you move to the right and decrease as you move to the left. Zero is located at the center between positive and negative numbers."
+      "content": "A number line represents numbers as points along a line. Numbers increase as you move to the right and decrease as you move to the left. Zero is located between positive and negative numbers.",
+      "key_terms": "number line, positive direction, negative direction, zero"
     },
     {
       "type": "example",
@@ -411,19 +395,12 @@
       "correct_answer": "D",
       "explanation": "Numbers increase from left to right on the number line. Therefore, 4 is farthest to the right."
     },
-
     {
       "type": "lesson",
       "title": "Number Sets and Relationships",
       "content": "Number sets are related through inclusion. Natural numbers are contained within the whole numbers, whole numbers are contained within the integers, and integers are contained within the rational numbers. Rational and irrational numbers together make up the real numbers.",
-      "formula": "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real"
-    },
-    {
-      "type": "example",
-      "title": "Classifying a Number",
-      "question": "Classify the number -3.",
-      "solution": "-3 is an integer. Since every integer is also rational and every rational number is real, -3 belongs to the integer, rational, and real number sets.",
-      "answer": "Integer, Rational, Real"
+      "formula": "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real",
+      "key_terms": "subset, inclusion, natural numbers, whole numbers, integers, rational numbers, irrational numbers, real numbers"
     },
     {
       "type": "concept_check",
@@ -449,7 +426,6 @@
       "correct_answer": "B",
       "explanation": "Whole numbers such as 0, 1, 2, and 3 are all integers. However, negative integers are not whole numbers."
     },
-
     {
       "type": "example",
       "title": "Ordering Real Numbers",

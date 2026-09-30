@@ -7,45 +7,22 @@
       "type": "lesson",
       "title": "What Is an Algebraic Expression?",
       "content": "An algebraic expression is a mathematical phrase made up of numbers, variables, and mathematical operations. Unlike an equation, an algebraic expression does not contain an equality sign (=). Expressions can represent quantities or relationships that may contain known and unknown values.",
-      "formula": "Examples: 3x + 5, 7a - 2, 4xy, x² + 3x - 1"
+      "key_terms": "Algebraic expression → a mathematical phrase containing numbers, variables, and operations\nEquation → a mathematical statement containing an equality sign (=)\nNumerical expression → an expression containing numbers but no variables",
+      "examples": "5x + 2 → algebraic expression\n7 = 3 + 4 → equation\n12 → numerical expression"
     },
     {
       "type": "example",
       "title": "Identifying an Algebraic Expression",
       "question": "Which of the following is an algebraic expression: 5x + 2, 7 = 3 + 4, or 12?",
-      "solution": "5x + 2 is an algebraic expression because it contains a variable, a number, and an operation without an equality sign. 7 = 3 + 4 is an equation because it contains an equality sign. 12 is a numerical expression rather than an algebraic expression because it contains no variable.",
+      "solution": "5x + 2 is an algebraic expression because it contains a variable, a number, and an operation without an equality sign. 7 = 3 + 4 is an equation because it contains an equality sign. 12 is a numerical expression because it contains no variable.",
       "answer": "5x + 2"
     },
-    {
-      "type": "concept_check",
-      "question": "Which statement best describes an algebraic expression?",
-      "options": [
-        {
-          "id": "A",
-          "text": "A mathematical phrase containing numbers, variables, and operations"
-        },
-        {
-          "id": "B",
-          "text": "A statement that always contains an equal sign"
-        },
-        {
-          "id": "C",
-          "text": "A mathematical statement containing only numbers"
-        },
-        {
-          "id": "D",
-          "text": "A comparison between two quantities"
-        }
-      ],
-      "correct_answer": "A",
-      "explanation": "An algebraic expression combines numbers, variables, and mathematical operations without requiring an equality sign."
-    },
-
     {
       "type": "lesson",
       "title": "Parts of an Algebraic Expression",
       "content": "An algebraic expression can contain several important parts. A variable represents an unknown or changing quantity. A coefficient is a number multiplying a variable. A constant is a fixed value without a variable. A term is a part of an expression separated by addition or subtraction signs.",
-      "formula": "Example: 5x² - 3x + 7\nTerms: 5x², -3x, 7\nCoefficients: 5, -3\nVariables: x\nConstant: 7"
+      "key_terms": "Variable → a symbol representing an unknown or changing quantity\nCoefficient → a number multiplying a variable\nConstant → a fixed value without a variable\nTerm → a part of an expression separated by addition or subtraction signs",
+      "examples": "5x² - 3x + 7\nTerms: 5x², -3x, 7\nCoefficients: 5, -3\nVariable: x\nConstant: 7"
     },
     {
       "type": "example",
@@ -78,12 +55,18 @@
       "correct_answer": "C",
       "explanation": "The constant term is the term that contains no variable. Therefore, 12 is the constant term."
     },
-
     {
       "type": "lesson",
       "title": "Writing Expressions from Words",
       "content": "Algebraic expressions can be written from verbal descriptions. Words such as sum, difference, product, and quotient indicate mathematical operations. The order of the words is important when translating a phrase into an expression.",
-      "formula": "Example: five more than x → x + 5"
+      "key_terms": "Sum → addition\nDifference → subtraction\nProduct → multiplication\nQuotient → division"
+    },
+    {
+      "type": "lesson",
+      "title": "Translating Mathematical Phrases",
+      "content": "Common mathematical words correspond to specific operations. Words such as sum, difference, product, and quotient indicate addition, subtraction, multiplication, and division. Words such as twice, three times, half, and one-third also indicate multiplication or division.",
+      "key_terms": "Sum → addition (+)\nDifference → subtraction (−)\nProduct → multiplication (×)\nQuotient → division (÷)\nTwice → multiplication by 2\nThree times → multiplication by 3\nHalf → division by 2\nOne-third → division by 3",
+      "examples": "Twice a number x → 2x\nThree times a number y → 3y\nHalf of x → x/2\nOne-third of x → x/3"
     },
     {
       "type": "example",
@@ -91,6 +74,13 @@
       "question": "Write an algebraic expression for 'seven more than twice a number x.'",
       "solution": "Twice a number means 2x. Seven more than that quantity means add 7.",
       "answer": "2x + 7"
+    },
+    {
+      "type": "example",
+      "title": "Translating a Mathematical Phrase",
+      "question": "Write an expression for 'the product of 6 and a number y, increased by 4.'",
+      "solution": "The product of 6 and y is 6y. Increasing this by 4 gives 6y + 4.",
+      "answer": "6y + 4"
     },
     {
       "type": "concept_check",
@@ -116,50 +106,12 @@
       "correct_answer": "C",
       "explanation": "Decreased by 9 means subtract 9 from the number, giving x - 9."
     },
-
-    {
-      "type": "lesson",
-      "title": "Translating Mathematical Phrases",
-      "content": "Common mathematical words correspond to specific operations. Sum indicates addition, difference indicates subtraction, product indicates multiplication, and quotient indicates division. Words such as twice, three times, half, and one-third also indicate multiplication or division.",
-      "formula": "Sum → +\nDifference → −\nProduct → ×\nQuotient → ÷"
-    },
-    {
-      "type": "example",
-      "title": "Translating a Mathematical Phrase",
-      "question": "Write an expression for 'the product of 6 and a number y, increased by 4.'",
-      "solution": "The product of 6 and y is 6y. Increasing this by 4 gives 6y + 4.",
-      "answer": "6y + 4"
-    },
-    {
-      "type": "concept_check",
-      "question": "Which expression represents 'the quotient of x and 5'?",
-      "options": [
-        {
-          "id": "A",
-          "text": "5x"
-        },
-        {
-          "id": "B",
-          "text": "x + 5"
-        },
-        {
-          "id": "C",
-          "text": "x/5"
-        },
-        {
-          "id": "D",
-          "text": "5 - x"
-        }
-      ],
-      "correct_answer": "C",
-      "explanation": "The quotient of x and 5 means x divided by 5, written as x/5."
-    },
-
     {
       "type": "lesson",
       "title": "Addition & Subtraction Expressions",
-      "content": "Addition expressions combine quantities using addition, while subtraction expressions represent the difference between quantities. In algebra, addition is commonly represented using + and subtraction using −. Pay attention to phrases such as 'more than,' 'less than,' 'increased by,' and 'decreased by.'",
-      "formula": "x + 8 → 8 more than x\nx - 8 → 8 less than x"
+      "content": "Addition expressions combine quantities using addition, while subtraction expressions represent the difference between quantities. Pay attention to phrases such as 'more than,' 'less than,' 'increased by,' and 'decreased by.'",
+      "key_terms": "More than → addition\nLess than → subtraction\nIncreased by → addition\nDecreased by → subtraction",
+      "examples": "x + 8 → 8 more than x\nx - 8 → 8 less than x\nx + 8 → x increased by 8\nx - 8 → x decreased by 8"
     },
     {
       "type": "example",
@@ -169,35 +121,12 @@
       "answer": "2n - 3"
     },
     {
-      "type": "concept_check",
-      "question": "Which expression represents '10 more than x'?",
-      "options": [
-        {
-          "id": "A",
-          "text": "x - 10"
-        },
-        {
-          "id": "B",
-          "text": "10 - x"
-        },
-        {
-          "id": "C",
-          "text": "x + 10"
-        },
-        {
-          "id": "D",
-          "text": "10x"
-        }
-      ],
-      "correct_answer": "C",
-      "explanation": "More than indicates addition, so 10 more than x is x + 10."
-    },
-
-    {
       "type": "lesson",
       "title": "Multiplication Expressions",
       "content": "Multiplication in algebra can be written in several ways. A multiplication symbol is often omitted when a number and variable are multiplied. For example, 5 × x can be written as 5x. Two variables can also be written together, such as xy.",
-      "formula": "5 × x = 5x\n3 × a × b = 3ab\nx × x = x²"
+      "key_terms": "Coefficient → a number multiplying a variable\nProduct → the result of multiplication",
+      "formula": "a × b = ab",
+      "examples": "5 × x → 5x\n3 × a × b → 3ab\nx × y → xy"
     },
     {
       "type": "example",
@@ -230,12 +159,13 @@
       "correct_answer": "B",
       "explanation": "Seven times y means 7 multiplied by y, which is written as 7y."
     },
-
     {
       "type": "lesson",
       "title": "Division Expressions",
       "content": "Division expressions represent one quantity divided by another. Division can be written using a division symbol, a fraction bar, or a denominator. In algebra, a fraction is often the clearest way to represent division.",
-      "formula": "x ÷ 4 = x/4\n12 ÷ y = 12/y"
+      "key_terms": "Dividend → the quantity being divided\nDivisor → the quantity by which another quantity is divided\nQuotient → the result of division",
+      "formula": "a ÷ b = a/b",
+      "examples": "x ÷ 4 → x/4\n12 ÷ y → 12/y\n18 ÷ x → 18/x"
     },
     {
       "type": "example",
@@ -245,35 +175,12 @@
       "answer": "18/x"
     },
     {
-      "type": "concept_check",
-      "question": "Which expression represents 'half of x'?",
-      "options": [
-        {
-          "id": "A",
-          "text": "2x"
-        },
-        {
-          "id": "B",
-          "text": "x + 2"
-        },
-        {
-          "id": "C",
-          "text": "x/2"
-        },
-        {
-          "id": "D",
-          "text": "x - 2"
-        }
-      ],
-      "correct_answer": "C",
-      "explanation": "Half of x means x divided by 2, which is x/2."
-    },
-
-    {
       "type": "lesson",
       "title": "Expressions with Exponents",
-      "content": "An exponent indicates repeated multiplication of a base by itself. In an algebraic expression, the exponent tells how many times the variable or number is used as a factor. The expression x² means x multiplied by x.",
-      "formula": "x² = x × x\nx³ = x × x × x\naⁿ = a × a × ... × a (n factors)"
+      "content": "An exponent indicates repeated multiplication of a base by itself. In an algebraic expression, the exponent tells how many times the variable or number is used as a factor.",
+      "key_terms": "Base → the quantity being multiplied repeatedly\nExponent → tells how many times the base is used as a factor",
+      "formula": "aⁿ = a × a × ... × a",
+      "examples": "x² = x × x\nx³ = x × x × x\n2³ = 2 × 2 × 2\nx⁴ = x × x × x × x"
     },
     {
       "type": "example",
@@ -306,57 +213,26 @@
       "correct_answer": "B",
       "explanation": "The coefficient 4 multiplies y², and y² means y × y. Therefore, 4y² means 4 × y × y."
     },
-
     {
       "type": "lesson",
       "title": "One-Term Expressions",
       "content": "A one-term expression contains exactly one term. A one-term expression is also called a monomial. It may contain a constant, a variable, or a product of constants and variables.",
-      "formula": "Examples: 7, 5x, -3a², 4xy"
+      "key_terms": "Monomial → a polynomial with exactly one term",
+      "examples": "7 → one term\n5x → one term\n-3a² → one term\n4xy → one term"
     },
-    {
-      "type": "example",
-      "title": "Identifying a One-Term Expression",
-      "question": "Which expression is a one-term expression: 5x, 3x + 2, or x² - 4x?",
-      "solution": "5x contains only one term and therefore is a one-term expression. The other expressions contain two terms.",
-      "answer": "5x"
-    },
-    {
-      "type": "concept_check",
-      "question": "Which is a one-term expression?",
-      "options": [
-        {
-          "id": "A",
-          "text": "x + 5"
-        },
-        {
-          "id": "B",
-          "text": "3x²"
-        },
-        {
-          "id": "C",
-          "text": "x² + x + 1"
-        },
-        {
-          "id": "D",
-          "text": "5 - x"
-        }
-      ],
-      "correct_answer": "B",
-      "explanation": "3x² contains only one term, so it is a one-term expression or monomial."
-    },
-
     {
       "type": "lesson",
       "title": "Two-Term Expressions",
       "content": "A two-term expression contains exactly two terms. A two-term polynomial is commonly called a binomial. The two terms are separated by an addition or subtraction sign.",
-      "formula": "Examples: x + 5, 3x - 2, 4x² + 7x"
+      "key_terms": "Binomial → a polynomial with exactly two terms",
+      "examples": "x + 5 → two terms\n3x - 2 → two terms\n4x² + 7x → two terms"
     },
     {
       "type": "example",
-      "title": "Counting Terms",
-      "question": "How many terms are in 7x² - 3?",
-      "solution": "The terms are 7x² and -3. Therefore, the expression contains two terms.",
-      "answer": "2 terms"
+      "title": "Comparing the Number of Terms",
+      "question": "Which expressions contain one term and which contain two terms: 5x, 3x + 2, and x² - 4x?",
+      "solution": "5x contains one term, so it is a monomial. 3x + 2 and x² - 4x each contain two terms, so they are binomials.",
+      "answer": "5x: one term; 3x + 2: two terms; x² - 4x: two terms"
     },
     {
       "type": "concept_check",
@@ -382,12 +258,19 @@
       "correct_answer": "B",
       "explanation": "A binomial contains exactly two terms. x + 7 has two terms."
     },
-
     {
       "type": "lesson",
       "title": "Three-Term Expressions",
       "content": "A three-term expression contains exactly three terms. A three-term polynomial is commonly called a trinomial. Each term is separated from the others by addition or subtraction.",
-      "formula": "Examples: x² + 3x + 2\n4a² - 5a + 7"
+      "key_terms": "Trinomial → a polynomial with exactly three terms",
+      "examples": "x² + 3x + 2 → three terms\n4a² - 5a + 7 → three terms"
+    },
+    {
+      "type": "lesson",
+      "title": "Polynomial Expressions",
+      "content": "A polynomial is an algebraic expression made up of one or more terms whose variables have nonnegative integer exponents. Polynomials can contain constants, variables, coefficients, and operations such as addition and subtraction.",
+      "key_terms": "Polynomial → an algebraic expression whose variable exponents are nonnegative integers\nNonnegative integer → a whole number greater than or equal to zero",
+      "examples": "5 → polynomial\n3x + 2 → polynomial\nx² - 4x + 7 → polynomial\n4x³ - 2x² + 7 → polynomial"
     },
     {
       "type": "example",
@@ -395,37 +278,6 @@
       "question": "How many terms are in 5x² - 2x + 8?",
       "solution": "The expression contains 5x², -2x, and 8. Since there are three terms, it is a trinomial.",
       "answer": "3 terms; trinomial"
-    },
-    {
-      "type": "concept_check",
-      "question": "Which expression is a trinomial?",
-      "options": [
-        {
-          "id": "A",
-          "text": "4x"
-        },
-        {
-          "id": "B",
-          "text": "x + 2"
-        },
-        {
-          "id": "C",
-          "text": "x² + 4x + 3"
-        },
-        {
-          "id": "D",
-          "text": "7"
-        }
-      ],
-      "correct_answer": "C",
-      "explanation": "x² + 4x + 3 contains three terms, so it is a trinomial."
-    },
-
-    {
-      "type": "lesson",
-      "title": "Polynomial Expressions",
-      "content": "A polynomial is an algebraic expression made up of one or more terms whose variables have nonnegative integer exponents. Polynomials can contain constants, variables, coefficients, and operations such as addition and subtraction.",
-      "formula": "Examples: 5x² + 3x - 7\n2x³ - x + 4\n9"
     },
     {
       "type": "example",
@@ -458,12 +310,12 @@
       "correct_answer": "C",
       "explanation": "4x² - 3x + 8 is a polynomial because the variable has only nonnegative integer exponents."
     },
-
     {
       "type": "lesson",
       "title": "Degree of an Expression",
-      "content": "The degree of a polynomial is the greatest exponent of the variable when the polynomial is written in terms of that variable. For a single-variable polynomial, the degree can be identified by looking for the highest exponent.",
-      "formula": "Degree of 5x³ + 2x² - x + 7 = 3"
+      "content": "The degree of a polynomial is the greatest exponent of the variable when the polynomial is written in terms of that variable. For a single-variable polynomial, identify the highest exponent to determine its degree.",
+      "key_terms": "Degree → the greatest exponent of the variable in a polynomial",
+      "examples": "Degree of 5x³ + 2x² - x + 7 → 3\n7x⁴ - 3x² + 5x - 1 → degree 4\n6x⁵ + 2x³ - 9 → degree 5"
     },
     {
       "type": "example",
@@ -496,12 +348,12 @@
       "correct_answer": "C",
       "explanation": "The highest exponent of x is 5, so the degree of the polynomial is 5."
     },
-
     {
       "type": "lesson",
       "title": "Identifying Expressions from Examples",
-      "content": "Algebraic expressions can be identified and classified by examining their symbols, terms, operations, and exponents. When analyzing an expression, first determine whether it contains an equality sign. Then count its terms, identify its variables and coefficients, and examine the exponents.",
-      "formula": "Analysis steps:\n1. Identify the terms.\n2. Identify variables and constants.\n3. Identify coefficients.\n4. Count the terms.\n5. Determine the degree when applicable."
+      "content": "Algebraic expressions can be identified and classified by examining their symbols, terms, operations, and exponents. When analyzing an expression, first determine its terms, variables, coefficients, constants, number of terms, and degree when applicable.",
+      "key_terms": "Terms → parts of an expression separated by addition or subtraction\nNumber of terms → determines whether an expression is a monomial, binomial, trinomial, or another polynomial\nDegree → greatest exponent of the variable",
+      "examples": "5x → monomial, degree 1\nx + 7 → binomial, degree 1\nx² + 3x + 2 → trinomial, degree 2\n4x³ - 2x² + 7 → polynomial, degree 3"
     },
     {
       "type": "example",

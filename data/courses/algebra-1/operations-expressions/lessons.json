@@ -7,7 +7,8 @@
       "type": "lesson",
       "title": "Adding Algebraic Expressions",
       "content": "To add algebraic expressions, remove parentheses and combine like terms. Like terms have the same variables raised to the same powers. Add or subtract only their coefficients while keeping the variable part unchanged.",
-      "formula": "(ax + b) + (cx + d) = (a + c)x + (b + d)"
+      "formula": "(ax + b) + (cx + d) = (a + c)x + (b + d)",
+      "key_terms": "like terms, coefficients, algebraic expressions"
     },
     {
       "type": "example",
@@ -44,7 +45,8 @@
       "type": "lesson",
       "title": "Subtracting Algebraic Expressions",
       "content": "To subtract algebraic expressions, distribute the negative sign across the expression being subtracted, then combine like terms. Every term inside the parentheses changes sign when a negative sign is distributed.",
-      "formula": "(ax + b) - (cx + d) = ax + b - cx - d"
+      "formula": "(ax + b) - (cx + d) = ax + b - cx - d",
+      "key_terms": "subtraction, negative sign, distribute, like terms"
     },
     {
       "type": "example",
@@ -81,7 +83,8 @@
       "type": "lesson",
       "title": "Multiplying a Monomial by a Monomial",
       "content": "When multiplying monomials, multiply their numerical coefficients and use the product of powers rule for variables with the same base. Add the exponents of matching variables.",
-      "formula": "a^m × a^n = a^(m+n)"
+      "formula": "a^m × a^n = a^(m+n)",
+      "key_terms": "monomial, coefficient, exponent, product of powers"
     },
     {
       "type": "example",
@@ -118,7 +121,8 @@
       "type": "lesson",
       "title": "Multiplying a Monomial by a Polynomial",
       "content": "To multiply a monomial by a polynomial, use the distributive property. Multiply the monomial by every term in the polynomial, then simplify the resulting terms.",
-      "formula": "a(b + c) = ab + ac"
+      "formula": "a(b + c) = ab + ac",
+      "key_terms": "monomial, polynomial, distributive property"
     },
     {
       "type": "example",
@@ -154,8 +158,9 @@
     {
       "type": "lesson",
       "title": "Multiplying Polynomials",
-      "content": "To multiply two polynomials, multiply every term in the first polynomial by every term in the second polynomial. After multiplying, combine like terms.",
-      "formula": "(a + b)(c + d) = ac + ad + bc + bd"
+      "content": "To multiply two polynomials, multiply every term in the first polynomial by every term in the second polynomial. After multiplying, combine like terms. This extends the same distributive idea used when multiplying a monomial by a polynomial.",
+      "formula": "(a + b)(c + d) = ac + ad + bc + bd",
+      "key_terms": "polynomial multiplication, binomial, distributive property"
     },
     {
       "type": "example",
@@ -191,8 +196,9 @@
     {
       "type": "lesson",
       "title": "Distributive Property in Multiplication",
-      "content": "The distributive property allows multiplication to be applied to every term inside parentheses. This is especially useful when expanding algebraic expressions.",
-      "formula": "a(b + c) = ab + ac"
+      "content": "The distributive property allows multiplication to be applied to every term inside parentheses. It provides a general method for expanding expressions and is the foundation for multiplying monomials by polynomials and polynomials by polynomials.",
+      "formula": "a(b + c) = ab + ac",
+      "key_terms": "distributive property, expansion, factor"
     },
     {
       "type": "example",
@@ -229,7 +235,8 @@
       "type": "lesson",
       "title": "Dividing Monomials",
       "content": "When dividing monomials with the same variable base, divide the coefficients and subtract the exponents of matching variables.",
-      "formula": "a^m / a^n = a^(m-n)"
+      "formula": "a^m / a^n = a^(m-n)",
+      "key_terms": "monomial division, quotient of powers, exponent"
     },
     {
       "type": "example",
@@ -266,7 +273,8 @@
       "type": "lesson",
       "title": "Dividing a Polynomial by a Monomial",
       "content": "To divide a polynomial by a monomial, divide every term of the polynomial by the monomial. Simplify each term separately using the quotient rule for exponents.",
-      "formula": "(a + b + c) / d = a/d + b/d + c/d"
+      "formula": "(a + b + c) / d = a/d + b/d + c/d",
+      "key_terms": "polynomial division, monomial divisor, quotient"
     },
     {
       "type": "example",
@@ -303,7 +311,8 @@
       "type": "lesson",
       "title": "Operations with Exponents",
       "content": "Exponent rules help simplify expressions during multiplication and division. When multiplying powers with the same base, add exponents. When dividing powers with the same base, subtract exponents. When raising a power to another power, multiply the exponents.",
-      "formula": "a^m × a^n = a^(m+n), a^m / a^n = a^(m-n), (a^m)^n = a^(mn)"
+      "formula": "a^m × a^n = a^(m+n), a^m / a^n = a^(m-n), (a^m)^n = a^(mn)",
+      "key_terms": "exponent, base, product of powers, quotient of powers, power of a power"
     },
     {
       "type": "example",
@@ -339,8 +348,8 @@
     {
       "type": "lesson",
       "title": "Simplifying After Operations",
-      "content": "After performing an operation such as addition, subtraction, multiplication, or division, always look for additional simplification. This may include combining like terms, applying exponent rules, or reducing numerical coefficients.",
-      "formula": "Perform the operation → Apply exponent rules → Combine like terms → Write in simplest form"
+      "content": "After performing an operation such as addition, subtraction, multiplication, or division, look for additional simplification. This may include combining like terms, applying exponent rules, or reducing numerical coefficients. Simplifying completely helps ensure that the expression is written in its simplest form.",
+      "key_terms": "simplify, like terms, exponent rules, simplest form"
     },
     {
       "type": "example",
@@ -376,8 +385,9 @@
     {
       "type": "lesson",
       "title": "Combining Multiple Operations",
-      "content": "Expressions may contain several operations at once. Follow the correct order: simplify parentheses first, perform multiplication and division, then perform addition and subtraction. After each step, combine like terms when possible.",
-      "formula": "Parentheses → Exponents → Multiplication/Division → Addition/Subtraction"
+      "content": "Expressions may contain several operations at once. Follow the correct order: simplify parentheses first, handle exponents, perform multiplication and division, then perform addition and subtraction. After each step, combine like terms when possible.",
+      "formula": "Parentheses → Exponents → Multiplication/Division → Addition/Subtraction",
+      "key_terms": "order of operations, parentheses, exponents, multiplication, division, addition, subtraction"
     },
     {
       "type": "example",
@@ -414,7 +424,8 @@
       "type": "lesson",
       "title": "Algebraic Fractions — Introduction",
       "content": "An algebraic fraction is a fraction containing variables in the numerator, denominator, or both. Algebraic fractions can often be simplified by factoring and canceling common nonzero factors. When adding or subtracting algebraic fractions, a common denominator is usually required.",
-      "formula": "a/b + c/b = (a + c)/b, where b ≠ 0"
+      "formula": "a/b + c/b = (a + c)/b, where b ≠ 0",
+      "key_terms": "algebraic fraction, numerator, denominator, common denominator"
     },
     {
       "type": "example",
@@ -451,7 +462,8 @@
       "type": "lesson",
       "title": "Checking Your Work",
       "content": "After performing operations on expressions, check your result by expanding carefully, combining terms again, or substituting a simple value for the variable into both the original and simplified expressions. If both forms give the same value, the simplification is consistent.",
-      "formula": "Original expression = Simplified expression"
+      "formula": "Original expression = Simplified expression",
+      "key_terms": "equivalent expressions, verification, substitution"
     },
     {
       "type": "example",

@@ -185,6 +185,18 @@ class LessonView(discord.ui.View):
             content,
         )
 
+        key_terms = lesson.get(
+            "key_terms"
+            )
+
+        if key_terms:
+
+            embed.add_field(
+                name="Key Terms",
+                value=key_terms,
+                inline=False,
+            )
+
         # Formula is optional.
         formula = lesson.get(
             "formula"
@@ -195,6 +207,19 @@ class LessonView(discord.ui.View):
             embed.add_field(
                 name="Formula",
                 value=f"`{formula}`",
+                inline=False,
+            )
+            
+
+        examples = lesson.get(
+            "examples"
+        )
+
+        if examples:
+
+            embed.add_field(
+                name="Examples",
+                value=f"```text\n{examples}\n```",
                 inline=False,
             )
 
