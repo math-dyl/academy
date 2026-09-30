@@ -11,23 +11,23 @@
     },
     {
       "name": "Sum Law",
-      "formula": "\\lim_{x \\to a} [f(x) + g(x)] = L + M"
+      "formula": "\\lim_{x \\to a} [f(x) + g(x)] = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)"
     },
     {
       "name": "Difference Law",
-      "formula": "\\lim_{x \\to a} [f(x) - g(x)] = L - M"
+      "formula": "\\lim_{x \\to a} [f(x) - g(x)] = \\lim_{x \\to a} f(x) - \\lim_{x \\to a} g(x)"
     },
     {
       "name": "Product Law",
-      "formula": "\\lim_{x \\to a} [f(x)g(x)] = LM"
+      "formula": "\\lim_{x \\to a} [f(x)g(x)] = \\left(\\lim_{x \\to a} f(x)\\right)\\left(\\lim_{x \\to a} g(x)\\right)"
     },
     {
       "name": "Quotient Law",
-      "formula": "\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{L}{M}"
+      "formula": "\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{\\lim_{x \\to a} f(x)}{\\lim_{x \\to a} g(x)}"
     },
     {
       "name": "Power Law",
-      "formula": "\\lim_{x \\to a} [f(x)]^n = L^n"
+      "formula": "\\lim_{x \\to a} [f(x)]^n = \\left(\\lim_{x \\to a} f(x)\\right)^n"
     }
   ]
 }

@@ -1,42 +1,82 @@
 [
   {
     "title": "Differentiate a Polynomial",
-    "problem": "Find the derivative of f(x) = 3x⁴ - 5x³ + 2x² - 7x + 4."
+    "problem": "Find the derivative of $f(x) = 3x^4 - 5x^3 + 2x^2 - 7x + 4$."
   },
   {
     "title": "Evaluate a Limit",
-    "problem": "Evaluate lim(x→2) (x² + 3x - 10)/(x - 2)."
+    "problem": "Evaluate $\\lim_{x \\to 2} \\frac{x^2 + 3x - 10}{x - 2}$."
   },
   {
     "title": "Solve a Quadratic Equation",
-    "problem": "Solve x² - 7x + 12 = 0."
+    "problem": "Solve $x^2 - 7x + 12 = 0$."
   },
   {
     "title": "Simplify an Expression",
-    "problem": "Simplify (x² - 9)/(x - 3), where x ≠ 3."
+    "problem": "Simplify $\\frac{x^2 - 9}{x - 3}$, where $x \\neq 3$."
   },
   {
     "title": "Derivative Using the Product Rule",
-    "problem": "Find the derivative of y = x² sin(x)."
+    "problem": "Find the derivative of $y = x^2\\sin(x)$."
   },
   {
     "title": "Derivative Using the Chain Rule",
-    "problem": "Find the derivative of y = (3x² + 1)⁵."
+    "problem": "Find the derivative of $y = (3x^2 + 1)^5$."
   },
   {
     "title": "Find the Slope",
-    "problem": "Find the slope of the tangent line to f(x) = x³ - 4x at x = 2."
+    "problem": "Find the slope of the tangent line to $f(x) = x^3 - 4x$ at $x = 2$."
   },
   {
     "title": "Solve the System",
-    "problem": "Solve the system: 2x + y = 7 and x - y = 2."
+    "problem": "Solve the system $\\begin{cases}2x + y = 7 \\\\ x - y = 2\\end{cases}$."
   },
   {
     "title": "Exponent Laws",
-    "problem": "Simplify (x³ · x⁵)/x²."
+    "problem": "Simplify $\\frac{x^3 \\cdot x^5}{x^2}$."
   },
   {
     "title": "Radical Expression",
-    "problem": "Simplify √50 + 2√8."
+    "problem": "Simplify $\\sqrt{50} + 2\\sqrt{8}$."
+  },
+  {
+    "title": "Evaluate a Definite Integral",
+    "problem": "Evaluate $\\int_0^2 (3x^2 + 2x)\\,dx$."
+  },
+  {
+    "title": "Find the Area of a Circle",
+    "problem": "Find the area of a circle with radius $r = 7$ using $A = \\pi r^2$."
+  },
+  {
+    "title": "Solve a Logarithmic Equation",
+    "problem": "Solve $\\log_2(x) = 5$."
+  },
+  {
+    "title": "Solve an Exponential Equation",
+    "problem": "Solve $3^{x+1} = 81$."
+  },
+  {
+    "title": "Arithmetic Sequence",
+    "problem": "Find the $10$th term of the arithmetic sequence $5, 8, 11, 14, \\ldots$."
+  },
+  {
+    "title": "Geometric Sequence",
+    "problem": "Find the $8$th term of the geometric sequence $2, 6, 18, 54, \\ldots$."
+  },
+  {
+    "title": "Probability of an Event",
+    "problem": "A fair six-sided die is rolled once. Find the probability of rolling an even number."
+  },
+  {
+    "title": "Combination Problem",
+    "problem": "How many different committees of $3$ people can be selected from a group of $10$ people?"
+  },
+  {
+    "title": "Pythagorean Theorem",
+    "problem": "A right triangle has legs of length $6$ and $8$. Find the length of the hypotenuse using $a^2 + b^2 = c^2$."
+  },
+  {
+    "title": "Trigonometric Equation",
+    "problem": "Solve $\\sin(x) = \\frac{1}{2}$ for $0 \\leq x \\leq 2\\pi$."
   }
 ]

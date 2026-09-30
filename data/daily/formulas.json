@@ -1,52 +1,102 @@
 [
   {
-    "title": "Power Rule",
-    "formula": "d/dx [x^n] = n x^(n-1)",
-    "explanation": "The Power Rule is used to differentiate a function containing a power of x. Multiply the exponent by the coefficient, then decrease the exponent by 1."
+    "title": "Pythagorean Theorem",
+    "formula": "a^2 + b^2 = c^2",
+    "explanation": "The Pythagorean Theorem relates the lengths of the sides of a right triangle. The square of the hypotenuse equals the sum of the squares of the two legs."
   },
   {
-    "title": "Product Rule",
-    "formula": "d/dx [u·v] = u'v + uv'",
-    "explanation": "The Product Rule is used when differentiating the product of two functions."
+    "title": "Quadratic Formula",
+    "formula": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+    "explanation": "The Quadratic Formula is used to find the solutions of a quadratic equation in the form ax^2 + bx + c = 0."
   },
   {
-    "title": "Quotient Rule",
-    "formula": "d/dx [u/v] = (v u' - u v') / v²",
-    "explanation": "The Quotient Rule is used when differentiating one function divided by another."
+    "title": "Slope Formula",
+    "formula": "m = \\frac{y_2-y_1}{x_2-x_1}",
+    "explanation": "The Slope Formula calculates the steepness and direction of a line using two points."
   },
   {
-    "title": "Chain Rule",
-    "formula": "d/dx [f(g(x))] = f'(g(x)) · g'(x)",
-    "explanation": "The Chain Rule is used to differentiate composite functions. Differentiate the outer function first, then multiply by the derivative of the inner function."
+    "title": "Distance Formula",
+    "formula": "d = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}",
+    "explanation": "The Distance Formula calculates the distance between two points on a coordinate plane."
   },
   {
-    "title": "Derivative of a Constant",
-    "formula": "d/dx [c] = 0",
-    "explanation": "The derivative of any constant is zero because a constant does not change as x changes."
+    "title": "Midpoint Formula",
+    "formula": "M = \\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)",
+    "explanation": "The Midpoint Formula finds the point exactly halfway between two points on a coordinate plane."
   },
   {
-    "title": "Derivative of e^x",
-    "formula": "d/dx [e^x] = e^x",
-    "explanation": "The exponential function e^x is special because its derivative is the function itself."
+    "title": "Point-Slope Form",
+    "formula": "y-y_1=m(x-x_1)",
+    "explanation": "Point-Slope Form represents a linear equation using the slope of the line and a known point on the line."
   },
   {
-    "title": "Derivative of ln(x)",
-    "formula": "d/dx [ln(x)] = 1/x",
-    "explanation": "The derivative of the natural logarithm of x is the reciprocal of x."
+    "title": "Slope-Intercept Form",
+    "formula": "y=mx+b",
+    "explanation": "Slope-Intercept Form represents a linear equation using its slope and y-intercept."
   },
   {
-    "title": "Derivative of sin(x)",
-    "formula": "d/dx [sin(x)] = cos(x)",
-    "explanation": "The derivative of sine is cosine."
+    "title": "Arithmetic Sequence",
+    "formula": "a_n=a_1+(n-1)d",
+    "explanation": "The formula for an arithmetic sequence finds the nth term by adding a constant common difference to the first term repeatedly."
   },
   {
-    "title": "Derivative of cos(x)",
-    "formula": "d/dx [cos(x)] = -sin(x)",
-    "explanation": "The derivative of cosine is negative sine."
+    "title": "Geometric Sequence",
+    "formula": "a_n=a_1r^{n-1}",
+    "explanation": "The formula for a geometric sequence finds the nth term by multiplying the first term by a common ratio raised to the appropriate power."
   },
   {
-    "title": "Derivative of tan(x)",
-    "formula": "d/dx [tan(x)] = sec²(x)",
-    "explanation": "The derivative of tangent is secant squared."
+    "title": "Arithmetic Series",
+    "formula": "S_n=\\frac{n}{2}(a_1+a_n)",
+    "explanation": "The Arithmetic Series Formula calculates the sum of the first n terms of an arithmetic sequence."
+  },
+  {
+    "title": "Geometric Series",
+    "formula": "S_n=a_1\\frac{1-r^n}{1-r}",
+    "explanation": "The Geometric Series Formula calculates the sum of the first n terms of a geometric sequence when the common ratio is not 1."
+  },
+  {
+    "title": "Simple Interest",
+    "formula": "I=Prt",
+    "explanation": "The Simple Interest Formula calculates the interest earned or charged based on the principal, interest rate, and time."
+  },
+  {
+    "title": "Compound Interest",
+    "formula": "A=P\\left(1+\\frac{r}{n}\\right)^{nt}",
+    "explanation": "The Compound Interest Formula calculates the accumulated amount when interest is compounded at regular intervals."
+  },
+  {
+    "title": "Permutations",
+    "formula": "P(n,r)=\\frac{n!}{(n-r)!}",
+    "explanation": "The Permutation Formula counts the number of ways to arrange r objects selected from n objects when order matters."
+  },
+  {
+    "title": "Combinations",
+    "formula": "C(n,r)=\\frac{n!}{r!(n-r)!}",
+    "explanation": "The Combination Formula counts the number of ways to select r objects from n objects when order does not matter."
+  },
+  {
+    "title": "Probability of an Event",
+    "formula": "P(A)=\\frac{\\text{Number of favorable outcomes}}{\\text{Total number of possible outcomes}}",
+    "explanation": "The Probability Formula determines how likely an event is to occur by comparing favorable outcomes with all possible outcomes."
+  },
+  {
+    "title": "Mean",
+    "formula": "\\bar{x}=\\frac{\\sum_{i=1}^{n}x_i}{n}",
+    "explanation": "The Mean Formula calculates the average of a set of numerical values by dividing their sum by the number of values."
+  },
+  {
+    "title": "Area of a Circle",
+    "formula": "A=\\pi r^2",
+    "explanation": "The Area of a Circle Formula calculates the amount of space inside a circle using its radius."
+  },
+  {
+    "title": "Volume of a Cylinder",
+    "formula": "V=\\pi r^2h",
+    "explanation": "The Volume of a Cylinder Formula calculates the three-dimensional space inside a cylinder using its radius and height."
+  },
+  {
+    "title": "Law of Sines",
+    "formula": "\\frac{a}{\\sin(A)}=\\frac{b}{\\sin(B)}=\\frac{c}{\\sin(C)}",
+    "explanation": "The Law of Sines relates the side lengths of a triangle to the sines of their opposite angles and can be used to solve oblique triangles."
   }
 ]

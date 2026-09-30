@@ -7,6 +7,9 @@ import discord
 
 from discord.ext import commands
 
+from pathlib import Path
+
+from .services.equation_renderer import EquationRenderer
 from .services.ai_service import AIService
 from .services.content_service import ContentService
 from .services.course_service import CourseService
@@ -94,6 +97,10 @@ class MathdylBot(
             QuizService(
                 self.course_service
             )
+        )
+
+        self.equation_renderer = EquationRenderer(
+            Path(__file__).resolve().parents[1]
         )
 
         # ==========================================

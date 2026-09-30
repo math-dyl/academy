@@ -1,52 +1,102 @@
 [
   {
-    "question": "What is the only number that has the same number of letters as its value?",
-    "answer": "Four",
-    "explanation": "The word 'four' contains four letters."
+    "question": "Which mathematician is credited with proving Fermat's Last Theorem in the 1990s?",
+    "answer": "Andrew Wiles",
+    "explanation": "Andrew Wiles announced a proof of Fermat's Last Theorem in 1994, completing one of the most famous problems in number theory."
   },
   {
-    "question": "What is the value of π to two decimal places?",
-    "answer": "3.14",
-    "explanation": "Pi is an irrational number approximately equal to 3.14159265..."
+    "question": "What is unusual about the number $0.999\\ldots$?",
+    "answer": "$0.999\\ldots = 1$",
+    "explanation": "The repeating decimal $0.999\\ldots$ is exactly equal to $1$, not merely an approximation. This follows from the properties of infinite geometric series and real numbers."
   },
   {
-    "question": "What is the only even prime number?",
-    "answer": "2",
-    "explanation": "A prime number has exactly two positive factors. The number 2 is divisible only by 1 and 2."
+    "question": "Which famous mathematical constant appears in Euler's identity $e^{i\\pi}+1=0$?",
+    "answer": "$\\pi$",
+    "explanation": "Euler's identity connects five fundamental mathematical constants: $e$, $i$, $\\pi$, $1$, and $0$ in a single equation."
   },
   {
-    "question": "What is the name of a polygon with eight sides?",
-    "answer": "Octagon",
-    "explanation": "The prefix 'octa-' means eight, so an eight-sided polygon is called an octagon."
+    "question": "Why is the number $1729$ famous in mathematics?",
+    "answer": "It is the smallest number expressible as the sum of two positive cubes in two different ways.",
+    "explanation": "The number $1729$ can be written as $1^3+12^3$ and also as $9^3+10^3$. It became famous through a story involving mathematicians Srinivasa Ramanujan and G. H. Hardy."
   },
   {
-    "question": "What is the square root of 144?",
-    "answer": "12",
-    "explanation": "Since 12 × 12 = 144, √144 = 12."
+    "question": "What is the smallest perfect number?",
+    "answer": "$6$",
+    "explanation": "The number $6$ is the smallest perfect number because its positive divisors other than itself are $1$, $2$, and $3$, and $1+2+3=6$."
   },
   {
-    "question": "What is the sum of the angles inside a triangle?",
-    "answer": "180°",
-    "explanation": "In Euclidean geometry, the interior angles of every triangle add up to 180 degrees."
+    "question": "What is the mathematical name for a shape that can be continuously deformed into another shape without tearing or gluing?",
+    "answer": "Homeomorphic shapes",
+    "explanation": "In topology, two spaces are homeomorphic when there is a continuous deformation between them that preserves their essential topological structure."
   },
   {
-    "question": "What is a number greater than 1 that has exactly two positive factors called?",
-    "answer": "Prime number",
-    "explanation": "A prime number has exactly two positive factors: 1 and itself."
+    "question": "Which mathematical object is often called a 'Rubik's Cube' of mathematics because of its enormous number of possible configurations?",
+    "answer": "The Rubik's Cube",
+    "explanation": "A standard $3\\times3\\times3$ Rubik's Cube has approximately $4.3\\times10^{19}$ possible configurations."
   },
   {
-    "question": "What mathematical constant is approximately equal to 2.71828?",
-    "answer": "Euler's number (e)",
-    "explanation": "Euler's number e is an important mathematical constant used extensively in exponential growth, logarithms, calculus, and differential equations."
+    "question": "What is the famous mathematical paradox involving a hotel with infinitely many rooms?",
+    "answer": "Hilbert's Hotel",
+    "explanation": "Hilbert's Hotel is a thought experiment demonstrating surprising properties of infinite sets. Even when every room is occupied, the hotel can accommodate additional guests by rearranging its occupants."
   },
   {
-    "question": "What is the Fibonacci sequence beginning with 0 and 1?",
-    "answer": "0, 1, 1, 2, 3, 5, 8, 13, ...",
-    "explanation": "Each number after the first two is obtained by adding the previous two numbers."
+    "question": "What is special about the number $6174$?",
+    "answer": "It is known as Kaprekar's constant.",
+    "explanation": "For most four-digit numbers with at least two different digits, repeatedly arranging the digits in descending and ascending order and subtracting eventually produces $6174$."
   },
   {
-    "question": "What is the derivative of x²?",
-    "answer": "2x",
-    "explanation": "Using the Power Rule, d/dx[xⁿ] = nxⁿ⁻¹. Therefore, d/dx[x²] = 2x."
+    "question": "Which ancient mathematician is associated with the theorem about right triangles?",
+    "answer": "Pythagoras",
+    "explanation": "Pythagoras is traditionally associated with the theorem stating that for a right triangle, $a^2+b^2=c^2$. Although the relationship was known before his time, the theorem bears his name."
+  },
+  {
+    "question": "What is the largest known type of prime number commonly studied using the form $2^p-1$?",
+    "answer": "Mersenne prime",
+    "explanation": "A Mersenne prime is a prime number of the form $2^p-1$, where $p$ is itself prime. These numbers are important in computational number theory and the search for very large primes."
+  },
+  {
+    "question": "What mathematical pattern appears in Pascal's Triangle?",
+    "answer": "Binomial coefficients",
+    "explanation": "The entries in Pascal's Triangle correspond to binomial coefficients. For example, the coefficients of $(a+b)^n$ appear in the $n$th row."
+  },
+  {
+    "question": "Why is the number $42$ famous in popular mathematical culture?",
+    "answer": "It is presented as the 'Answer to the Ultimate Question of Life, the Universe, and Everything.'",
+    "explanation": "In Douglas Adams' science-fiction series, a supercomputer calculates $42$ as the answer to the ultimate question. The number became a widely recognized mathematical and cultural reference."
+  },
+  {
+    "question": "What is the mathematical significance of the Golden Ratio?",
+    "answer": "$\\varphi=\\frac{1+\\sqrt{5}}{2}$",
+    "explanation": "The Golden Ratio is an irrational number approximately equal to $1.618$. It appears in mathematics through relationships involving Fibonacci numbers, geometry, and certain recursive patterns."
+  },
+  {
+    "question": "What is the Banach-Tarski paradox known for?",
+    "answer": "It shows that a solid ball can theoretically be decomposed and rearranged into two balls of the same size.",
+    "explanation": "The Banach-Tarski paradox is a result in set-theoretic geometry that relies on the axiom of choice. The decomposition involves highly non-intuitive sets that cannot be physically constructed."
+  },
+  {
+    "question": "Which mathematician is famous for introducing the concept of a mathematical infinity hierarchy?",
+    "answer": "Georg Cantor",
+    "explanation": "Georg Cantor developed set theory and demonstrated that infinite sets can have different sizes, introducing concepts such as countable and uncountable infinity."
+  },
+  {
+    "question": "What is unusual about the number $1$ in the context of prime numbers?",
+    "answer": "$1$ is neither prime nor composite.",
+    "explanation": "The number $1$ has only one positive divisor, itself. Modern mathematics defines prime numbers as integers greater than $1$ with exactly two positive divisors."
+  },
+  {
+    "question": "What is the Monty Hall problem famous for?",
+    "answer": "Changing your choice increases the probability of winning.",
+    "explanation": "In the classic three-door version, switching after one losing door is revealed gives a winning probability of $\\frac{2}{3}$, while staying with the original choice gives a probability of $\\frac{1}{3}$."
+  },
+  {
+    "question": "What is the smallest number that can be expressed as the sum of two positive cubes in two different ways?",
+    "answer": "$1729$",
+    "explanation": "The number $1729$ has the remarkable representations $1729=1^3+12^3$ and $1729=9^3+10^3$. This property made the number particularly famous in recreational number theory."
+  },
+  {
+    "question": "What happens to the decimal representation of $\\frac{1}{7}$?",
+    "answer": "$\\frac{1}{7}=0.142857142857\\ldots$",
+    "explanation": "The decimal expansion of $\\frac{1}{7}$ repeats the six-digit sequence $142857$ indefinitely. This repeating block has several interesting cyclic properties when multiplied by integers from $1$ through $6$."
   }
 ]

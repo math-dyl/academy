@@ -3,15 +3,15 @@
   "formulas": [
     {
       "name": "Quadratic Formula",
-      "formula": "x = (-b ± √(b²-4ac))/(2a)"
+      "formula": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"
     },
     {
       "name": "Discriminant",
-      "formula": "Δ = b² - 4ac"
+      "formula": "\\Delta = b^2 - 4ac"
     },
     {
       "name": "Vertex",
-      "formula": "x = -b/(2a)"
+      "formula": "x = -\\frac{b}{2a}"
     }
   ]
 }

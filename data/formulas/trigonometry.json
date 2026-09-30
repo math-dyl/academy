@@ -3,31 +3,31 @@
   "formulas": [
     {
       "name": "Pythagorean Identity",
-      "formula": "sin²θ + cos²θ = 1"
+      "formula": "\\sin^2\\theta + \\cos^2\\theta = 1"
     },
     {
       "name": "Tangent Identity",
-      "formula": "tanθ = sinθ/cosθ"
+      "formula": "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}"
     },
     {
       "name": "Reciprocal Identity",
-      "formula": "cscθ = 1/sinθ"
+      "formula": "\\csc\\theta = \\frac{1}{\\sin\\theta}"
     },
     {
       "name": "Reciprocal Identity",
-      "formula": "secθ = 1/cosθ"
+      "formula": "\\sec\\theta = \\frac{1}{\\cos\\theta}"
     },
     {
       "name": "Reciprocal Identity",
-      "formula": "cotθ = 1/tanθ"
+      "formula": "\\cot\\theta = \\frac{1}{\\tan\\theta}"
     },
     {
       "name": "Pythagorean Identity",
-      "formula": "1 + tan²θ = sec²θ"
+      "formula": "1 + \\tan^2\\theta = \\sec^2\\theta"
     },
     {
       "name": "Pythagorean Identity",
-      "formula": "1 + cot²θ = csc²θ"
+      "formula": "1 + \\cot^2\\theta = \\csc^2\\theta"
     }
   ]
 }

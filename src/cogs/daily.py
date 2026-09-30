@@ -63,19 +63,55 @@ class DailyCog(commands.Cog):
             explanation,
         )
 
-        embed.add_field(
-            name="Formula",
-            value=f"`{formula}`",
-            inline=False,
+        # ==============================================
+        # RENDER EQUATION AS IMAGE
+        # ==============================================
+
+        equation_renderer = (
+            self.bot.equation_renderer
         )
 
-        embed.set_footer(
-            text="Mathdyl Academy • Formula of the Day"
+        image_path = equation_renderer.render(
+            formula
         )
 
-        await channel.send(
-            embed=embed
-        )
+        if image_path:
+
+            filename = image_path.name
+
+            file = discord.File(
+                image_path,
+                filename=filename,
+            )
+
+            embed.set_image(
+                url=f"attachment://{filename}"
+            )
+
+            embed.set_footer(
+                text="Mathdyl Academy • Formula of the Day"
+            )
+
+            await channel.send(
+                embed=embed,
+                file=file,
+            )
+
+        else:
+
+            embed.add_field(
+                name="Formula",
+                value=f"`{formula}`",
+                inline=False,
+            )
+
+            embed.set_footer(
+                text="Mathdyl Academy • Formula of the Day"
+            )
+
+            await channel.send(
+                embed=embed
+            )
 
         return True
 
@@ -112,6 +148,59 @@ class DailyCog(commands.Cog):
 
         if not problem:
             return False
+
+        equation_renderer = (
+            self.bot.equation_renderer
+        )
+
+        # ==============================================
+        # RENDER ENTIRE PROBLEM AS IMAGE
+        # ==============================================
+
+        if equation_renderer.looks_like_equation(
+            problem
+        ):
+
+            image_path = (
+                equation_renderer.render_content(
+                    problem
+                )
+            )
+
+            if image_path:
+
+                filename = image_path.name
+
+                file = discord.File(
+                    image_path,
+                    filename=filename,
+                )
+
+                # Image already contains the problem.
+                # Embed contains only title, image, footer.
+                embed = make_embed(
+                    title,
+                    "",
+                )
+
+                embed.set_image(
+                    url=f"attachment://{filename}"
+                )
+
+                embed.set_footer(
+                    text="Mathdyl Academy • Problem of the Day"
+                )
+
+                await channel.send(
+                    embed=embed,
+                    file=file,
+                )
+
+                return True
+
+        # ==============================================
+        # NORMAL EMBED
+        # ==============================================
 
         embed = make_embed(
             title,
@@ -168,6 +257,78 @@ class DailyCog(commands.Cog):
 
         if not problem or not solution:
             return False
+
+        equation_renderer = (
+            self.bot.equation_renderer
+        )
+
+        # ==============================================
+        # COMBINE COMPLETE CONTENT
+        # ==============================================
+
+        full_content = (
+            f"{problem}\n\n"
+            f"Answer:\n"
+            f"{solution}"
+        )
+
+        if explanation:
+
+            full_content += (
+                f"\n\n"
+                f"Explanation:\n"
+                f"{explanation}"
+            )
+
+        # ==============================================
+        # RENDER ENTIRE SOLUTION AS IMAGE
+        # ==============================================
+
+        if equation_renderer.looks_like_equation(
+            full_content
+        ):
+
+            image_path = (
+                equation_renderer.render_content(
+                    full_content
+                )
+            )
+
+            if image_path:
+
+                filename = image_path.name
+
+                file = discord.File(
+                    image_path,
+                    filename=filename,
+                )
+
+                # Image already contains the problem,
+                # solution, and explanation.
+                # Embed contains only title, image, footer.
+                embed = make_embed(
+                    title,
+                    "",
+                )
+
+                embed.set_image(
+                    url=f"attachment://{filename}"
+                )
+
+                embed.set_footer(
+                    text="Mathdyl Academy • Solution of the Day"
+                )
+
+                await channel.send(
+                    embed=embed,
+                    file=file,
+                )
+
+                return True
+
+        # ==============================================
+        # NORMAL EMBED
+        # ==============================================
 
         embed = make_embed(
             title,
@@ -233,6 +394,82 @@ class DailyCog(commands.Cog):
 
         if not question:
             return False
+
+        equation_renderer = (
+            self.bot.equation_renderer
+        )
+
+        # ==============================================
+        # COMBINE COMPLETE CONTENT
+        # ==============================================
+
+        full_content = question
+
+        if answer:
+
+            full_content += (
+                f"\n\n"
+                f"Answer:\n"
+                f"{answer}"
+            )
+
+        if explanation:
+
+            full_content += (
+                f"\n\n"
+                f"Explanation:\n"
+                f"{explanation}"
+            )
+
+        # ==============================================
+        # RENDER ENTIRE TRIVIA AS IMAGE
+        # ==============================================
+
+        if equation_renderer.looks_like_equation(
+            full_content
+        ):
+
+            image_path = (
+                equation_renderer.render_content(
+                    full_content
+                )
+            )
+
+            if image_path:
+
+                filename = image_path.name
+
+                file = discord.File(
+                    image_path,
+                    filename=filename,
+                )
+
+                # Image already contains the question,
+                # answer, and explanation.
+                # Embed contains only title, image, footer.
+                embed = make_embed(
+                    "Math Trivia",
+                    "",
+                )
+
+                embed.set_image(
+                    url=f"attachment://{filename}"
+                )
+
+                embed.set_footer(
+                    text="Mathdyl Academy • Math Trivia"
+                )
+
+                await channel.send(
+                    embed=embed,
+                    file=file,
+                )
+
+                return True
+
+        # ==============================================
+        # NORMAL EMBED
+        # ==============================================
 
         embed = make_embed(
             "Math Trivia",

@@ -179,13 +179,13 @@ class SchedulerCog(commands.Cog):
     def already_posted(
         self,
         state,
-        date_key,
+        slot_key,
         event_name,
     ):
 
         return (
             state
-            .get(date_key, {})
+            .get(slot_key, {})
             .get(event_name, False)
         )
 
@@ -196,15 +196,15 @@ class SchedulerCog(commands.Cog):
     def mark_posted(
         self,
         state,
-        date_key,
+        slot_key,
         event_name,
     ):
 
-        if date_key not in state:
+        if slot_key not in state:
 
-            state[date_key] = {}
+            state[slot_key] = {}
 
-        state[date_key][event_name] = True
+        state[slot_key][event_name] = True
 
         self.save_state(state)
 
@@ -237,12 +237,10 @@ class SchedulerCog(commands.Cog):
 
         now = datetime.now(timezone)
 
-        current_time = now.strftime(
-            "%H:%M"
-        )
+        current_minute = now.minute
 
-        date_key = now.strftime(
-            "%Y-%m-%d"
+        slot_key = now.strftime(
+            "%Y-%m-%d-%H-%M"
         )
 
         daily_config = (
@@ -254,6 +252,13 @@ class SchedulerCog(commands.Cog):
         )
 
         state = self.load_state()
+
+        daily_cog = self.bot.get_cog(
+            "DailyCog"
+        )
+
+        if not daily_cog:
+            return
 
         # ==============================================
         # FORMULA
@@ -267,17 +272,33 @@ class SchedulerCog(commands.Cog):
             )
         )
 
+        formula_schedule = (
+            formula_config
+            .get(
+                "schedule",
+                {},
+            )
+        )
+
+        formula_minute = (
+            formula_schedule
+            .get(
+                "minute"
+            )
+        )
+
         if (
             formula_config.get(
                 "enabled",
                 False,
             )
-            and formula_config.get(
-                "time"
-            ) == current_time
+            and formula_schedule.get(
+                "type"
+            ) == "hourly"
+            and formula_minute == current_minute
             and not self.already_posted(
                 state,
-                date_key,
+                slot_key,
                 "formula",
             )
         ):
@@ -290,31 +311,25 @@ class SchedulerCog(commands.Cog):
 
             if channel:
 
-                daily_cog = self.bot.get_cog(
-                    "DailyCog"
+                success = await (
+                    daily_cog
+                    .send_formula_of_the_day(
+                        channel
+                    )
                 )
 
-                if daily_cog:
+                if success:
 
-                    success = await (
-                        daily_cog
-                        .send_formula_of_the_day(
-                            channel
-                        )
+                    self.mark_posted(
+                        state,
+                        slot_key,
+                        "formula",
                     )
 
-                    if success:
-
-                        self.mark_posted(
-                            state,
-                            date_key,
-                            "formula",
-                        )
-
-                        print(
-                            "[Scheduler] "
-                            "Formula of the Day posted."
-                        )
+                    print(
+                        "[Scheduler] "
+                        "Formula of the Day posted."
+                    )
 
         # ==============================================
         # PROBLEM
@@ -328,17 +343,33 @@ class SchedulerCog(commands.Cog):
             )
         )
 
+        problem_schedule = (
+            problem_config
+            .get(
+                "schedule",
+                {},
+            )
+        )
+
+        problem_minute = (
+            problem_schedule
+            .get(
+                "minute"
+            )
+        )
+
         if (
             problem_config.get(
                 "enabled",
                 False,
             )
-            and problem_config.get(
-                "time"
-            ) == current_time
+            and problem_schedule.get(
+                "type"
+            ) == "hourly"
+            and problem_minute == current_minute
             and not self.already_posted(
                 state,
-                date_key,
+                slot_key,
                 "problem",
             )
         ):
@@ -351,31 +382,96 @@ class SchedulerCog(commands.Cog):
 
             if channel:
 
-                daily_cog = self.bot.get_cog(
-                    "DailyCog"
+                success = await (
+                    daily_cog
+                    .send_problem_of_the_day(
+                        channel
+                    )
                 )
 
-                if daily_cog:
+                if success:
 
-                    success = await (
-                        daily_cog
-                        .send_problem_of_the_day(
-                            channel
-                        )
+                    self.mark_posted(
+                        state,
+                        slot_key,
+                        "problem",
                     )
 
-                    if success:
+                    print(
+                        "[Scheduler] "
+                        "Problem of the Day posted."
+                    )
 
-                        self.mark_posted(
-                            state,
-                            date_key,
-                            "problem",
-                        )
+        # ==============================================
+        # SOLUTION
+        # ==============================================
 
-                        print(
-                            "[Scheduler] "
-                            "Problem of the Day posted."
-                        )
+        solution_config = (
+            daily_config
+            .get(
+                "solution",
+                {},
+            )
+        )
+
+        solution_schedule = (
+            solution_config
+            .get(
+                "schedule",
+                {},
+            )
+        )
+
+        solution_minute = (
+            solution_schedule
+            .get(
+                "minute"
+            )
+        )
+
+        if (
+            solution_config.get(
+                "enabled",
+                False,
+            )
+            and solution_schedule.get(
+                "type"
+            ) == "hourly"
+            and solution_minute == current_minute
+            and not self.already_posted(
+                state,
+                slot_key,
+                "solution",
+            )
+        ):
+
+            channel = await self.get_channel(
+                solution_config.get(
+                    "channel_id"
+                )
+            )
+
+            if channel:
+
+                success = await (
+                    daily_cog
+                    .send_solution_of_the_day(
+                        channel
+                    )
+                )
+
+                if success:
+
+                    self.mark_posted(
+                        state,
+                        slot_key,
+                        "solution",
+                    )
+
+                    print(
+                        "[Scheduler] "
+                        "Solution of the Day posted."
+                    )
 
         # ==============================================
         # TRIVIA
@@ -389,17 +485,33 @@ class SchedulerCog(commands.Cog):
             )
         )
 
+        trivia_schedule = (
+            trivia_config
+            .get(
+                "schedule",
+                {},
+            )
+        )
+
+        trivia_minute = (
+            trivia_schedule
+            .get(
+                "minute"
+            )
+        )
+
         if (
             trivia_config.get(
                 "enabled",
                 False,
             )
-            and trivia_config.get(
-                "time"
-            ) == current_time
+            and trivia_schedule.get(
+                "type"
+            ) == "hourly"
+            and trivia_minute == current_minute
             and not self.already_posted(
                 state,
-                date_key,
+                slot_key,
                 "trivia",
             )
         ):
@@ -412,31 +524,25 @@ class SchedulerCog(commands.Cog):
 
             if channel:
 
-                daily_cog = self.bot.get_cog(
-                    "DailyCog"
+                success = await (
+                    daily_cog
+                    .send_trivia(
+                        channel
+                    )
                 )
 
-                if daily_cog:
+                if success:
 
-                    success = await (
-                        daily_cog
-                        .send_trivia(
-                            channel
-                        )
+                    self.mark_posted(
+                        state,
+                        slot_key,
+                        "trivia",
                     )
 
-                    if success:
-
-                        self.mark_posted(
-                            state,
-                            date_key,
-                            "trivia",
-                        )
-
-                        print(
-                            "[Scheduler] "
-                            "Math Trivia posted."
-                        )
+                    print(
+                        "[Scheduler] "
+                        "Math Trivia posted."
+                    )
 
     # ==================================================
     # BOT READY

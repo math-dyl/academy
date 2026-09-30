@@ -1,50 +1,116 @@
 [
   {
     "title": "Polynomial Derivative",
-    "problem": "Find the derivative of f(x) = 3x⁴ - 5x³ + 2x² - 7x + 4.",
-    "solution": "f'(x) = 12x³ - 15x² + 4x - 7",
-    "explanation": "Apply the Power Rule to each term: 3x⁴ becomes 12x³, -5x³ becomes -15x², 2x² becomes 4x, -7x becomes -7, and the constant 4 becomes 0."
+    "problem": "Find the derivative of $f(x) = 3x^4 - 5x^3 + 2x^2 - 7x + 4$.",
+    "solution": "$f'(x) = 12x^3 - 15x^2 + 4x - 7$",
+    "explanation": "Apply the Power Rule to each term: $3x^4$ becomes $12x^3$, $-5x^3$ becomes $-15x^2$, $2x^2$ becomes $4x$, $-7x$ becomes $-7$, and the constant $4$ becomes $0$."
   },
   {
     "title": "Quadratic Equation",
-    "problem": "Solve x² - 7x + 12 = 0.",
-    "solution": "x = 3 or x = 4",
-    "explanation": "Factor the quadratic: x² - 7x + 12 = (x - 3)(x - 4). Setting each factor equal to zero gives x = 3 and x = 4."
+    "problem": "Solve $x^2 - 7x + 12 = 0$.",
+    "solution": "$x = 3$ or $x = 4$",
+    "explanation": "Factor the quadratic: $x^2 - 7x + 12 = (x - 3)(x - 4)$. Setting each factor equal to zero gives $x = 3$ and $x = 4$."
   },
   {
     "title": "Limit Evaluation",
-    "problem": "Evaluate lim(x→2) (x² + 3x - 10)/(x - 2).",
-    "solution": "7",
-    "explanation": "Factor the numerator: x² + 3x - 10 = (x - 2)(x + 5). Cancel x - 2, leaving x + 5. Substituting x = 2 gives 7."
+    "problem": "Evaluate $\\lim_{x \\to 2} \\frac{x^2 + 3x - 10}{x - 2}$.",
+    "solution": "$7$",
+    "explanation": "Factor the numerator: $x^2 + 3x - 10 = (x - 2)(x + 5)$. Cancel $x - 2$, leaving $x + 5$. Substituting $x = 2$ gives $7$."
   },
   {
     "title": "Simplifying a Rational Expression",
-    "problem": "Simplify (x² - 9)/(x - 3), where x ≠ 3.",
-    "solution": "x + 3",
-    "explanation": "Factor the numerator using the difference of squares: x² - 9 = (x - 3)(x + 3). Cancel the common factor x - 3, leaving x + 3."
+    "problem": "Simplify $\\frac{x^2 - 9}{x - 3}$, where $x \\neq 3$.",
+    "solution": "$x + 3$",
+    "explanation": "Factor the numerator using the difference of squares: $x^2 - 9 = (x - 3)(x + 3)$. Cancel the common factor $x - 3$, leaving $x + 3$."
   },
   {
     "title": "Product Rule",
-    "problem": "Find the derivative of y = x² sin(x).",
-    "solution": "y' = 2x sin(x) + x² cos(x)",
-    "explanation": "Using the Product Rule, (uv)' = u'v + uv'. Let u = x² and v = sin(x). Then u' = 2x and v' = cos(x), giving y' = 2x sin(x) + x² cos(x)."
+    "problem": "Find the derivative of $y = x^2\\sin(x)$.",
+    "solution": "$y' = 2x\\sin(x) + x^2\\cos(x)$",
+    "explanation": "Using the Product Rule, $(uv)' = u'v + uv'$. Let $u = x^2$ and $v = \\sin(x)$. Then $u' = 2x$ and $v' = \\cos(x)$, giving $y' = 2x\\sin(x) + x^2\\cos(x)$."
   },
   {
     "title": "Chain Rule",
-    "problem": "Find the derivative of y = (3x² + 1)⁵.",
-    "solution": "y' = 30x(3x² + 1)⁴",
-    "explanation": "Using the Chain Rule, differentiate the outer power first: 5(3x² + 1)⁴. Then multiply by the derivative of the inner function, 6x. Therefore y' = 30x(3x² + 1)⁴."
+    "problem": "Find the derivative of $y = (3x^2 + 1)^5$.",
+    "solution": "$y' = 30x(3x^2 + 1)^4$",
+    "explanation": "Using the Chain Rule, differentiate the outer power first: $5(3x^2 + 1)^4$. Then multiply by the derivative of the inner function, $6x$. Therefore, $y' = 30x(3x^2 + 1)^4$."
   },
   {
     "title": "System of Equations",
-    "problem": "Solve the system: 2x + y = 7 and x - y = 2.",
-    "solution": "x = 3, y = 1",
-    "explanation": "Add the two equations: (2x + y) + (x - y) = 7 + 2, giving 3x = 9. Thus x = 3. Substitute x = 3 into x - y = 2 to get y = 1."
+    "problem": "Solve the system: $\\begin{cases} 2x + y = 7 \\\\ x - y = 2 \\end{cases}$.",
+    "solution": "$x = 3,\\quad y = 1$",
+    "explanation": "Add the two equations: $(2x + y) + (x - y) = 7 + 2$, giving $3x = 9$. Thus, $x = 3$. Substitute $x = 3$ into $x - y = 2$ to get $y = 1$."
   },
   {
     "title": "Exponent Laws",
-    "problem": "Simplify (x³ · x⁵)/x².",
-    "solution": "x⁶",
-    "explanation": "When multiplying powers with the same base, add the exponents: x³ · x⁵ = x⁸. When dividing, subtract the exponents: x⁸/x² = x⁶."
+    "problem": "Simplify $\\frac{x^3 \\cdot x^5}{x^2}$.",
+    "solution": "$x^6$",
+    "explanation": "When multiplying powers with the same base, add the exponents: $x^3 \\cdot x^5 = x^8$. When dividing, subtract the exponents: $\\frac{x^8}{x^2} = x^6$."
+  },
+  {
+    "title": "Radical Simplification",
+    "problem": "Simplify $\\sqrt{50} + 2\\sqrt{8}$.",
+    "solution": "$9\\sqrt{2}$",
+    "explanation": "Rewrite the radicals: $\\sqrt{50} = 5\\sqrt{2}$ and $\\sqrt{8} = 2\\sqrt{2}$. Therefore, $5\\sqrt{2} + 2(2\\sqrt{2}) = 9\\sqrt{2}$."
+  },
+  {
+    "title": "Definite Integral",
+    "problem": "Evaluate $\\int_0^2 (3x^2 + 2x)\\,dx$.",
+    "solution": "$12$",
+    "explanation": "Find the antiderivative: $\\int (3x^2 + 2x)\\,dx = x^3 + x^2$. Evaluate from $0$ to $2$: $(2^3 + 2^2) - (0^3 + 0^2) = 12$."
+  },
+  {
+    "title": "Logarithmic Equation",
+    "problem": "Solve $\\log_2(x) = 5$.",
+    "solution": "$x = 32$",
+    "explanation": "Rewrite the logarithmic equation in exponential form: $x = 2^5$. Therefore, $x = 32$."
+  },
+  {
+    "title": "Exponential Equation",
+    "problem": "Solve $3^{x+1} = 81$.",
+    "solution": "$x = 3$",
+    "explanation": "Rewrite $81$ as $3^4$. Therefore, $3^{x+1} = 3^4$, so $x + 1 = 4$. Hence, $x = 3$."
+  },
+  {
+    "title": "Arithmetic Sequence",
+    "problem": "Find the $10$th term of the arithmetic sequence $5, 8, 11, 14, \\ldots$.",
+    "solution": "$a_{10} = 32$",
+    "explanation": "The first term is $a_1 = 5$ and the common difference is $d = 3$. Using $a_n = a_1 + (n - 1)d$, we get $a_{10} = 5 + (10 - 1)(3) = 32$."
+  },
+  {
+    "title": "Geometric Sequence",
+    "problem": "Find the $8$th term of the geometric sequence $2, 6, 18, 54, \\ldots$.",
+    "solution": "$a_8 = 4374$",
+    "explanation": "The first term is $a_1 = 2$ and the common ratio is $r = 3$. Using $a_n = a_1r^{n-1}$, we get $a_8 = 2(3)^7 = 4374$."
+  },
+  {
+    "title": "Probability",
+    "problem": "A fair six-sided die is rolled once. Find the probability of rolling an even number.",
+    "solution": "$P(E) = \\frac{1}{2}$",
+    "explanation": "The even outcomes are $2$, $4$, and $6$, giving $3$ favorable outcomes out of $6$ possible outcomes. Therefore, $P(E) = \\frac{3}{6} = \\frac{1}{2}$."
+  },
+  {
+    "title": "Combination",
+    "problem": "How many different committees of $3$ people can be selected from a group of $10$ people?",
+    "solution": "$\\binom{10}{3} = 120$",
+    "explanation": "Since the order of the people does not matter, use combinations: $\\binom{10}{3} = \\frac{10!}{3!(10-3)!} = 120$."
+  },
+  {
+    "title": "Pythagorean Theorem",
+    "problem": "A right triangle has legs of length $6$ and $8$. Find the length of the hypotenuse using $a^2 + b^2 = c^2$.",
+    "solution": "$c = 10$",
+    "explanation": "Substitute the known side lengths: $6^2 + 8^2 = c^2$. Thus, $36 + 64 = c^2$, so $100 = c^2$. Taking the positive square root gives $c = 10$."
+  },
+  {
+    "title": "Trigonometric Equation",
+    "problem": "Solve $\\sin(x) = \\frac{1}{2}$ for $0 \\leq x \\leq 2\\pi$.",
+    "solution": "$x = \\frac{\\pi}{6},\\quad \\frac{5\\pi}{6}$",
+    "explanation": "The reference angle for $\\sin(x) = \\frac{1}{2}$ is $\\frac{\\pi}{6}$. Sine is positive in Quadrants I and II, giving $x = \\frac{\\pi}{6}$ and $x = \\pi - \\frac{\\pi}{6} = \\frac{5\\pi}{6}$."
+  },
+  {
+    "title": "Circle Area",
+    "problem": "Find the area of a circle with radius $r = 7$ using $A = \\pi r^2$.",
+    "solution": "$A = 49\\pi$",
+    "explanation": "Substitute $r = 7$ into the area formula: $A = \\pi(7)^2 = 49\\pi$. Therefore, the area is $49\\pi$ square units."
   }
 ]
