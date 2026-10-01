@@ -6,7 +6,7 @@
             "enabled": true,
             "schedule": {
                 "type": "hourly",
-                "minute": 36
+                "minute": 15
             },
             "channel_id": "1526511372098080802"
         },
@@ -15,16 +15,16 @@
             "enabled": true,
             "schedule": {
                 "type": "hourly",
-                "minute": 36
+                "minute": 30
             },
             "channel_id": "1526511372098080802"
         },
 
         "solution": {
-            "enabled": false,
+            "enabled": true,
             "schedule": {
                 "type": "hourly",
-                "minute": 36
+                "minute": 45
             },
             "channel_id": "1526511372098080802"
         },
@@ -33,7 +33,7 @@
             "enabled": true,
             "schedule": {
                 "type": "hourly",
-                "minute": 36
+                "minute": 00
             },
             "channel_id": "1526511372098080802"
         }
