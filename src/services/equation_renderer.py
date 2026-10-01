@@ -10,9 +10,24 @@ import matplotlib
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
+from matplotlib import cbook
+from matplotlib.font_manager import FontProperties
 
 
 class EquationRenderer:
+
+    # Match escaped backslashes/dollars first so they cannot open math.
+    # Inside a math span, escaped characters belong to the expression.
+    _LATEX_TOKEN_PATTERN = re.compile(
+        r"(?P<escaped>\\[\\$])"
+        r"|(?P<math>"
+        r"\$\$(?:\\.|[^\\])*?\$\$"
+        r"|\$(?:\\.|[^\\$])*?\$"
+        r"|\\\((?:\\.|[^\\])*?\\\)"
+        r"|\\\[(?:\\.|[^\\])*?\\\]"
+        r")",
+        re.DOTALL,
+    )
 
     def __init__(
         self,
@@ -83,6 +98,8 @@ class EquationRenderer:
                 horizontalalignment="center",
                 verticalalignment="center",
                 fontsize=32,
+                parse_math=True,
+                usetex=False,
             )
 
             figure.savefig(
@@ -191,6 +208,8 @@ class EquationRenderer:
                     horizontalalignment="center",
                     verticalalignment="center",
                     fontsize=30,
+                    parse_math=True,
+                    usetex=False,
                 )
 
             figure.savefig(
@@ -260,17 +279,15 @@ class EquationRenderer:
             if not lines:
                 return None
 
+            figure = plt.figure(figsize=(11, 2.0))
+            lines = self._wrap_content_lines(
+                [self._prepare_content_line(line) for line in lines],
+                figure,
+                fontsize=28,
+            )
             line_count = len(lines)
-
-            # Increased vertical spacing
-            figure_height = max(
-                2.0,
-                line_count * 1.1,
-            )
-
-            figure = plt.figure(
-                figsize=(11, figure_height)
-            )
+            figure_height = max(2.0, line_count * 1.1)
+            figure.set_size_inches(11, figure_height)
 
             figure.patch.set_facecolor(
                 "white"
@@ -291,11 +308,7 @@ class EquationRenderer:
                     )
                 )
 
-                rendered_line = (
-                    self._prepare_content_line(
-                        line
-                    )
-                )
+                rendered_line = line
 
                 figure.text(
                     0.05,
@@ -304,7 +317,9 @@ class EquationRenderer:
                     horizontalalignment="left",
                     verticalalignment="center",
                     fontsize=28,
-                    wrap=True,
+                    wrap=False,
+                    parse_math=True,
+                    usetex=False,
                 )
 
             figure.savefig(
@@ -331,185 +346,88 @@ class EquationRenderer:
             return None
 
     # ==================================================
-    # SPLIT CONTENT WHILE PRESERVING LATEX
+    # NORMALIZE AND SPLIT LATEX
     # ==================================================
 
     @staticmethod
-    def _split_content_preserving_latex(
-        content: str,
-    ) -> list[str]:
+    def _normalize_latex_delimiters(content: str) -> str:
+        """Convert complete math spans to mathtext without changing prose."""
+        content = str(content).replace("\r\n", "\n").replace("\r", "\n")
 
-        content = str(content).replace(
-            "\r\n",
-            "\n",
-        )
+        def normalize(match: re.Match) -> str:
+            if match.lastgroup != "math":
+                return match.group(0)
 
-        content = content.replace(
-            "\r",
-            "\n",
-        )
-
-        # ------------------------------------------
-        # NORMALIZE NEWLINES INSIDE INLINE MATH
-        # ------------------------------------------
-        content = re.sub(
-            r"\$(.*?)\$",
-            lambda match: (
-                "$"
-                + re.sub(
-                    r"\s+",
-                    " ",
-                    match.group(1),
-                ).strip()
-                + "$"
-            ),
-            content,
-            flags=re.DOTALL,
-        )
-
-        lines: list[str] = []
-
-        current = ""
-
-        math_mode = False
-        math_delimiter = ""
-
-        index = 0
-
-        while index < len(content):
-
-            char = content[index]
-
-            # ------------------------------------------
-            # $$ ... $$
-            # ------------------------------------------
-
-            if content.startswith(
-                "$$",
-                index,
-            ):
-
-                current += "$$"
-
-                if (
-                    math_mode
-                    and math_delimiter == "$$"
-                ):
-
-                    math_mode = False
-                    math_delimiter = ""
-
-                elif not math_mode:
-
-                    math_mode = True
-                    math_delimiter = "$$"
-
-                index += 2
-
-                continue
-
-            # ------------------------------------------
-            # \[ ... \]
-            # ------------------------------------------
-
-            if content.startswith(
-                r"\[",
-                index,
-            ):
-
-                current += r"\["
-
-                if not math_mode:
-
-                    math_mode = True
-                    math_delimiter = r"\["
-
-                index += 2
-
-                continue
-
-            if content.startswith(
-                r"\]",
-                index,
-            ):
-
-                current += r"\]"
-
-                if (
-                    math_mode
-                    and math_delimiter == r"\["
-                ):
-
-                    math_mode = False
-                    math_delimiter = ""
-
-                index += 2
-
-                continue
-
-            # ------------------------------------------
-            # SINGLE $
-            # ------------------------------------------
-
-            if char == "$":
-
-                current += char
-
-                if (
-                    index == 0
-                    or content[index - 1] != "\\"
-                ):
-
-                    if not math_mode:
-
-                        math_mode = True
-                        math_delimiter = "$"
-
-                    elif math_delimiter == "$":
-
-                        math_mode = False
-                        math_delimiter = ""
-
-                index += 1
-
-                continue
-
-            # ------------------------------------------
-            # NEWLINE
-            # ------------------------------------------
-
-            if char == "\n":
-
-                if math_mode:
-
-                    # Preserve newline inside LaTeX.
-                    current += " "
-
-                else:
-
-                    if current.strip():
-
-                        lines.append(
-                            current.strip()
-                        )
-
-                    current = ""
-
-                index += 1
-
-                continue
-
-            current += char
-
-            index += 1
-
-        if current.strip():
-
-            lines.append(
-                current.strip()
+            value = match.group(0)
+            delimiter_length = (
+                1 if value.startswith("$") and not value.startswith("$$") else 2
             )
+            expression = re.sub(
+                r"\s+", " ", value[delimiter_length:-delimiter_length],
+            ).strip()
+            return f"${expression}$" if expression else ""
 
-        return lines
+        return EquationRenderer._LATEX_TOKEN_PATTERN.sub(normalize, content)
+
+    @staticmethod
+    def _split_math_parts(content: str) -> list[str]:
+        """Return alternating prose/math spans, ignoring escaped dollars."""
+        parts = []
+        position = 0
+        for match in EquationRenderer._LATEX_TOKEN_PATTERN.finditer(content):
+            if match.lastgroup == "math":
+                parts.extend((content[position:match.start()], match.group(0)))
+                position = match.end()
+        parts.append(content[position:])
+        return parts
+
+    @staticmethod
+    def _split_content_preserving_latex(content: str) -> list[str]:
+        # Complete math spans have no newlines after normalization. Newlines
+        # in prose retain their existing meaning as visual line breaks.
+        content = EquationRenderer._normalize_latex_delimiters(content)
+        return [line.strip() for line in content.split("\n") if line.strip()]
+
+    @staticmethod
+    def _wrap_content_lines(lines: list[str], figure, fontsize: int) -> list[str]:
+        """Wrap prose by measured width, keeping each math span indivisible."""
+        renderer = figure.canvas.get_renderer()
+        font = FontProperties(size=fontsize)
+        available_width = figure.bbox.width * 0.9
+        wrapped = []
+
+        for line in lines:
+            # Keep math attached to adjacent prose (e.g. "$8$th" or "$x$.").
+            tokens = []
+            for index, part in enumerate(EquationRenderer._split_math_parts(line)):
+                if index % 2:
+                    pieces = [part]
+                else:
+                    pieces = re.split(r"(\s+)", part)
+                for piece in pieces:
+                    if not piece:
+                        continue
+                    if tokens and not tokens[-1].isspace() and not piece.isspace():
+                        tokens[-1] += piece
+                    else:
+                        tokens.append(piece)
+
+            current = ""
+            for token in tokens:
+                candidate = current + token
+                if not token.isspace():
+                    width, _, _ = renderer.get_text_width_height_descent(
+                        candidate, font, ismath=cbook.is_math_text(candidate),
+                    )
+                    if current.strip() and width > available_width:
+                        wrapped.append(current.rstrip())
+                        current = token
+                        continue
+                current = candidate
+            if current.strip():
+                wrapped.append(current.rstrip())
+
+        return wrapped
 
     # ==================================================
     # PREPARE CONTENT LINE
@@ -535,74 +453,7 @@ class EquationRenderer:
             line,
         )
 
-        # ----------------------------------------------
-        # DISPLAY MATH
-        # ----------------------------------------------
-
-        line = re.sub(
-            r"\$\$(.*?)\$\$",
-            lambda match: (
-                f"${match.group(1).strip()}$"
-            ),
-            line,
-            flags=re.DOTALL,
-        )
-
-        # ----------------------------------------------
-        # \[ ... \]
-        # ----------------------------------------------
-
-        line = re.sub(
-            r"\\\[(.*?)\\\]",
-            lambda match: (
-                f"${match.group(1).strip()}$"
-            ),
-            line,
-            flags=re.DOTALL,
-        )
-
-        # ----------------------------------------------
-        # \( ... \)
-        # ----------------------------------------------
-
-        line = re.sub(
-            r"\\\((.*?)\\\)",
-            lambda match: (
-                f"${match.group(1).strip()}$"
-            ),
-            line,
-            flags=re.DOTALL,
-        )
-
-        # ----------------------------------------------
-        # NORMALIZE WHITESPACE INSIDE LATEX
-        # ----------------------------------------------
-
-        def normalize_math(
-            match,
-        ):
-
-            expression = (
-                match.group(1)
-                .replace("\n", " ")
-            )
-
-            expression = re.sub(
-                r"\s+",
-                " ",
-                expression,
-            )
-
-            return (
-                f"${expression.strip()}$"
-            )
-
-        line = re.sub(
-            r"\$(.*?)\$",
-            normalize_math,
-            line,
-            flags=re.DOTALL,
-        )
+        line = EquationRenderer._normalize_latex_delimiters(line)
 
         # ----------------------------------------------
         # BARE LATEX COMMANDS
@@ -612,12 +463,16 @@ class EquationRenderer:
             r"""
             (?<![\w$])
             (
-                \\(?:frac|dfrac|tfrac|sqrt|sum|prod|int|lim)
-                (?:\s*_[^{\s]+|\s*_\{[^}]*\})?
-                (?:\s*\^[^{\s]+|\s*\^\{[^}]*\})?
-                \s*
-                \{[^{}]*\}
+                \\(?:frac|dfrac|tfrac|sqrt)
+                \s*\{[^{}]*\}(?:\s*\{[^{}]*\})?
+                |
+                \\(?:sum|prod|int|lim)
+                (?:\s*[_^](?:\{[^}]*\}|[-+]?[A-Za-z0-9])){0,2}
                 (?:\s*\{[^{}]*\})?
+                |
+                \\(?:pi|theta|alpha|beta|gamma|Delta|partial|nabla|
+                     cdot|times|sin|cos|tan|log|ln|exp|infty|ldots|
+                     leq|geq|neq|approx)\b
             )
             (?![\w$])
             """,
@@ -635,11 +490,7 @@ class EquationRenderer:
         # Only apply this to bare LaTeX commands
         # that are not already inside $...$.
 
-        parts = re.split(
-            r"(\$.*?\$)",
-            line,
-            flags=re.DOTALL,
-        )
+        parts = EquationRenderer._split_math_parts(line)
 
         for index in range(
             0,
@@ -673,11 +524,7 @@ class EquationRenderer:
             re.VERBOSE,
         )
 
-        parts = re.split(
-            r"(\$.*?\$)",
-            line,
-            flags=re.DOTALL,
-        )
+        parts = EquationRenderer._split_math_parts(line)
 
         for index in range(
             0,
@@ -711,11 +558,7 @@ class EquationRenderer:
             re.VERBOSE,
         )
 
-        parts = re.split(
-            r"(\$.*?\$)",
-            line,
-            flags=re.DOTALL,
-        )
+        parts = EquationRenderer._split_math_parts(line)
 
         for index in range(
             0,
@@ -745,77 +588,14 @@ class EquationRenderer:
         equation: str,
     ) -> str:
 
-        equation = str(
-            equation
-        ).strip()
+        equation = EquationRenderer._normalize_latex_delimiters(equation).strip()
+        parts = EquationRenderer._split_math_parts(equation)
+        if len(parts) > 1:
+            # Already delimited equations (or mixed text) must not be wrapped
+            # again: nested dollar delimiters disable mathtext parsing.
+            return equation
 
-        # ----------------------------------------------
-        # $$ ... $$
-        # ----------------------------------------------
-
-        if (
-            equation.startswith("$$")
-            and equation.endswith("$$")
-        ):
-
-            equation = equation[
-                2:-2
-            ].strip()
-
-        # ----------------------------------------------
-        # $ ... $
-        # ----------------------------------------------
-
-        elif (
-            equation.startswith("$")
-            and equation.endswith("$")
-        ):
-
-            equation = equation[
-                1:-1
-            ].strip()
-
-        # ----------------------------------------------
-        # \[ ... \]
-        # ----------------------------------------------
-
-        elif (
-            equation.startswith(r"\[")
-            and equation.endswith(r"\]")
-        ):
-
-            equation = equation[
-                2:-2
-            ].strip()
-
-        # ----------------------------------------------
-        # \( ... \)
-        # ----------------------------------------------
-
-        elif (
-            equation.startswith(r"\(")
-            and equation.endswith(r"\)")
-        ):
-
-            equation = equation[
-                2:-2
-            ].strip()
-
-        # ----------------------------------------------
-        # NORMALIZE WHITESPACE
-        # ----------------------------------------------
-
-        equation = equation.replace(
-            "\n",
-            " ",
-        )
-
-        equation = re.sub(
-            r"\s+",
-            " ",
-            equation,
-        )
-
+        equation = re.sub(r"\s+", " ", equation)
         return f"${equation}$"
 
     # ==================================================
@@ -871,6 +651,7 @@ class EquationRenderer:
             r"\geq",
             r"\neq",
             r"\approx",
+            r"\ldots",
         )
 
         if any(
@@ -880,40 +661,9 @@ class EquationRenderer:
 
             return True
 
-        # ==============================================
-        # MATH DELIMITERS
-        # ==============================================
-
-        if re.search(
-            r"\$\$.*?\$\$",
-            text,
-            re.DOTALL,
-        ):
-
-            return True
-
-        if re.search(
-            r"\$[^$]+\$",
-            text,
-            re.DOTALL,
-        ):
-
-            return True
-
-        if re.search(
-            r"\\\[.*?\\\]",
-            text,
-            re.DOTALL,
-        ):
-
-            return True
-
-        if re.search(
-            r"\\\(.*?\\\)",
-            text,
-            re.DOTALL,
-        ):
-
+        # Complete math spans are recognized by the same escape-aware parser
+        # used for normalization and wrapping.
+        if len(EquationRenderer._split_math_parts(text)) > 1:
             return True
 
         # ==============================================

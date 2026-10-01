@@ -1,28 +1,21 @@
 {
-    "2026-10-01-01-05": {
+    "2026-10-01-19-33": {
         "formula": true,
         "problem": true,
         "trivia": true
     },
-    "2026-10-01-01-15": {
-        "formula": true
-    },
-    "2026-10-01-01-30": {
-        "problem": true
-    },
-    "2026-10-01-01-45": {
+    "2026-10-01-19-34": {
+        "formula": true,
         "trivia": true
     },
-    "2026-10-01-15-45": {
+    "2026-10-01-19-35": {
+        "formula": true,
+        "problem": true,
         "trivia": true
     },
-    "2026-10-01-16-15": {
-        "formula": true
-    },
-    "2026-10-01-16-30": {
-        "problem": true
-    },
-    "2026-10-01-16-45": {
+    "2026-10-01-19-36": {
+        "formula": true,
+        "problem": true,
         "trivia": true
     }
 }
