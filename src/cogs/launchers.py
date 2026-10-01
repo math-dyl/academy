@@ -1,10 +1,13 @@
 from __future__ import annotations
 
+import logging
 import traceback
 
 import discord
 from discord.ext import commands
 
+
+logger = logging.getLogger(__name__)
 
 LAUNCHER_MARKER = "MATHDYL_TOPIC_LAUNCHER"
 
@@ -26,52 +29,145 @@ class TopicLauncherView(discord.ui.View):
         self.topic = topic
 
     # ==================================================
+    # ==================================================
     # START LEARNING
     # ==================================================
 
     @discord.ui.button(
         label="Start Learning",
         style=discord.ButtonStyle.primary,
-        emoji="📖", 
+        emoji="📖",
         custom_id="mathdyl:start_learning",
     )
-    async def start_learning(
-        self,
-        interaction: discord.Interaction,
-        button: discord.ui.Button,
-    ):
-        lessons = (
-            self.bot.course_service.lessons(
-                self.course,
-                self.topic,
-            )
-        )
-
+    async def start_learning(self, interaction: discord.Interaction, button: discord.ui.Button):
+        lessons = self.bot.course_service.lessons(self.course, self.topic)
         if not lessons:
+            await interaction.response.send_message("No lessons are available for this topic.", ephemeral=True)
+            return
+        try:
+            await self.bot.database_service.upsert_user(
+                user_id=interaction.user.id,
+                username=interaction.user.name,
+                display_name=interaction.user.display_name,
+            )
+            progress = await self.bot.database_service.get_course_progress(
+                interaction.user.id, self.course, self.topic
+            )
+        except Exception:
+            logger.exception("Could not load topic progress.")
             await interaction.response.send_message(
-                "No lessons are available for this topic.",
+                "I couldn't load your saved progress right now. Please try again shortly.",
                 ephemeral=True,
             )
             return
 
-        from .courses import LessonView
+        if progress.get("completed"):
+            view = CompletedTopicView(
+                bot=self.bot, course=self.course, topic=self.topic,
+                lessons=lessons, user_id=interaction.user.id,
+            )
+            embed = discord.Embed(
+                title="✅ Topic Completed",
+                description="You have completed this topic. Would you like to restart it?",
+                color=0x16A34A,
+            )
+            await interaction.response.send_message(embed=embed, view=view, ephemeral=True)
+            return
 
-        view = LessonView(
-            bot=self.bot,
-            course=self.course,
-            topic=self.topic,
-            lessons=lessons,
+        raw_index = progress.get("lesson_index", 0)
+        try:
+            index = int(raw_index)
+        except (TypeError, ValueError, OverflowError):
+            index = 0
+        # lessons.json is a flat list: lessons, examples, and concept checks
+        # each occupy one displayable content index.
+        index = max(0, min(index, len(lessons) - 1))
+        if not progress.get("exists") or index != raw_index:
+            try:
+                await self.bot.database_service.save_course_progress(
+                    interaction.user.id, self.course, self.topic, index
+                )
+            except Exception:
+                logger.exception("Could not initialize or repair topic progress.")
+                await interaction.response.send_message(
+                    "I couldn't save your progress right now. Please try again shortly.",
+                    ephemeral=True,
+                )
+                return
+
+        await _start_lesson(
+            interaction, self.bot, self.course, self.topic, lessons, index
         )
 
+
+class CompletedTopicView(discord.ui.View):
+    def __init__(self, bot, course, topic, lessons, user_id: int):
+        super().__init__(timeout=300)
+        self.bot = bot
+        self.course = course
+        self.topic = topic
+        self.lessons = lessons
+        self.user_id = user_id
+
+    async def _check_owner(self, interaction: discord.Interaction) -> bool:
+        if interaction.user.id == self.user_id:
+            return True
+        await interaction.response.send_message("This learning session belongs to another user.", ephemeral=True)
+        return False
+
+    @discord.ui.button(label="Restart Topic", style=discord.ButtonStyle.primary)
+    async def restart(self, interaction: discord.Interaction, button: discord.ui.Button):
+        if not await self._check_owner(interaction):
+            return
+        try:
+            await self.bot.database_service.reset_course_progress(self.user_id, self.course, self.topic)
+        except Exception:
+            logger.exception("Could not restart completed topic.")
+            await interaction.response.send_message(
+                "I couldn't restart this topic right now. Please try again shortly.",
+                ephemeral=True,
+            )
+            return
+        await _start_lesson(
+            interaction, self.bot, self.course, self.topic, self.lessons, 0,
+            replace_message=True,
+        )
+
+
+async def _start_lesson(
+    interaction, bot, course, topic, lessons, index: int, replace_message: bool = False
+):
+    """Persist the starting position before displaying the lesson view."""
+    from .courses import LessonView
+
+    try:
+        await bot.database_service.save_course_progress(
+            interaction.user.id, course, topic, index
+        )
+    except Exception:
+        logger.exception("Could not save lesson start position.")
         await interaction.response.send_message(
-            embed=view.make_embed(),
-            view=view,
+            "I couldn't save your progress right now. Please try again shortly.",
             ephemeral=True,
         )
+        return
+    view = LessonView(
+        bot=bot, course=course, topic=topic, lessons=lessons,
+        user_id=interaction.user.id, start_index=index,
+    )
+    if replace_message:
+        await interaction.response.edit_message(
+            content=None,
+            embed=view.make_embed(),
+            view=view,
+        )
+    else:
+        await interaction.response.send_message(
+            embed=view.make_embed(), view=view, ephemeral=True
+        )
 
-    
 
-# ======================================================
+
 # TOPIC LAUNCHER COG
 # ======================================================
 

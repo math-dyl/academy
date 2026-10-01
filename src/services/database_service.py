@@ -509,6 +509,179 @@ class DatabaseService:
 
         return [dict(row) for row in rows]
 
+
+    # ==========================================================
+    # COURSE PROGRESS
+    # ==========================================================
+
+    async def get_course_progress(
+        self,
+        user_id: int,
+        course: str,
+        topic: str,
+    ) -> dict[str, Any]:
+        """Get a user's progress and whether a record already exists."""
+        pool = self._get_pool()
+        row = await pool.fetchrow(
+            """
+            SELECT lesson_index, completed, updated_at
+            FROM course_progress
+            WHERE user_id = $1
+              AND course = $2
+              AND topic = $3
+            """,
+            user_id,
+            course,
+            topic,
+        )
+        if not row:
+            return {
+                "lesson_index": 0,
+                "completed": False,
+                "updated_at": None,
+                "exists": False,
+            }
+        return {
+            "lesson_index": int(row["lesson_index"]),
+            "completed": bool(row["completed"]),
+            "updated_at": row["updated_at"],
+            "exists": True,
+        }
+
+    async def save_course_progress(
+        self,
+        user_id: int,
+        course: str,
+        topic: str,
+        lesson_index: int,
+    ) -> None:
+        """
+        Save or update a user's course progress.
+
+        Progress is unique per:
+        user + course + topic.
+        """
+
+        if lesson_index < 0:
+            raise ValueError(
+                "lesson_index cannot be negative."
+            )
+
+        pool = self._get_pool()
+
+        await pool.execute(
+            """
+            INSERT INTO course_progress (
+                user_id,
+                course,
+                topic,
+                lesson_index,
+                completed,
+                updated_at
+            )
+            VALUES (
+                $1,
+                $2,
+                $3,
+                $4,
+                FALSE,
+                CURRENT_TIMESTAMP
+            )
+
+            ON CONFLICT (
+                user_id,
+                course,
+                topic
+            )
+
+            DO UPDATE SET
+                lesson_index = EXCLUDED.lesson_index,
+                updated_at = CURRENT_TIMESTAMP
+            """,
+            user_id,
+            course,
+            topic,
+            lesson_index,
+        )
+
+    async def complete_course_topic(
+        self,
+        user_id: int,
+        course: str,
+        topic: str,
+        lesson_index: int,
+    ) -> None:
+        """
+        Mark a course topic as completed.
+        """
+
+        if lesson_index < 0:
+            raise ValueError(
+                "lesson_index cannot be negative."
+            )
+
+        pool = self._get_pool()
+
+        await pool.execute(
+            """
+            INSERT INTO course_progress (
+                user_id,
+                course,
+                topic,
+                lesson_index,
+                completed,
+                updated_at
+            )
+            VALUES (
+                $1,
+                $2,
+                $3,
+                $4,
+                TRUE,
+                CURRENT_TIMESTAMP
+            )
+
+            ON CONFLICT (
+                user_id,
+                course,
+                topic
+            )
+
+            DO UPDATE SET
+                lesson_index = EXCLUDED.lesson_index,
+                completed = TRUE,
+                updated_at = CURRENT_TIMESTAMP
+            """,
+            user_id,
+            course,
+            topic,
+            lesson_index,
+        )
+
+    async def reset_course_progress(
+        self,
+        user_id: int,
+        course: str,
+        topic: str,
+    ) -> None:
+        """
+        Reset a user's progress for a course topic.
+        """
+
+        pool = self._get_pool()
+
+        await pool.execute(
+            """
+            DELETE FROM course_progress
+            WHERE user_id = $1
+              AND course = $2
+              AND topic = $3
+            """,
+            user_id,
+            course,
+            topic,
+        )
+
     # ==========================================================
     # COMPLETE QUIZ SUBMISSION
     # ==========================================================

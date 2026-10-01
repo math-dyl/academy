@@ -6,6 +6,24 @@ CREATE TABLE users (
     last_seen TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS course_progress (
+    user_id BIGINT NOT NULL,
+    course TEXT NOT NULL,
+    topic TEXT NOT NULL,
+    lesson_index INTEGER NOT NULL DEFAULT 0,
+    completed BOOLEAN NOT NULL DEFAULT FALSE,
+    updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    PRIMARY KEY (user_id, course, topic),
+
+    CONSTRAINT course_progress_lesson_index_check
+        CHECK (lesson_index >= 0),
+
+    CONSTRAINT course_progress_user_fk
+        FOREIGN KEY (user_id)
+        REFERENCES users(user_id)
+        ON DELETE CASCADE
+);
 
 CREATE TABLE ai_chat_usage (
     user_id BIGINT NOT NULL,

@@ -44,6 +44,8 @@ class QuizView(
         course,
         topic,
         questions,
+        user_id: int,
+        lesson_index: int,
     ):
 
         super().__init__(
@@ -54,6 +56,8 @@ class QuizView(
 
         self.course = course
         self.topic = topic
+        self.user_id = user_id
+        self.lesson_index = lesson_index
 
         self.questions = questions
 
@@ -378,6 +382,14 @@ class QuizView(
             ),
         )
 
+        finish_button = discord.ui.Button(
+            label="Finish Lesson",
+            style=discord.ButtonStyle.success,
+            custom_id="mathdyl:quiz:finish_lesson",
+        )
+        finish_button.callback = self.finish_lesson_callback
+        self.add_item(finish_button)
+
         await interaction.response.edit_message(
             content=None,
             embed=embed,
@@ -438,6 +450,44 @@ class QuizView(
                 ),
                 ephemeral=True,
             )
+
+
+    async def finish_lesson_callback(
+        self,
+        interaction: discord.Interaction,
+    ):
+        if interaction.user.id != self.user_id:
+            await interaction.response.send_message(
+                "This quiz belongs to another user.",
+                ephemeral=True,
+            )
+            return
+
+        await interaction.response.defer()
+        try:
+            await self.bot.database_service.complete_course_topic(
+                self.user_id,
+                self.course,
+                self.topic,
+                self.lesson_index,
+            )
+        except Exception:
+            logger.exception("Could not mark topic complete after quiz.")
+            await interaction.followup.send(
+                "Your quiz was saved, but I couldn't record topic completion. Please try again.",
+                ephemeral=True,
+            )
+            return
+
+        self.stop()
+        self.clear_items()
+        await interaction.edit_original_response(
+            embed=make_embed(
+                "✅ Lesson Finished",
+                "Congratulations! You have completed this topic!",
+            ),
+            view=None,
+        )
 
 
 # ======================================================

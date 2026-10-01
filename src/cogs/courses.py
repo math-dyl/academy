@@ -1,11 +1,16 @@
 from __future__ import annotations
 
+import asyncio
+import logging
+
 import discord
 
 from discord import app_commands
 from discord.ext import commands
 
 from ..utils.embeds import make_embed
+
+logger = logging.getLogger(__name__)
 
 
 class CourseCog(commands.Cog):
@@ -79,6 +84,8 @@ class LessonView(discord.ui.View):
         course,
         topic,
         lessons,
+        user_id: int,
+        start_index: int = 0,
     ):
 
         super().__init__(
@@ -86,6 +93,8 @@ class LessonView(discord.ui.View):
         )
 
         self.bot = bot
+        self.user_id = user_id
+        self._progress_lock = asyncio.Lock()
         self.course = course
         self.topic = topic
 
@@ -97,13 +106,50 @@ class LessonView(discord.ui.View):
         #
         self.lessons = lessons
 
-        self.index = 0
+        self.index = max(0, min(int(start_index), len(lessons) - 1))
 
         # Concept-check state
         self.concept_answered = False
         self.selected_answer = None
 
         self.update_buttons()
+
+    async def _check_owner(self, interaction: discord.Interaction) -> bool:
+        if interaction.user.id == self.user_id:
+            return True
+        await interaction.response.send_message(
+            "This learning session belongs to another user.",
+            ephemeral=True,
+        )
+        return False
+
+    async def _save_position(self, index: int) -> bool:
+        try:
+            await self.bot.database_service.save_course_progress(
+                self.user_id, self.course, self.topic, index
+            )
+            return True
+        except Exception:
+            logger.exception("Could not persist lesson position.")
+            return False
+
+    async def _move(self, interaction: discord.Interaction, offset: int) -> None:
+        async with self._progress_lock:
+            new_index = max(0, min(self.index + offset, len(self.lessons) - 1))
+            if not await self._save_position(new_index):
+                await interaction.followup.send(
+                    "I couldn't save your progress, so I kept you at the current item. Please try again.",
+                    ephemeral=True,
+                )
+                return
+            self.index = new_index
+            self.concept_answered = False
+            self.selected_answer = None
+            self.update_buttons()
+            await interaction.edit_original_response(
+                embed=self.make_embed(),
+                view=self,
+            )
 
     # ==================================================
     # CURRENT CONTENT
@@ -637,6 +683,7 @@ class LessonView(discord.ui.View):
                 row=2,
             )
 
+
             practice.callback = (
                 self.practice_callback
             )
@@ -680,6 +727,8 @@ class LessonView(discord.ui.View):
         interaction: discord.Interaction,
         answer: str,
     ):
+        if not await self._check_owner(interaction):
+            return
 
         item = self.current
 
@@ -742,226 +791,77 @@ class LessonView(discord.ui.View):
     # PREVIOUS
     # ==================================================
 
-    async def previous_callback(
-        self,
-        interaction: discord.Interaction,
-    ):
-
-        # ==================================================
-        # ACKNOWLEDGE INTERACTION FIRST
-        # ==================================================
-
+    async def previous_callback(self, interaction: discord.Interaction):
+        if not await self._check_owner(interaction):
+            return
         await interaction.response.defer()
-
-        # ==================================================
-        # MOVE BACK
-        # ==================================================
-
-        if self.index > 0:
-
-            self.index -= 1
-
-        # ==================================================
-        # RESET CONCEPT CHECK
-        # ==================================================
-
-        self.concept_answered = False
-        self.selected_answer = None
-
-        # ==================================================
-        # UPDATE VIEW
-        # ==================================================
-
-        self.update_buttons()
-
-        # ==================================================
-        # UPDATE MESSAGE
-        # ==================================================
-
-        await interaction.edit_original_response(
-            embed=self.make_embed(),
-            view=self,
-        )
+        await self._move(interaction, -1)
 
     # ==================================================
     # NEXT
     # ==================================================
 
-    async def next_callback(
-        self,
-        interaction: discord.Interaction,
-    ):
-
-        # ==================================================
-        # PREVENT SKIPPING CONCEPT CHECK
-        # ==================================================
-
-        item = self.current
-
-        if (
-            item.get("type") == "concept_check"
-            and not self.concept_answered
-        ):
-
-            await interaction.response.send_message(
-                "Please answer the concept check "
-                "before continuing.",
-                ephemeral=True,
-            )
-
+    async def next_callback(self, interaction: discord.Interaction):
+        if not await self._check_owner(interaction):
             return
-
-        # ==================================================
-        # ACKNOWLEDGE INTERACTION FIRST
-        # ==================================================
-
+        item = self.current
+        if item.get("type") == "concept_check" and not self.concept_answered:
+            await interaction.response.send_message("Please answer the concept check before continuing.", ephemeral=True)
+            return
         await interaction.response.defer()
-
-        # ==================================================
-        # MOVE FORWARD
-        # ==================================================
-
-        if self.index < len(
-            self.lessons
-        ) - 1:
-
-            self.index += 1
-
-        # ==================================================
-        # RESET CONCEPT CHECK
-        # ==================================================
-
-        self.concept_answered = False
-        self.selected_answer = None
-
-        # ==================================================
-        # UPDATE VIEW
-        # ==================================================
-
-        self.update_buttons()
-
-        # ==================================================
-        # UPDATE MESSAGE
-        # ==================================================
-
-        await interaction.edit_original_response(
-            embed=self.make_embed(),
-            view=self,
-        )
+        await self._move(interaction, 1)
 
     # ==================================================
     # PRACTICE
     # ==================================================
 
-    async def practice_callback(
-        self,
-        interaction: discord.Interaction,
-    ):
-
-        questions = (
-            self.bot
-            .practice_service
-            .questions(
-                self.course,
-                self.topic,
-            )
-        )
-
-        if not questions:
-
-            await interaction.response.send_message(
-                "No practice questions were found "
-                "for this topic.",
-                ephemeral=True,
-            )
-
+    async def practice_callback(self, interaction: discord.Interaction):
+        if not await self._check_owner(interaction):
             return
-
+        if not await self._save_position(self.index):
+            await interaction.response.send_message("I couldn't save your progress right now. Please try again shortly.", ephemeral=True)
+            return
+        questions = self.bot.practice_service.questions(self.course, self.topic)
+        if not questions:
+            await interaction.response.send_message("No practice questions were found for this topic.", ephemeral=True)
+            return
         from .practice import PracticeView
-
-        view = PracticeView(
-            bot=self.bot,
-            course=self.course,
-            topic=self.topic,
-            questions=questions,
-        )
-
-        await interaction.response.send_message(
-            embed=view.make_embed(),
-            view=view,
-            ephemeral=True,
-        )
+        view = PracticeView(bot=self.bot, course=self.course, topic=self.topic, questions=questions)
+        await interaction.response.send_message(embed=view.make_embed(), view=view, ephemeral=True)
 
     # ==================================================
     # QUIZ
     # ==================================================
 
-    async def quiz_callback(
-        self,
-        interaction: discord.Interaction,
-    ):
-
-        questions = (
-            self.bot
-            .quiz_service
-            .questions(
-                self.course,
-                self.topic,
-            )
-        )
-
-        if not questions:
-
-            await interaction.response.send_message(
-                "No quiz questions were found "
-                "for this topic.",
-                ephemeral=True,
-            )
-
+    async def quiz_callback(self, interaction: discord.Interaction):
+        if not await self._check_owner(interaction):
             return
-
+        if not await self._save_position(self.index):
+            await interaction.response.send_message("I couldn't save your progress right now. Please try again shortly.", ephemeral=True)
+            return
+        questions = self.bot.quiz_service.questions(self.course, self.topic)
+        if not questions:
+            await interaction.response.send_message("No quiz questions were found for this topic.", ephemeral=True)
+            return
         from .quizzes import QuizView
-
         view = QuizView(
             bot=self.bot,
             course=self.course,
             topic=self.topic,
             questions=questions,
+            user_id=interaction.user.id,
+            lesson_index=self.index,
         )
-
-        await interaction.response.send_message(
-            embed=view.make_embed(),
-            view=view,
-            ephemeral=True,
-        )
+        await interaction.response.send_message(embed=view.make_embed(), view=view, ephemeral=True)
 
     # ==================================================
     # CLOSE
     # ==================================================
 
-    async def close_callback(
-        self,
-        interaction: discord.Interaction,
-    ):
-
-        # ==================================================
-        # ACKNOWLEDGE INTERACTION
-        # ==================================================
-
+    async def close_callback(self, interaction: discord.Interaction):
+        if not await self._check_owner(interaction):
+            return
         await interaction.response.defer()
-
-        # ==================================================
-        # STOP VIEW
-        # ==================================================
-
         self.stop()
+        await interaction.edit_original_response(content="Learning session closed.", embed=None, view=None)
 
-        # ==================================================
-        # REMOVE COMPONENTS
-        # ==================================================
-
-        await interaction.edit_original_response(
-            content="Learning session closed.",
-            embed=None,
-            view=None,
-        )
