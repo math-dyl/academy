@@ -21,7 +21,7 @@
         },
 
         "solution": {
-            "enabled": true,
+            "enabled": false,
             "schedule": {
                 "type": "hourly",
                 "minute": 45
