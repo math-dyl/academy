@@ -1,242 +1,242 @@
 [
   {
     "id": "quiz-1",
-    "question": "Which set contains the positive counting numbers 1, 2, 3, 4, and so on?",
+    "question": "What is the sum of 12 and 8?",
     "options": [
-      "Natural numbers",
-      "Whole numbers",
-      "Integers",
-      "Irrational numbers"
+      "4",
+      "20",
+      "96",
+      "18"
     ],
-    "answer": "Natural numbers",
-    "explanation": "Natural numbers are the positive counting numbers. In this course, they begin with 1."
+    "answer": "20",
+    "explanation": "Addition combines quantities to find their sum. Therefore, 12 + 8 = 20."
   },
   {
     "id": "quiz-2",
-    "question": "Which number is a whole number but not a natural number?",
+    "question": "What is the product of 7 and 6?",
     "options": [
-      "-1",
-      "0",
-      "1",
-      "5"
+      "13",
+      "36",
+      "42",
+      "48"
     ],
-    "answer": "0",
-    "explanation": "Whole numbers include 0, while natural numbers in this course begin with 1."
+    "answer": "42",
+    "explanation": "Multiplication finds the product of factors. Therefore, 7 × 6 = 42."
   },
   {
     "id": "quiz-3",
-    "question": "Which of the following is an integer?",
+    "question": "Which equation demonstrates the commutative property of addition?",
     "options": [
-      "2.5",
-      "3/4",
-      "-6",
-      "√5"
+      "6 + 9 = 9 + 6",
+      "(6 + 9) + 2 = 6 + (9 + 2)",
+      "6 + 0 = 6",
+      "6 + (-6) = 0"
     ],
-    "answer": "-6",
-    "explanation": "Integers include positive and negative whole numbers and zero. Therefore, -6 is an integer."
+    "answer": "6 + 9 = 9 + 6",
+    "explanation": "The commutative property of addition states that changing the order of the addends does not change the sum."
   },
   {
     "id": "quiz-4",
-    "question": "Which number is NOT an integer?",
+    "question": "Which equation demonstrates the commutative property of multiplication?",
     "options": [
-      "-10",
-      "0",
-      "8",
-      "3.5"
+      "4 × 8 = 8 × 4",
+      "(4 × 8) × 3 = 4 × (8 × 3)",
+      "4 × 1 = 4",
+      "4 × 0 = 0"
     ],
-    "answer": "3.5",
-    "explanation": "Integers do not contain decimal or fractional parts. Therefore, 3.5 is not an integer."
+    "answer": "4 × 8 = 8 × 4",
+    "explanation": "The commutative property of multiplication states that changing the order of the factors does not change the product."
   },
   {
     "id": "quiz-5",
-    "question": "Which of the following is a rational number?",
+    "question": "Which equation demonstrates the associative property of addition?",
     "options": [
-      "√2",
-      "π",
-      "5/8",
-      "√7"
+      "5 + 7 = 7 + 5",
+      "(5 + 7) + 3 = 5 + (7 + 3)",
+      "5 + 0 = 5",
+      "5 + (-5) = 0"
     ],
-    "answer": "5/8",
-    "explanation": "5/8 is a ratio of two integers with a nonzero denominator, so it is rational."
+    "answer": "(5 + 7) + 3 = 5 + (7 + 3)",
+    "explanation": "The associative property changes the grouping of the addends without changing their order or the resulting sum."
   },
   {
     "id": "quiz-6",
-    "question": "Which decimal represents a rational number?",
+    "question": "Which equation demonstrates the associative property of multiplication?",
     "options": [
-      "0.75",
-      "√2",
-      "π",
-      "√3"
+      "3 × 5 = 5 × 3",
+      "(3 × 5) × 2 = 3 × (5 × 2)",
+      "3 × 1 = 3",
+      "3 × 0 = 0"
     ],
-    "answer": "0.75",
-    "explanation": "0.75 is a terminating decimal and can be written as 3/4, so it is rational."
+    "answer": "(3 × 5) × 2 = 3 × (5 × 2)",
+    "explanation": "The associative property allows factors to be regrouped without changing their order or product."
   },
   {
     "id": "quiz-7",
-    "question": "Which number is irrational?",
+    "question": "Which equation demonstrates the additive identity property?",
     "options": [
-      "4",
-      "1/3",
-      "0.125",
-      "√5"
+      "14 + 0 = 14",
+      "14 × 1 = 14",
+      "14 × 0 = 0",
+      "14 + (-14) = 0"
     ],
-    "answer": "√5",
-    "explanation": "√5 cannot be expressed as a ratio of two integers, so it is irrational."
+    "answer": "14 + 0 = 14",
+    "explanation": "Zero is the additive identity because adding zero to any number leaves the number unchanged."
   },
   {
     "id": "quiz-8",
-    "question": "Which statement correctly describes irrational numbers?",
+    "question": "Which equation demonstrates the multiplicative identity property?",
     "options": [
-      "They can always be written as fractions.",
-      "Their decimal representations always terminate.",
-      "Their decimal representations are non-terminating and non-repeating.",
-      "They are always integers."
+      "11 + 0 = 11",
+      "11 × 1 = 11",
+      "11 × 0 = 0",
+      "11 + (-11) = 0"
     ],
-    "answer": "Their decimal representations are non-terminating and non-repeating.",
-    "explanation": "Irrational numbers cannot be written as a ratio of two integers and have non-terminating, non-repeating decimal representations."
+    "answer": "11 × 1 = 11",
+    "explanation": "One is the multiplicative identity because multiplying any number by 1 leaves the number unchanged."
   },
   {
     "id": "quiz-9",
-    "question": "Which of the following is a real number?",
+    "question": "What is the additive inverse of -8?",
     "options": [
-      "√2",
-      "π",
-      "-7",
-      "All of the above"
+      "-8",
+      "8",
+      "1/8",
+      "0"
     ],
-    "answer": "All of the above",
-    "explanation": "√2 and π are irrational real numbers, while -7 is a rational real number. Therefore, all three are real numbers."
+    "answer": "8",
+    "explanation": "The additive inverse of -8 is 8 because -8 + 8 = 0."
   },
   {
     "id": "quiz-10",
-    "question": "Which number is NOT a real number?",
+    "question": "What is the multiplicative inverse of 6?",
     "options": [
-      "√2",
-      "-5",
-      "3/4",
-      "√-1"
+      "-6",
+      "6",
+      "1/6",
+      "0"
     ],
-    "answer": "√-1",
-    "explanation": "√-1 is not a real number. It is associated with the imaginary unit i."
+    "answer": "1/6",
+    "explanation": "The multiplicative inverse of 6 is 1/6 because 6 × 1/6 = 1."
   },
   {
     "id": "quiz-11",
-    "question": "Which classification is correct for the number 9?",
+    "question": "What is the value of 84 × 0?",
     "options": [
-      "Natural only",
-      "Natural and whole only",
-      "Natural, whole, integer, rational, and real",
-      "Integer and irrational only"
+      "84",
+      "1",
+      "0",
+      "-84"
     ],
-    "answer": "Natural, whole, integer, rational, and real",
-    "explanation": "9 is a natural number. Therefore, it is also a whole number, integer, rational number, and real number."
+    "answer": "0",
+    "explanation": "The zero property of multiplication states that any number multiplied by zero equals zero."
   },
   {
     "id": "quiz-12",
-    "question": "Which classification is correct for -8?",
+    "question": "Which expression is equivalent to 6(x + 4) using the distributive property?",
     "options": [
-      "Natural, whole, integer",
-      "Integer, rational, real",
-      "Irrational and real",
-      "Whole and irrational"
+      "6x + 4",
+      "6x + 10",
+      "6x + 24",
+      "x + 24"
     ],
-    "answer": "Integer, rational, real",
-    "explanation": "-8 is an integer. It can be written as -8/1, making it rational, and every rational number is real."
+    "answer": "6x + 24",
+    "explanation": "Distribute 6 to each term inside the parentheses: 6(x) + 6(4) = 6x + 24."
   },
   {
     "id": "quiz-13",
-    "question": "Which statement correctly shows the relationship between the number sets?",
+    "question": "Which expression is equivalent to 4(x - 5)?",
     "options": [
-      "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real",
-      "Real ⊂ Rational ⊂ Integers ⊂ Whole",
-      "Integers ⊂ Natural ⊂ Whole ⊂ Real",
-      "Rational ⊂ Irrational ⊂ Real"
+      "4x - 5",
+      "4x - 20",
+      "4x + 20",
+      "x - 20"
     ],
-    "answer": "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real",
-    "explanation": "Natural numbers are contained within whole numbers, whole numbers within integers, integers within rational numbers, and rational numbers within real numbers."
+    "answer": "4x - 20",
+    "explanation": "Using the distributive property, multiply 4 by both terms: 4(x) - 4(5) = 4x - 20."
   },
   {
     "id": "quiz-14",
-    "question": "Which statement about number sets is correct?",
+    "question": "Which statement about subtraction is correct?",
     "options": [
-      "Every integer is a natural number.",
-      "Every whole number is an integer.",
-      "Every rational number is irrational.",
-      "Every real number is an integer."
+      "Subtraction is commutative.",
+      "Subtraction is associative.",
+      "Changing the order of subtraction can change the result.",
+      "Changing the order of subtraction never changes the result."
     ],
-    "answer": "Every whole number is an integer.",
-    "explanation": "Whole numbers such as 0, 1, 2, and 3 are all integers. However, not every integer is a whole number because negative integers are not whole numbers."
+    "answer": "Changing the order of subtraction can change the result.",
+    "explanation": "Subtraction is not commutative. For example, 9 - 4 = 5, while 4 - 9 = -5."
   },
   {
     "id": "quiz-15",
-    "question": "Which number is greatest?",
+    "question": "Which statement about division is correct?",
     "options": [
-      "-12",
-      "-4",
-      "-9",
-      "-15"
+      "Division is commutative.",
+      "Division is associative.",
+      "Division by zero equals zero.",
+      "Division by zero is undefined."
     ],
-    "answer": "-4",
-    "explanation": "On the number line, -4 is farthest to the right among the choices, so it is the greatest."
+    "answer": "Division by zero is undefined.",
+    "explanation": "Division by zero is undefined because there is no number that can be multiplied by zero to produce a nonzero dividend."
   },
   {
     "id": "quiz-16",
-    "question": "Which list is arranged from least to greatest?",
+    "question": "Which expression is equivalent to 8 + x + 2?",
     "options": [
-      "6, 2, -1, -4",
-      "-4, -1, 2, 6",
-      "-1, -4, 2, 6",
-      "2, -1, -4, 6"
+      "10x",
+      "10 + x",
+      "8x + 2",
+      "x + 6"
     ],
-    "answer": "-4, -1, 2, 6",
-    "explanation": "Numbers increase from left to right on the number line, so -4, -1, 2, 6 is the correct order."
+    "answer": "10 + x",
+    "explanation": "Using the commutative and associative properties, 8 and 2 can be grouped together. Since 8 + 2 = 10, the expression becomes 10 + x."
   },
   {
     "id": "quiz-17",
-    "question": "What is the value of |-14|?",
+    "question": "Which expression is equivalent to 3(x + 7)?",
     "options": [
-      "-14",
-      "-7",
-      "0",
-      "14"
+      "3x + 7",
+      "3x + 10",
+      "3x + 21",
+      "x + 21"
     ],
-    "answer": "14",
-    "explanation": "Absolute value represents distance from zero. Since -14 is 14 units from zero, |-14| = 14."
+    "answer": "3x + 21",
+    "explanation": "Using the distributive property, multiply 3 by both terms: 3(x) + 3(7) = 3x + 21."
   },
   {
     "id": "quiz-18",
-    "question": "Which number is farthest to the left on the number line?",
+    "question": "Simplify 4(x + 3) + 2x.",
     "options": [
-      "-3",
-      "2",
-      "-8",
-      "5"
+      "6x + 3",
+      "6x + 12",
+      "4x + 6",
+      "8x + 12"
     ],
-    "answer": "-8",
-    "explanation": "Numbers become smaller as you move to the left on the number line. Therefore, -8 is farthest to the left."
+    "answer": "6x + 12",
+    "explanation": "First distribute 4 to obtain 4x + 12 + 2x. Then combine the like terms 4x and 2x to get 6x + 12."
   },
   {
     "id": "quiz-19",
-    "question": "Which number belongs to the integers but not the whole numbers?",
+    "question": "Simplify 3(x + 2) + 2(x + 5).",
     "options": [
-      "0",
-      "6",
-      "-5",
-      "1/2"
+      "5x + 7",
+      "5x + 16",
+      "6x + 10",
+      "5x + 10"
     ],
-    "answer": "-5",
-    "explanation": "Integers include negative whole numbers, but whole numbers do not include negative numbers. Therefore, -5 is an integer but not a whole number."
+    "answer": "5x + 16",
+    "explanation": "Distribute to get 3x + 6 + 2x + 10. Group and combine like terms to obtain 5x + 16."
   },
   {
     "id": "quiz-20",
-    "question": "Which statement correctly describes the real number system?",
+    "question": "Which sequence correctly simplifies 5(x + 2) + 3x?",
     "options": [
-      "Real numbers contain only integers.",
-      "Real numbers contain only rational numbers.",
-      "Real numbers consist of rational and irrational numbers.",
-      "Real numbers contain only natural numbers."
+      "Distribute, then combine like terms",
+      "Use only the zero property",
+      "Use only the inverse property",
+      "Use only the identity property"
     ],
-    "answer": "Real numbers consist of rational and irrational numbers.",
-    "explanation": "The real number system consists of both rational and irrational numbers. These numbers can be represented on the real number line."
+    "answer": "Distribute, then combine like terms",
+    "explanation": "First use the distributive property to get 5x + 10 + 3x. Then combine the like terms 5x and 3x to obtain 8x + 10."
   }
 ]

@@ -1,80 +1,177 @@
 {
-  "id": "number-systems",
-  "title": "Number Systems",
-  "description": "Learn the different types of numbers, their properties, relationships, and how to classify and compare them.",
+  "id": "properties-of-operations",
+  "title": "Properties of Operations",
+  "description": "Learn the fundamental properties of addition and multiplication and use them to rewrite, simplify, and evaluate algebraic expressions.",
   "content": [
     {
       "type": "lesson",
-      "title": "What Are Numbers?",
-      "content": "Numbers are symbols used to represent quantities, values, measurements, and positions. In mathematics, numbers allow us to describe quantities and perform operations such as addition, subtraction, multiplication, and division.",
-      "key_terms": "number, quantity, value, measurement, position"
+      "title": "Addition and Multiplication",
+      "content": "Addition and multiplication are fundamental arithmetic operations used throughout algebra. Addition combines quantities to find a sum, while multiplication represents repeated addition or the product of factors. Understanding these operations is important because many algebraic properties describe how numbers and expressions behave when they are added or multiplied.",
+      "formula": "a + b = sum; a × b = product",
+      "key_terms": "addition, multiplication, sum, product, addend, factor"
     },
     {
       "type": "example",
-      "title": "Using Numbers",
-      "question": "What number represents the quantity of 8 apples?",
-      "solution": "The number 8 represents the quantity because there are eight apples.",
-      "answer": "8"
-    },
-    {
-      "type": "lesson",
-      "title": "Natural Numbers",
-      "content": "Natural numbers are the positive counting numbers. In this course, natural numbers begin with 1 and continue indefinitely: 1, 2, 3, 4, 5, and so on.",
-      "key_terms": "natural numbers, counting numbers"
-    },
-    {
-      "type": "lesson",
-      "title": "Whole Numbers",
-      "content": "Whole numbers include all natural numbers together with zero. They are 0, 1, 2, 3, 4, and so on. Unlike natural numbers in this course, whole numbers include 0.",
-      "key_terms": "whole numbers, zero"
-    },
-    {
-      "type": "example",
-      "title": "Natural Numbers vs Whole Numbers",
-      "question": "Is 0 a natural number or a whole number?",
-      "solution": "In this course, natural numbers begin with 1, while whole numbers include 0. Therefore, 0 is a whole number but not a natural number.",
-      "answer": "Whole number"
+      "title": "Addition and Multiplication",
+      "question": "Evaluate 8 + 5 and 8 × 5.",
+      "solution": "For addition, combine 8 and 5 to get 13. For multiplication, multiply 8 by 5 to get 40.",
+      "answer": "8 + 5 = 13; 8 × 5 = 40"
     },
     {
       "type": "concept_check",
-      "question": "Which number is a whole number but not a natural number?",
+      "question": "Which statement correctly describes multiplication?",
       "options": [
         {
           "id": "A",
-          "text": "-1"
+          "text": "It finds the difference between two numbers."
         },
         {
           "id": "B",
-          "text": "0"
+          "text": "It finds the product of factors."
         },
         {
           "id": "C",
-          "text": "3"
+          "text": "It always makes a number smaller."
         },
         {
           "id": "D",
-          "text": "5"
+          "text": "It finds the quotient of two numbers."
         }
       ],
       "correct_answer": "B",
-      "explanation": "Whole numbers include 0, while natural numbers in this course begin with 1."
+      "explanation": "Multiplication combines factors to produce a product."
     },
     {
       "type": "lesson",
-      "title": "Integers",
-      "content": "Integers extend the whole numbers to include negative whole numbers. They include positive whole numbers, negative whole numbers, and zero. They continue indefinitely in both directions: ..., -3, -2, -1, 0, 1, 2, 3, ...",
-      "key_terms": "integer, positive integer, negative integer, zero"
+      "title": "Commutative Property",
+      "content": "The commutative property states that changing the order of numbers being added or multiplied does not change the result. Addition and multiplication are commutative operations.",
+      "formula": "a + b = b + a; ab = ba",
+      "key_terms": "commutative property, order, addition, multiplication"
     },
     {
       "type": "example",
-      "title": "Identifying Integers",
-      "question": "Which of the following are integers: -6, 2.5, 0, and 9?",
-      "solution": "Integers do not contain decimal or fractional parts. Therefore, -6, 0, and 9 are integers, while 2.5 is not.",
-      "answer": "-6, 0, and 9"
+      "title": "Using the Commutative Property",
+      "question": "Rewrite 7 + 12 using the commutative property.",
+      "solution": "The commutative property allows the order of the addends to be changed without changing the sum. Therefore, 7 + 12 can be rewritten as 12 + 7.",
+      "answer": "12 + 7"
     },
     {
       "type": "concept_check",
-      "question": "Which number is NOT an integer?",
+      "question": "Which equation demonstrates the commutative property?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 + 7 = 7 + 4"
+        },
+        {
+          "id": "B",
+          "text": "(4 + 7) + 2 = 4 + (7 + 2)"
+        },
+        {
+          "id": "C",
+          "text": "4 + 0 = 4"
+        },
+        {
+          "id": "D",
+          "text": "4(7 + 2) = 28 + 8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The commutative property changes the order of the numbers without changing the result."
+    },
+    {
+      "type": "lesson",
+      "title": "Associative Property",
+      "content": "The associative property states that changing the grouping of three or more numbers in addition or multiplication does not change the result. The order of the numbers remains the same, but the placement of parentheses changes.",
+      "formula": "(a + b) + c = a + (b + c); (ab)c = a(bc)",
+      "key_terms": "associative property, grouping, parentheses, addition, multiplication"
+    },
+    {
+      "type": "example",
+      "title": "Using the Associative Property",
+      "question": "Rewrite (2 + 5) + 8 using the associative property.",
+      "solution": "Keep the numbers in the same order and change their grouping. Therefore, (2 + 5) + 8 becomes 2 + (5 + 8).",
+      "answer": "2 + (5 + 8)"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which equation demonstrates the associative property?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 + 6 = 6 + 3"
+        },
+        {
+          "id": "B",
+          "text": "(3 + 6) + 4 = 3 + (6 + 4)"
+        },
+        {
+          "id": "C",
+          "text": "3 + 0 = 3"
+        },
+        {
+          "id": "D",
+          "text": "3(6 + 4) = 18 + 12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The associative property changes the grouping of numbers while keeping their order the same."
+    },
+    {
+      "type": "lesson",
+      "title": "Identity Property",
+      "content": "The identity property states that adding zero to a number or multiplying a number by one leaves the number unchanged. Zero is the additive identity, while one is the multiplicative identity.",
+      "formula": "a + 0 = a; a × 1 = a",
+      "key_terms": "identity property, additive identity, multiplicative identity, zero, one"
+    },
+    {
+      "type": "example",
+      "title": "Using the Identity Property",
+      "question": "Simplify 15 + 0 and 15 × 1.",
+      "solution": "Adding zero does not change a number, and multiplying by one does not change a number. Therefore, both expressions equal 15.",
+      "answer": "15 + 0 = 15; 15 × 1 = 15"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which equation demonstrates the multiplicative identity property?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9 × 0 = 0"
+        },
+        {
+          "id": "B",
+          "text": "9 + 0 = 9"
+        },
+        {
+          "id": "C",
+          "text": "9 × 1 = 9"
+        },
+        {
+          "id": "D",
+          "text": "9 + (-9) = 0"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "One is the multiplicative identity because multiplying any number by 1 leaves it unchanged."
+    },
+    {
+      "type": "lesson",
+      "title": "Inverse Property",
+      "content": "The inverse property describes pairs of numbers that combine to produce an identity. A number and its additive inverse have a sum of zero. A nonzero number and its multiplicative inverse, or reciprocal, have a product of one.",
+      "formula": "a + (-a) = 0; a × (1/a) = 1, a ≠ 0",
+      "key_terms": "inverse property, additive inverse, multiplicative inverse, reciprocal"
+    },
+    {
+      "type": "example",
+      "title": "Finding Inverses",
+      "question": "Find the additive inverse and multiplicative inverse of 5.",
+      "solution": "The additive inverse of 5 is -5 because 5 + (-5) = 0. The multiplicative inverse is 1/5 because 5 × 1/5 = 1.",
+      "answer": "Additive inverse: -5; Multiplicative inverse: 1/5"
+    },
+    {
+      "type": "concept_check",
+      "question": "What is the multiplicative inverse of 8?",
       "options": [
         {
           "id": "A",
@@ -86,279 +183,217 @@
         },
         {
           "id": "C",
-          "text": "12"
+          "text": "1/8"
         },
         {
           "id": "D",
-          "text": "4.5"
-        }
-      ],
-      "correct_answer": "D",
-      "explanation": "Integers are positive and negative whole numbers together with zero. 4.5 has a decimal part, so it is not an integer."
-    },
-    {
-      "type": "lesson",
-      "title": "Rational Numbers",
-      "content": "A rational number is any number that can be written as a fraction a/b, where a and b are integers and b is not zero. Rational numbers include integers, fractions, terminating decimals, and repeating decimals.",
-      "formula": "a/b, where a, b ∈ ℤ and b ≠ 0",
-      "key_terms": "rational number, numerator, denominator, terminating decimal, repeating decimal"
-    },
-    {
-      "type": "example",
-      "title": "Identifying Rational Numbers",
-      "question": "Is 0.75 a rational number?",
-      "solution": "Yes. 0.75 can be written as 75/100, which simplifies to 3/4. Since 3 and 4 are integers and the denominator is not zero, 0.75 is rational.",
-      "answer": "Yes, 0.75 is rational."
-    },
-    {
-      "type": "lesson",
-      "title": "Irrational Numbers",
-      "content": "Irrational numbers are numbers that cannot be written as a ratio of two integers. Their decimal representations are non-terminating and non-repeating. Common examples include π, √2, and √3.",
-      "key_terms": "irrational number, non-terminating decimal, non-repeating decimal"
-    },
-    {
-      "type": "example",
-      "title": "Identifying Irrational Numbers",
-      "question": "Is √2 rational or irrational?",
-      "solution": "√2 cannot be expressed as a fraction of two integers. Its decimal representation continues indefinitely without repeating a fixed pattern. Therefore, √2 is irrational.",
-      "answer": "Irrational"
-    },
-    {
-      "type": "concept_check",
-      "question": "Which number is irrational?",
-      "options": [
-        {
-          "id": "A",
-          "text": "1/2"
-        },
-        {
-          "id": "B",
-          "text": "0.25"
-        },
-        {
-          "id": "C",
-          "text": "√2"
-        },
-        {
-          "id": "D",
-          "text": "-3"
+          "text": "8"
         }
       ],
       "correct_answer": "C",
-      "explanation": "√2 cannot be expressed as a ratio of two integers, so it is irrational."
+      "explanation": "The multiplicative inverse of 8 is 1/8 because 8 × 1/8 = 1."
     },
     {
       "type": "lesson",
-      "title": "Real Numbers",
-      "content": "Real numbers include all rational and irrational numbers. Every real number can be represented as a point on the real number line. Examples include integers, fractions, decimals, square roots of positive numbers, and π.",
-      "key_terms": "real number, rational number, irrational number, real number line"
+      "title": "Zero Property",
+      "content": "The zero property of multiplication states that the product of any number and zero is zero. This property applies whether zero appears as the first or second factor.",
+      "formula": "a × 0 = 0; 0 × a = 0",
+      "key_terms": "zero property, multiplication, zero, product"
     },
     {
       "type": "example",
-      "title": "Identifying Real Numbers",
-      "question": "Is √2 a real number?",
-      "solution": "Yes. √2 is an irrational number, and all irrational numbers are part of the real number system.",
-      "answer": "Yes, √2 is real."
-    },
-    {
-      "type": "lesson",
-      "title": "Classifying Numbers",
-      "content": "A number can belong to more than one number set. For example, 5 is a natural number, whole number, integer, rational number, and real number. Classification means identifying all the number sets to which a number belongs.",
-      "key_terms": "classification, natural number, whole number, integer, rational number, real number"
-    },
-    {
-      "type": "example",
-      "title": "Classifying 5",
-      "question": "Which number sets contain 5?",
-      "solution": "5 is a natural number. Every natural number is also a whole number and an integer. Every integer is rational, and every rational number is real.",
-      "answer": "Natural, Whole, Integer, Rational, Real"
+      "title": "Using the Zero Property",
+      "question": "Simplify 27 × 0.",
+      "solution": "The zero property states that any number multiplied by zero equals zero.",
+      "answer": "0"
     },
     {
       "type": "concept_check",
-      "question": "Which number belongs to the natural, whole, integer, rational, and real number sets?",
+      "question": "What is the value of 125 × 0?",
       "options": [
         {
           "id": "A",
-          "text": "5"
+          "text": "0"
         },
         {
           "id": "B",
-          "text": "-5"
+          "text": "1"
         },
         {
           "id": "C",
-          "text": "√2"
+          "text": "125"
         },
         {
           "id": "D",
-          "text": "1/2"
+          "text": "-125"
         }
       ],
       "correct_answer": "A",
-      "explanation": "5 is a natural number, so it is also a whole number, integer, rational number, and real number."
+      "explanation": "Any number multiplied by zero equals zero."
     },
     {
       "type": "lesson",
-      "title": "Number Sets and Relationships",
-      "content": "The common number sets are related through inclusion. Natural numbers are contained within the whole numbers, whole numbers are contained within the integers, and integers are contained within the rational numbers. Rational and irrational numbers together make up the real numbers.",
-      "formula": "Natural ⊂ Whole ⊂ Integers ⊂ Rational ⊂ Real",
-      "key_terms": "subset, inclusion, number set, rational, irrational"
+      "title": "Distributive Property",
+      "content": "The distributive property connects multiplication with addition and subtraction. A factor outside parentheses can be multiplied by each term inside the parentheses. The property can also be used in reverse to factor expressions.",
+      "formula": "a(b + c) = ab + ac; a(b - c) = ab - ac",
+      "key_terms": "distributive property, factor, term, parentheses, expansion"
     },
     {
       "type": "example",
-      "title": "Classifying -3",
-      "question": "Classify the number -3.",
-      "solution": "-3 is an integer. Since every integer can be written as a fraction with denominator 1, -3 is also rational. Every rational number is real.",
-      "answer": "Integer, Rational, Real"
+      "title": "Using the Distributive Property",
+      "question": "Expand 4(x + 3).",
+      "solution": "Multiply 4 by each term inside the parentheses. Multiply 4 by x to get 4x and multiply 4 by 3 to get 12.",
+      "answer": "4x + 12"
     },
     {
       "type": "concept_check",
-      "question": "Which statement about number sets is correct?",
+      "question": "Which expression is equivalent to 5(x + 2)?",
       "options": [
         {
           "id": "A",
-          "text": "Every integer is a natural number."
+          "text": "5x + 2"
         },
         {
           "id": "B",
-          "text": "Every whole number is an integer."
+          "text": "5x + 10"
         },
         {
           "id": "C",
-          "text": "Every irrational number is rational."
+          "text": "x + 10"
         },
         {
           "id": "D",
-          "text": "Every real number is an integer."
+          "text": "5x + 7"
         }
       ],
       "correct_answer": "B",
-      "explanation": "Whole numbers such as 0, 1, 2, and 3 are all integers. However, negative integers are not whole numbers."
+      "explanation": "Distribute 5 to both terms: 5(x) + 5(2) = 5x + 10."
     },
     {
       "type": "lesson",
-      "title": "Comparing Real Numbers",
-      "content": "Real numbers can be compared using greater than (>), less than (<), and equal to (=). On a number line, a number farther to the right is greater than a number farther to the left.",
-      "formula": "a > b, a < b, or a = b"
-    },
-    {
-      "type": "lesson",
-      "title": "Ordering Real Numbers",
-      "content": "Real numbers can be arranged from least to greatest or from greatest to least. When ordering numbers on a number line, numbers farther to the left are smaller and numbers farther to the right are greater.",
-      "key_terms": "compare, greater than, less than, equal to, least to greatest, greatest to least"
+      "title": "Properties of Subtraction and Division",
+      "content": "Unlike addition and multiplication, subtraction and division are generally not commutative or associative. Changing the order or grouping of numbers in subtraction or division can change the result. Division by zero is also undefined.",
+      "formula": "a - b ≠ b - a; a ÷ b ≠ b ÷ a; a ÷ 0 is undefined",
+      "key_terms": "subtraction, division, non-commutative, non-associative, undefined"
     },
     {
       "type": "example",
-      "title": "Comparing Negative Numbers",
-      "question": "Which is greater: -2 or -5?",
-      "solution": "On the number line, -2 is located to the right of -5. Therefore, -2 is greater than -5.",
-      "answer": "-2"
+      "title": "Subtraction Is Not Commutative",
+      "question": "Compare 10 - 4 and 4 - 10.",
+      "solution": "10 - 4 = 6, while 4 - 10 = -6. Since changing the order changes the result, subtraction is not commutative.",
+      "answer": "10 - 4 = 6; 4 - 10 = -6"
     },
     {
       "type": "example",
-      "title": "Ordering Numbers",
-      "question": "Order the numbers -3, 1, -1, and 4 from least to greatest.",
-      "solution": "Place the numbers on a number line. The numbers from left to right are -3, -1, 1, and 4.",
-      "answer": "-3, -1, 1, 4"
+      "title": "Division Is Not Commutative",
+      "question": "Compare 12 ÷ 3 and 3 ÷ 12.",
+      "solution": "12 ÷ 3 = 4, while 3 ÷ 12 = 1/4. Since changing the order changes the result, division is not commutative.",
+      "answer": "12 ÷ 3 = 4; 3 ÷ 12 = 1/4"
     },
     {
       "type": "concept_check",
-      "question": "Which list shows the numbers in order from least to greatest?",
+      "question": "Which statement is correct?",
       "options": [
         {
           "id": "A",
-          "text": "3, 1, -1, -4"
+          "text": "Subtraction is commutative."
         },
         {
           "id": "B",
-          "text": "-4, -1, 1, 3"
+          "text": "Division is commutative."
         },
         {
           "id": "C",
-          "text": "-1, -4, 1, 3"
+          "text": "Division by zero is undefined."
         },
         {
           "id": "D",
-          "text": "1, -1, -4, 3"
+          "text": "Subtraction is always associative."
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Division by zero is undefined. Subtraction and division are generally neither commutative nor associative."
+    },
+    {
+      "type": "lesson",
+      "title": "Using Properties to Rewrite Expressions",
+      "content": "Properties of operations can be used to rewrite expressions without changing their values. The commutative property can change order, the associative property can change grouping, and the distributive property can expand or factor expressions. Rewriting expressions can make calculations and algebraic simplification easier.",
+      "key_terms": "equivalent expressions, rewrite, simplify, commutative, associative, distributive"
+    },
+    {
+      "type": "example",
+      "title": "Rewriting an Expression",
+      "question": "Rewrite 3 + x + 7 so that the constants are next to each other.",
+      "solution": "Use the commutative property to change the order to 3 + 7 + x. Then use the associative property to group the constants as (3 + 7) + x. Simplifying gives 10 + x.",
+      "answer": "10 + x"
+    },
+    {
+      "type": "concept_check",
+      "question": "Which expression is equivalent to 6 + x + 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10x"
+        },
+        {
+          "id": "B",
+          "text": "10 + x"
+        },
+        {
+          "id": "C",
+          "text": "6x + 4"
+        },
+        {
+          "id": "D",
+          "text": "x + 2"
         }
       ],
       "correct_answer": "B",
-      "explanation": "Numbers increase from left to right on the number line. Therefore, the correct order is -4, -1, 1, 3."
+      "explanation": "Use the commutative and associative properties to group 6 and 4. Since 6 + 4 = 10, the expression becomes 10 + x."
     },
     {
       "type": "lesson",
-      "title": "Absolute Value",
-      "content": "The absolute value of a number represents its distance from zero on the number line. Distance is always non-negative, so the absolute value of any real number is greater than or equal to zero.",
-      "formula": "|a| ≥ 0",
-      "key_terms": "absolute value, distance from zero, non-negative"
+      "title": "Combining Multiple Properties",
+      "content": "More complex expressions may require several properties to simplify. The distributive property can remove parentheses, the commutative and associative properties can rearrange and group terms, and identity, inverse, or zero properties can further simplify the expression.",
+      "key_terms": "multiple properties, simplify, equivalent expressions, combine like terms, algebraic properties"
     },
     {
       "type": "example",
-      "title": "Finding Absolute Value",
-      "question": "Find the absolute value of -8.",
-      "solution": "-8 is 8 units away from zero on the number line. Therefore, its absolute value is 8.",
-      "answer": "|-8| = 8"
-    },
-    {
-      "type": "concept_check",
-      "question": "What is the value of |-12|?",
-      "options": [
-        {
-          "id": "A",
-          "text": "-12"
-        },
-        {
-          "id": "B",
-          "text": "-1"
-        },
-        {
-          "id": "C",
-          "text": "0"
-        },
-        {
-          "id": "D",
-          "text": "12"
-        }
-      ],
-      "correct_answer": "D",
-      "explanation": "Absolute value represents distance from zero. Since -12 is 12 units from zero, |-12| = 12."
-    },
-    {
-      "type": "lesson",
-      "title": "The Number Line",
-      "content": "A number line represents numbers as points along a line. Zero is the reference point. Positive numbers are located to the right of zero, while negative numbers are located to the left. Numbers increase as you move to the right and decrease as you move to the left.",
-      "key_terms": "number line, positive numbers, negative numbers, zero, direction"
+      "title": "Combining Properties",
+      "question": "Simplify 2(x + 4) + 3x.",
+      "solution": "First use the distributive property: 2(x + 4) = 2x + 8. The expression becomes 2x + 8 + 3x. Use the commutative property to rewrite it as 2x + 3x + 8. Then combine the like terms to obtain 5x + 8.",
+      "answer": "5x + 8"
     },
     {
       "type": "example",
-      "title": "Using the Number Line",
-      "question": "Which number is farther to the left on the number line: -4 or 2?",
-      "solution": "-4 is located to the left of 2 on the number line because -4 is less than 2.",
-      "answer": "-4"
+      "title": "Using Several Properties",
+      "question": "Simplify 3(x + 2) + 2(x + 4).",
+      "solution": "Use the distributive property to obtain 3x + 6 + 2x + 8. Use the commutative and associative properties to group like terms: (3x + 2x) + (6 + 8). Combine the terms to get 5x + 14.",
+      "answer": "5x + 14"
     },
     {
       "type": "concept_check",
-      "question": "Which number is located farthest to the right?",
+      "question": "Simplify 4(x + 2) + 2x.",
       "options": [
         {
           "id": "A",
-          "text": "-5"
+          "text": "6x + 2"
         },
         {
           "id": "B",
-          "text": "-1"
+          "text": "6x + 8"
         },
         {
           "id": "C",
-          "text": "0"
+          "text": "4x + 4"
         },
         {
           "id": "D",
-          "text": "4"
+          "text": "8x + 2"
         }
       ],
-      "correct_answer": "D",
-      "explanation": "Numbers increase from left to right on the number line. Therefore, 4 is farthest to the right."
+      "correct_answer": "B",
+      "explanation": "Distribute 4 to get 4x + 8 + 2x. Combine the like terms 4x and 2x to obtain 6x + 8."
     }
   ]
 }
