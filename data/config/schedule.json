@@ -3,7 +3,7 @@
 
     "daily": {
         "formula": {
-            "enabled": true,
+            "enabled": false,
             "schedule": {
                 "type": "hourly",
                 "minute": 15
@@ -12,7 +12,7 @@
         },
 
         "problem": {
-            "enabled": true,
+            "enabled": false,
             "schedule": {
                 "type": "hourly",
                 "minute": 30
@@ -30,7 +30,7 @@
         },
 
         "trivia": {
-            "enabled": true,
+            "enabled": false,
             "schedule": {
                 "type": "hourly",
                 "minute": 0
